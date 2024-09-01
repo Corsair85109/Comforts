@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,7 +24,7 @@
               "RelativeDocumentMoniker": "ComfortsPlugin.cs",
               "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
               "RelativeToolTip": "ComfortsPlugin.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAgwDcAAAAjAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAQwDcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-31T18:40:03.472Z",
               "IsPinned": true,
