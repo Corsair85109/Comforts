@@ -11,7 +11,13 @@ namespace Comforts.Monobehaviors.Handtargets
 {
     internal class JukeboxUIHandtarget : HandTarget, IHandTarget
     {
-        internal string useKey = "GenericUse";
+        internal virtual string useKey
+        {
+            get
+            {
+                return "GenericUse";
+            }
+        }
         internal ComfortJukeboxController jukebox
         {
             get
@@ -34,11 +40,12 @@ namespace Comforts.Monobehaviors.Handtargets
 
     internal class JukeboxUIPlayHandTarget : JukeboxUIHandtarget
     {
-        public override void Awake()
+        internal override string useKey
         {
-            base.Awake();
-
-            useKey = "JukeboxUIPlay";
+            get
+            {
+                return "JukeboxUIPlay";
+            }
         }
 
         public override void OnHandClick(GUIHand hand)
@@ -49,11 +56,12 @@ namespace Comforts.Monobehaviors.Handtargets
 
     internal class JukeboxUIStopHandTarget : JukeboxUIHandtarget
     {
-        public override void Awake()
+        internal override string useKey
         {
-            base.Awake();
-
-            useKey = "JukeboxUIStop";
+            get
+            {
+                return "JukeboxUIStop";
+            }
         }
 
         public override void OnHandClick(GUIHand hand)
@@ -64,11 +72,12 @@ namespace Comforts.Monobehaviors.Handtargets
 
     internal class JukeboxUISkipHandTarget : JukeboxUIHandtarget
     {
-        public override void Awake()
+        internal override string useKey
         {
-            base.Awake();
-
-            useKey = "JukeboxUISkip";
+            get
+            {
+                return "JukeboxUISkip";
+            }
         }
 
         public override void OnHandClick(GUIHand hand)
@@ -79,11 +88,12 @@ namespace Comforts.Monobehaviors.Handtargets
 
     internal class JukeboxUIBackHandTarget : JukeboxUIHandtarget
     {
-        public override void Awake()
+        internal override string useKey
         {
-            base.Awake();
-
-            useKey = "JukeboxUIBack";
+            get
+            {
+                return "JukeboxUIBack";
+            }
         }
 
         public override void OnHandClick(GUIHand hand)

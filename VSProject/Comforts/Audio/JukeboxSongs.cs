@@ -11,22 +11,41 @@ namespace Comforts.Audio
 {
     internal class JukeboxSongs
     {
-        private static string[] songPaths;
-
         internal static List<FMODAsset> songs = new List<FMODAsset>();
         internal static void RegisterSongs(string folder)
         {
-            if (Directory.Exists(folder))
+            if (!Directory.Exists(folder))
             {
-                songPaths = Directory.GetFiles(folder);
-                foreach (string song in songPaths)
-                {
-                    string busPath = "bus:/master/SFX_for_pause/PDA_pause/all/SFX/reverbsend";
-                    CustomSoundHandler.RegisterCustomSound(song, song, busPath, FMOD.MODE.DEFAULT);
-                    FMODAsset asset = ScriptableObject.CreateInstance<FMODAsset>();
-                    asset.id = song;
-                    songs.Add(asset);
-                }
+                Debug.LogError("Could not find jukebox songs file directory!");
+                return;
+            }
+
+            string[] songFiles = Directory.GetFiles(folder);
+
+            if (songFiles.Length == 0)
+            {
+                Debug.LogWarning("Jukebox songs file directory is empty! Your jukebox will not play anything");
+                return;
+            }
+
+            foreach (string songFile in songFiles)
+            {
+                string songName = Path.GetFileNameWithoutExtension(songFile);
+
+                string busPath = Nautilus.Utility.AudioUtils.BusPaths.PlayerSFXs;
+                CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, FMOD.MODE.DEFAULT);
+
+                FMODAsset asset = ScriptableObject.CreateInstance<FMODAsset>();
+                asset.id = songName;
+                songs.Add(asset);
+            }
+
+
+            // Log songs found
+            Debug.Log("Found songs:");
+            foreach (FMODAsset asset in songs)
+            {
+                Debug.Log(asset.id);
             }
         }
     }

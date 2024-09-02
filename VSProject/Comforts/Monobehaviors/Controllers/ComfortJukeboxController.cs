@@ -12,20 +12,16 @@ namespace Comforts.Monobehaviors.Controllers
     {
         public FMODAsset currentSong;
         public int currentSongNum = 0;
-        public bool playSong;
+        public bool playSong = false;
 
         public void Start()
         {
             ComfortsSpeaker.allJukeboxes.Add(gameObject);
-            playSong = false;
         }
 
         public void Update()
         {
-            if (currentSong != JukeboxSongs.songs[currentSongNum])
-            {
-                currentSong = JukeboxSongs.songs[currentSongNum];
-            }
+            currentSong = JukeboxSongs.songs[currentSongNum];
         }
 
         public void Play()
@@ -40,7 +36,7 @@ namespace Comforts.Monobehaviors.Controllers
 
         public void Skip()
         {
-            if (currentSongNum == JukeboxSongs.songs.Count)
+            if (currentSongNum == JukeboxSongs.songs.Count - 1)
             {
                 currentSongNum = 0;
             }
@@ -54,7 +50,7 @@ namespace Comforts.Monobehaviors.Controllers
         {
             if (currentSongNum == 0)
             {
-                currentSongNum = JukeboxSongs.songs.Count;
+                currentSongNum = JukeboxSongs.songs.Count - 1;
             }
             else
             {
