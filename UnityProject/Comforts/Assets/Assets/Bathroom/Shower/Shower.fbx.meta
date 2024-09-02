@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 7db1c28ffa5dedd4cb41284ff91d228d, type: 2}
+      name: Grating
+    second: {fileID: 2100000, guid: f37adb3fec18240449640ef32ff9ffaa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: MoonpoolFloorMods5
-    second: {fileID: 2100000, guid: 4d46e59899a6bcb46a60f048106aa6c3, type: 2}
+      name: ShowerGlassTransparent
+    second: {fileID: 2100000, guid: 1954d65d95e06ab43a368ce48d08265e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
