@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\audio\\jukeboxsongs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:audio\\jukeboxsongs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\monobehaviors\\controllers\\comfortjukeboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortjukeboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\monobehaviors\\controllers\\comfortsspeaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortsspeaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,40 +34,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ComfortsSpeaker.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsSpeaker.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortsSpeaker.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsSpeaker.cs",
-              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortsSpeaker.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAIwFMAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T22:29:52.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ComfortJukeboxController.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
-              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T22:28:04.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "JukeboxSongs.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\JukeboxSongs.cs",
-              "RelativeDocumentMoniker": "Audio\\JukeboxSongs.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\JukeboxSongs.cs",
-              "RelativeToolTip": "Audio\\JukeboxSongs.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC8AAAAkAAAA",
+              "Title": "ComfortsCustomPrefab.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeDocumentMoniker": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeToolTip": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABQAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T22:28:31.013Z",
+              "WhenOpened": "2024-09-02T09:14:52.459Z",
               "EditorCaption": ""
             }
           ]

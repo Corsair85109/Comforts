@@ -1,4 +1,5 @@
-﻿using Nautilus.Utility;
+﻿using Comforts.Utils;
+using Nautilus.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,17 +18,7 @@ namespace Comforts.Prefabs
             PrefabUtils.AddBasicComponents(prefabGO, classID, techType, 0);
             float num = 1f;
             prefabGO.transform.localScale = new Vector3(num, num, num);
-            GameObject model = prefabGO.transform.Find("Model").gameObject;
-            MaterialUtils.ApplySNShaders(model);
-            return prefabGO;
-        }
-        public static GameObject GetGameObject(string classID, GameObject prefabGO, TechType techType, string modelName)
-        {
-            PrefabUtils.AddBasicComponents(prefabGO, classID, techType, 0);
-            float num = 1f;
-            prefabGO.transform.localScale = new Vector3(num, num, num);
-            GameObject model = prefabGO.transform.Find(modelName).gameObject;
-            MaterialUtils.ApplySNShaders(model);
+            ComfortUtils.ApplyMarmosetUBERShader(prefabGO, 10f, 1f, 1f);
             return prefabGO;
         }
     }
