@@ -16,7 +16,7 @@ namespace Comforts.Audio
         {
             if (!Directory.Exists(folder))
             {
-                Debug.LogError("Could not find jukebox songs file directory!");
+                Debug.LogError("[Comforts]: Could not find jukebox songs file directory!");
                 return;
             }
 
@@ -24,15 +24,15 @@ namespace Comforts.Audio
 
             if (songFiles.Length == 0)
             {
-                Debug.LogWarning("Jukebox songs file directory is empty! Your jukebox will not play anything");
+                Debug.LogWarning("[Comforts]: Jukebox songs file directory is empty! Your jukebox will not play anything");
                 return;
             }
 
             foreach (string songFile in songFiles)
             {
-                Debug.Log("songFile: " + songFile);
+                Debug.Log("[Comforts]: songFile: " + songFile);
                 string songName = Path.GetFileNameWithoutExtension(songFile);
-                Debug.Log("songName: " + songName);
+                Debug.Log("[Comforts]: songName: " + songName);
 
                 string busPath = Nautilus.Utility.AudioUtils.BusPaths.PlayerSFXs;
                 CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, FMOD.MODE.DEFAULT);
@@ -40,14 +40,6 @@ namespace Comforts.Audio
                 FMODAsset asset = ScriptableObject.CreateInstance<FMODAsset>();
                 asset.id = songName;
                 songs.Add(asset);
-            }
-
-
-            // Log songs found
-            Debug.Log("Found songs:");
-            foreach (FMODAsset asset in songs)
-            {
-                Debug.Log(asset.id);
             }
         }
     }

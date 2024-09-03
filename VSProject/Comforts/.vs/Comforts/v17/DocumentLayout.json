@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\audio\\jukeboxsongs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\audio\\jukeboxsongs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:audio\\jukeboxsongs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -35,12 +39,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ComfortsCustomPrefab.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeDocumentMoniker": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeToolTip": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAUwBsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T10:40:41.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "JukeboxSongs.cs",
               "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\JukeboxSongs.cs",
               "RelativeDocumentMoniker": "Audio\\JukeboxSongs.cs",
               "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\JukeboxSongs.cs",
               "RelativeToolTip": "Audio\\JukeboxSongs.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAAADIAAAANAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAACkAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T22:23:18.355Z",
               "EditorCaption": ""

@@ -445,6 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSong: {fileID: 0}
+  currentSongNum: 0
   playSong: 0
 --- !u!114 &4588165420025771644
 MonoBehaviour:

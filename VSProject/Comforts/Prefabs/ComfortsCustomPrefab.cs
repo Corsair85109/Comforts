@@ -16,9 +16,21 @@ namespace Comforts.Prefabs
         public static GameObject GetGameObject(string classID, GameObject prefabGO, TechType techType)
         {
             PrefabUtils.AddBasicComponents(prefabGO, classID, techType, 0);
-            float num = 1f;
-            prefabGO.transform.localScale = new Vector3(num, num, num);
+
+            
+            if (prefabGO.transform.Find("ConstructBounds") != null)
+            {
+                BoxCollider boundsCollider = prefabGO.transform.Find("ConstructBounds").GetComponent<BoxCollider>();
+                ConstructableBounds constructableBounds = prefabGO.EnsureComponent<ConstructableBounds>();
+                constructableBounds.bounds.position = boundsCollider.center;
+                constructableBounds.bounds.size = boundsCollider.size;
+                boundsCollider.enabled = false;
+            }
+
             ComfortUtils.ApplyMarmosetUBERShader(prefabGO, 10f, 1f, 1f);
+
+
+
             return prefabGO;
         }
     }
