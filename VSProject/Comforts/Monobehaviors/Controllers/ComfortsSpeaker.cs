@@ -25,29 +25,15 @@ namespace Comforts.Monobehaviors.Controllers
         {
             float ComputeDistance(GameObject thing)
             {
-                try
-                {
-                    return Vector3.Distance(position, thing.transform.position);
-                }
-                catch
-                {
-                    return 9999;
-                }
+                return Vector3.Distance(position, thing.transform.position);
             }
             GameObject nearestJukebox = null;
             foreach (GameObject jukebox in allJukeboxes)
             {
-                if (jukebox is null)
-                {
-                    continue;
-                }
                 if (nearestJukebox == null || (ComputeDistance(jukebox) < ComputeDistance(nearestJukebox)))
                 {
-
                     nearestJukebox = jukebox;
-
                 }
-
             }
 
             return nearestJukebox;

@@ -10,13 +10,18 @@ namespace Comforts.Monobehaviors.Controllers
 {
     internal class ComfortJukeboxController : MonoBehaviour
     {
-        public FMODAsset currentSong;
-        public int currentSongNum = 0;
-        public bool playSong = false;
+        internal FMODAsset currentSong;
+        internal int currentSongNum = 0;
+        internal bool playSong;
 
         public void Start()
         {
             ComfortsSpeaker.allJukeboxes.Add(gameObject);
+        }
+
+        public void OnDestroy()
+        {
+            ComfortsSpeaker.allJukeboxes.Remove(gameObject);
         }
 
         public void Update()
