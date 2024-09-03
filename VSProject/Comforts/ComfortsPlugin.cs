@@ -2,6 +2,7 @@
 using BepInEx.Logging;
 using Comforts.Audio;
 using Comforts.Prefabs.Bathroom;
+using Comforts.Prefabs.Kitchen;
 using Comforts.Prefabs.Power;
 using HarmonyLib;
 using Nautilus.Handlers;
@@ -54,6 +55,9 @@ namespace Comforts
             Jukebox.Register();
             Speaker.Register();
             WallSpeaker.Register();
+
+            // Kitchen
+            Sink.Register();
         }
     }
 }

@@ -30,7 +30,9 @@ namespace Comforts.Audio
 
             foreach (string songFile in songFiles)
             {
+                Debug.Log("songFile: " + songFile);
                 string songName = Path.GetFileNameWithoutExtension(songFile);
+                Debug.Log("songName: " + songName);
 
                 string busPath = Nautilus.Utility.AudioUtils.BusPaths.PlayerSFXs;
                 CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, FMOD.MODE.DEFAULT);
