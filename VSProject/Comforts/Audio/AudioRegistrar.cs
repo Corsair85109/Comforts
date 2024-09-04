@@ -25,12 +25,14 @@ namespace Comforts.Audio
         public static void AddVoiceLine(AudioClip clip, string soundPath)
         {
             var sound = AudioUtils.CreateSound(clip, kStreamSoundModes);
+            sound.set3DMinMaxDistance(1f, 50f);
             CustomSoundHandler.RegisterCustomSound(soundPath, sound, AudioUtils.BusPaths.VoiceOvers);
         }
 
         public static void AddWorldSoundEffect(AudioClip clip, string soundPath, float minDistance = 1f, float maxDistance = 100f, string overrideBus = null)
         {
             var sound = AudioUtils.CreateSound(clip, k3DSoundModes);
+            sound.set3DMinMaxDistance(1f, 10f);
             if (maxDistance > 0f)
             {
                 sound.set3DMinMaxDistance(minDistance, maxDistance);
@@ -41,6 +43,7 @@ namespace Comforts.Audio
         public static void AddInterfaceSoundEffect(AudioClip clip, string soundPath)
         {
             var sound = AudioUtils.CreateSound(clip, k2DSoundModes);
+            sound.set3DMinMaxDistance(1f, 10f);
             CustomSoundHandler.RegisterCustomSound(soundPath, sound, AudioUtils.BusPaths.PlayerSFXs);
         }
 
@@ -53,6 +56,7 @@ namespace Comforts.Audio
         public static void AddWorldLoopingSoundEffect(AudioClip clip, string soundPath, float minDistance = 1f, float maxDistance = 100f, string overrideBus = null)
         {
             var sound = AudioUtils.CreateSound(clip, k3DSoundModes);
+            sound.set3DMinMaxDistance(1f, 10f);
             if (maxDistance > 0f)
             {
                 sound.set3DMinMaxDistance(minDistance, maxDistance);

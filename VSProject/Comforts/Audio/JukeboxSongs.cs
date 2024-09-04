@@ -38,6 +38,7 @@ namespace Comforts.Audio
                 var songSound = CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, FMOD.MODE.DEFAULT);
 
                 songSound.setMode(FMOD.MODE.LOOP_NORMAL);
+                songSound.set3DMinMaxDistance(1f, 10f);
 
                 FMODAsset asset = ScriptableObject.CreateInstance<FMODAsset>();
                 asset.id = songName;
