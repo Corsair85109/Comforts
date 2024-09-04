@@ -1,5 +1,5 @@
 ﻿using Comforts.Monobehaviors.Controllers;
-using Comforts.Utils;
+using Comforts.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;

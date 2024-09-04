@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\monobehaviors\\controllers\\comfortjukeboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortjukeboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\monobehaviors\\controllers\\comfortsspeaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortsspeaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\monobehaviors\\controllers\\comfortjukeboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortjukeboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,27 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ComfortJukeboxController.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
-              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwB0AAAAuAAAA",
+              "Title": "ComfortsPlugin.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
+              "RelativeDocumentMoniker": "ComfortsPlugin.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
+              "RelativeToolTip": "ComfortsPlugin.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwCoAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T10:41:55.148Z",
+              "WhenOpened": "2024-09-04T11:44:33.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ComfortsSpeaker.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsSpeaker.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortsSpeaker.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsSpeaker.cs",
-              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortsSpeaker.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAIwDUAAAAeAAAA",
+              "Title": "ComfortJukeboxController.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
+              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
+              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortJukeboxController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowC4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T09:48:18.998Z",
+              "WhenOpened": "2024-09-04T11:43:22.63Z",
               "EditorCaption": ""
             }
           ]

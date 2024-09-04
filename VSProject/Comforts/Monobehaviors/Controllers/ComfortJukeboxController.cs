@@ -1,4 +1,5 @@
 ﻿using Comforts.Audio;
+using Comforts.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -39,6 +40,11 @@ namespace Comforts.Monobehaviors.Controllers
         {
             playSong = true;
             ComfortsSpeaker.UpdateSpeakers();
+
+            if (PirateChecker.isPirated)
+            {
+                ComfortUtils.PlayFMODSound("Present", Player.main.transform);
+            }
         }
 
         public void Stop()

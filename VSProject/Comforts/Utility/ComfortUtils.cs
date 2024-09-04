@@ -7,7 +7,7 @@ using UnityEngine;
 using UWE;
 using static Nautilus.Utility.MaterialUtils;
 
-namespace Comforts.Utils
+namespace Comforts.Utility
 {
     internal class ComfortUtils
     {
@@ -52,5 +52,13 @@ namespace Comforts.Utils
                 }
             }
         }
+
+        public static void PlayFMODSound(string soundName, Transform position)
+        {
+            var asset = Nautilus.Utility.AudioUtils.GetFmodAsset(soundName);
+            Utils.PlayFMODAsset(asset, position);
+        }
+
+
     }
 }

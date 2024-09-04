@@ -1,4 +1,4 @@
-﻿using Comforts.Utils;
+﻿using Comforts.Utility;
 using Nautilus.Utility;
 using System;
 using System.Collections.Generic;

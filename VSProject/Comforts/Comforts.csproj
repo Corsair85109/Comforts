@@ -99,11 +99,13 @@
     <Compile Include="Audio\AudioRegistrar.cs" />
     <Compile Include="Audio\JukeboxSongs.cs" />
     <Compile Include="ComfortsPlugin.cs" />
+    <Compile Include="Commands\ComfortsConsoleCommands.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortJukeboxController.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortsSpeaker.cs" />
     <Compile Include="Monobehaviors\Controllers\JukeboxUIManager.cs" />
     <Compile Include="Monobehaviors\Handtargets\JukeboxUIHandtargets.cs" />
     <Compile Include="Monobehaviors\Handtargets\ParticleSystemHandTarget.cs" />
+    <Compile Include="PirateChecker.cs" />
     <Compile Include="Prefabs\Bathroom\Shower.cs" />
     <Compile Include="Prefabs\ComfortsCustomPrefab.cs" />
     <Compile Include="Prefabs\Kitchen\Sink.cs" />
@@ -111,7 +113,7 @@
     <Compile Include="Prefabs\Power\Speaker.cs" />
     <Compile Include="Prefabs\Power\WallSpeaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\ComfortUtils.cs" />
+    <Compile Include="Utility\ComfortUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

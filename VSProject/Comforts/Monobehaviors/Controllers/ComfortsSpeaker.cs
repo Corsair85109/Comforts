@@ -1,4 +1,4 @@
-﻿using Comforts.Utils;
+﻿using Comforts.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -93,7 +93,7 @@ namespace Comforts.Monobehaviors.Controllers
 
         public void Update()
         {
-            if (currentJukebox == null)
+            if (currentJukebox == null || PirateChecker.isPirated)
             {
                 if (fmodEmitter.asset != null)
                 {

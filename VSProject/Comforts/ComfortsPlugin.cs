@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using Comforts.Audio;
+using Comforts.Commands;
 using Comforts.Prefabs.Bathroom;
 using Comforts.Prefabs.Kitchen;
 using Comforts.Prefabs.Power;
@@ -30,20 +31,30 @@ namespace Comforts
             Harmony.PatchAll();
             Debug.Log($"{PluginName} version {VersionString} is loaded.");
 
+            PirateChecker.CheckPiracy();
+
             // Get mod folder
             modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             // Find assetbundle
             theUltimateBundleOfAssets = AssetBundle.LoadFromFile(Path.Combine(modFolder, "Assets/Comforts"));
 
+            // Register Audio
+            AudioRegistrar.RegisterAudio(theUltimateBundleOfAssets);
+
             // Register Localization
             LanguageHandler.RegisterLocalizationFolder();
+
+            // Register console commands
+            ConsoleCommandsHandler.RegisterConsoleCommands(typeof(ComfortsConsoleCommands));
 
             // Register jukebox songs
             JukeboxSongs.RegisterSongs(Path.Combine(modFolder, "JukeboxSongs"));
 
             // Register prefabs
             RegisterAllPrefabs();
+
+            
         }
 
         private void RegisterAllPrefabs()
