@@ -35,10 +35,13 @@ namespace Comforts.Audio
                 Debug.Log("[Comforts]: songName: " + songName);
 
                 string busPath = Nautilus.Utility.AudioUtils.BusPaths.PlayerSFXs;
-                CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, FMOD.MODE.DEFAULT);
+                var songSound = CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, FMOD.MODE.DEFAULT);
+
+                songSound.setMode(FMOD.MODE.LOOP_NORMAL);
 
                 FMODAsset asset = ScriptableObject.CreateInstance<FMODAsset>();
                 asset.id = songName;
+                asset.path = songName;
                 songs.Add(asset);
             }
         }

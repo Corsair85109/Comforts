@@ -19,6 +19,7 @@ namespace Comforts.Audio
         public static void RegisterAudio(AssetBundle bundle)
         {
             // put audio to register here
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Present"), "Present");
         }
 
         public static void AddVoiceLine(AudioClip clip, string soundPath)

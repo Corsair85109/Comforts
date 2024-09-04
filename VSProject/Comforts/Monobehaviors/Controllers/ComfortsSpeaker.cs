@@ -1,5 +1,6 @@
 ﻿using Comforts.Utils;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +12,64 @@ namespace Comforts.Monobehaviors.Controllers
     public class ComfortsSpeaker : MonoBehaviour
     {
         public static List<GameObject> allJukeboxes = new List<GameObject>();
+        public static List<GameObject> allSpeakers = new List<GameObject>();
 
-        private GameObject currentJukebox;
+        private ComfortJukeboxController currentJukebox;
         private FMOD_CustomLoopingEmitter fmodEmitter
         {
             get
             {
                 return gameObject.GetComponent<FMOD_CustomLoopingEmitter>();
+            }
+        }
+
+        public static void UpdateJukeboxes()
+        {
+            if (allJukeboxes.Count <= 1) return;
+
+            foreach (GameObject jukebox in allJukeboxes)
+            {
+                ComfortJukeboxController controller = jukebox.GetComponent<ComfortJukeboxController>();
+
+                controller.Refresh();
+            }
+        }
+
+        public static void UpdateSpeakers()
+        {
+            if (allSpeakers.Count <= 1) return;
+
+            foreach (GameObject speaker in allSpeakers)
+            {
+                ComfortsSpeaker component = speaker.GetComponent<ComfortsSpeaker>();
+
+                component.SetUp();
+            }
+        }
+
+        public void Start()
+        {
+            allSpeakers.Add(gameObject);
+
+            UpdateJukeboxes();
+        }
+
+        public void OnDestroy()
+        {
+            allSpeakers.Remove(gameObject);
+
+            UpdateJukeboxes();
+        }
+
+        public void SetUp()
+        {
+            fmodEmitter.Stop();
+
+            currentJukebox = FindNearestJukebox(transform.position).GetComponent<ComfortJukeboxController>();
+
+            if (currentJukebox != null)
+            {
+                fmodEmitter.asset = currentJukebox.currentSong;
             }
         }
 
@@ -39,11 +91,6 @@ namespace Comforts.Monobehaviors.Controllers
             return nearestJukebox;
         }
 
-        public void Start()
-        {
-            currentJukebox = FindNearestJukebox(transform.position);
-        }
-
         public void Update()
         {
             if (currentJukebox == null)
@@ -59,13 +106,11 @@ namespace Comforts.Monobehaviors.Controllers
             }
             else
             {
-                var jukeboxController = currentJukebox.GetComponent<ComfortJukeboxController>();
-
-                if (fmodEmitter.asset == null)
+                if (fmodEmitter.asset != currentJukebox.currentSong)
                 {
-                    fmodEmitter.asset = jukeboxController.currentSong;
+                    fmodEmitter.asset = currentJukebox.currentSong;
                 }
-                if (jukeboxController.playSong)
+                if (currentJukebox.playSong)
                 {
                     if (!fmodEmitter.playing)
                     {

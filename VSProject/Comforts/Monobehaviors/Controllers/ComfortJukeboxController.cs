@@ -1,5 +1,6 @@
 ﻿using Comforts.Audio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +15,19 @@ namespace Comforts.Monobehaviors.Controllers
         internal int currentSongNum = 0;
         internal bool playSong;
 
+
         public void Start()
         {
             ComfortsSpeaker.allJukeboxes.Add(gameObject);
+
+            ComfortsSpeaker.UpdateJukeboxes();
         }
 
         public void OnDestroy()
         {
             ComfortsSpeaker.allJukeboxes.Remove(gameObject);
+
+            ComfortsSpeaker.UpdateJukeboxes();
         }
 
         public void Update()
@@ -32,11 +38,13 @@ namespace Comforts.Monobehaviors.Controllers
         public void Play()
         {
             playSong = true;
+            ComfortsSpeaker.UpdateSpeakers();
         }
 
         public void Stop()
         {
             playSong = false;
+            ComfortsSpeaker.UpdateSpeakers();
         }
 
         public void Skip()
@@ -49,6 +57,8 @@ namespace Comforts.Monobehaviors.Controllers
             {
                 currentSongNum++;
             }
+
+            Refresh();
         }
 
         public void Back()
@@ -61,6 +71,22 @@ namespace Comforts.Monobehaviors.Controllers
             {
                 currentSongNum--;
             }
+
+            Refresh();
+        }
+
+        public void Refresh()
+        {
+            UWE.CoroutineHost.StartCoroutine(RefreshAllTheShits());
+        }
+
+        private IEnumerator RefreshAllTheShits()
+        {
+            bool wasPlaying = playSong;
+            Stop();
+            yield return new WaitForEndOfFrame();
+            ComfortsSpeaker.UpdateSpeakers();
+            if (wasPlaying) Play();
         }
     }
 }
