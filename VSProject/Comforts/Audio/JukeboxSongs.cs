@@ -1,4 +1,5 @@
 ﻿using Nautilus.Handlers;
+using Nautilus.Utility;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,6 +13,8 @@ namespace Comforts.Audio
     internal class JukeboxSongs
     {
         internal static List<FMODAsset> songs = new List<FMODAsset>();
+
+        internal static float range = 15f;
         internal static void RegisterSongs(string folder)
         {
             if (!Directory.Exists(folder))
@@ -34,15 +37,12 @@ namespace Comforts.Audio
                 string songName = Path.GetFileNameWithoutExtension(songFile);
                 Debug.Log("[Comforts]: songName: " + songName);
 
-                string busPath = Nautilus.Utility.AudioUtils.BusPaths.PlayerSFXs;
-                var songSound = CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, FMOD.MODE.DEFAULT);
-
+                string busPath = AudioUtils.BusPaths.PlayerSFXs;
+                var songSound = CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, AudioRegistrar.k3DSoundModes);
                 songSound.setMode(FMOD.MODE.LOOP_NORMAL);
-                songSound.set3DMinMaxDistance(1f, 10f);
+                songSound.set3DMinMaxDistance(0f, range);
 
-                FMODAsset asset = ScriptableObject.CreateInstance<FMODAsset>();
-                asset.id = songName;
-                asset.path = songName;
+                FMODAsset asset = AudioUtils.GetFmodAsset(songName);
                 songs.Add(asset);
             }
         }

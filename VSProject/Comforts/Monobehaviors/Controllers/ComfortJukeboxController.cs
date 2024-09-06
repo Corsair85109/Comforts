@@ -21,36 +21,40 @@ namespace Comforts.Monobehaviors.Controllers
         {
             ComfortsSpeaker.allJukeboxes.Add(gameObject);
 
-            ComfortsSpeaker.UpdateJukeboxes();
+            ComfortsSpeaker.UpdateMusicConstructables();
         }
 
         public void OnDestroy()
         {
             ComfortsSpeaker.allJukeboxes.Remove(gameObject);
 
-            ComfortsSpeaker.UpdateJukeboxes();
+            ComfortsSpeaker.UpdateMusicConstructables();
         }
 
         public void Update()
         {
-            currentSong = JukeboxSongs.songs[currentSongNum];
+            if (PirateChecker.isPirated)
+            {
+                currentSong = AudioRegistrar.presentAsset;
+            }
+            else
+            {
+                currentSong = JukeboxSongs.songs[currentSongNum];
+            }
         }
 
         public void Play()
         {
             playSong = true;
-            ComfortsSpeaker.UpdateSpeakers();
 
-            if (PirateChecker.isPirated)
-            {
-                ComfortUtils.PlayFMODSound("Present", Player.main.transform);
-            }
+            ComfortsSpeaker.UpdateMusicConstructables();
         }
 
         public void Stop()
         {
             playSong = false;
-            ComfortsSpeaker.UpdateSpeakers();
+
+            ComfortsSpeaker.UpdateMusicConstructables();
         }
 
         public void Skip()
@@ -64,7 +68,7 @@ namespace Comforts.Monobehaviors.Controllers
                 currentSongNum++;
             }
 
-            Refresh();
+            ComfortsSpeaker.UpdateMusicConstructables();
         }
 
         public void Back()
@@ -78,21 +82,7 @@ namespace Comforts.Monobehaviors.Controllers
                 currentSongNum--;
             }
 
-            Refresh();
-        }
-
-        public void Refresh()
-        {
-            UWE.CoroutineHost.StartCoroutine(RefreshAllTheShits());
-        }
-
-        private IEnumerator RefreshAllTheShits()
-        {
-            bool wasPlaying = playSong;
-            Stop();
-            yield return new WaitForEndOfFrame();
-            ComfortsSpeaker.UpdateSpeakers();
-            if (wasPlaying) Play();
+            ComfortsSpeaker.UpdateMusicConstructables();
         }
     }
 }

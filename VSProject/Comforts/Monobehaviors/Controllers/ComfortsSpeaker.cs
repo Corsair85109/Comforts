@@ -23,63 +23,36 @@ namespace Comforts.Monobehaviors.Controllers
             }
         }
 
-        public static void UpdateJukeboxes()
+
+
+
+        public static void UpdateMusicConstructables()
         {
-            if (allJukeboxes.Count <= 1) return;
-
-            foreach (GameObject jukebox in allJukeboxes)
+            if (allSpeakers.Count > 0)
             {
-                ComfortJukeboxController controller = jukebox.GetComponent<ComfortJukeboxController>();
+                foreach (GameObject obj in allSpeakers)
+                {
+                    ComfortsSpeaker speaker = obj.GetComponent<ComfortsSpeaker>();
 
-                controller.Refresh();
+                    speaker.fmodEmitter.Stop();
+                    speaker.currentJukebox = speaker.FindNearestJukebox().GetComponent<ComfortJukeboxController>();
+                    speaker.Update();
+                }
             }
         }
+        
 
-        public static void UpdateSpeakers()
+        private GameObject FindNearestJukebox()
         {
-            if (allSpeakers.Count <= 1) return;
+            Vector3 position = transform.position;
 
-            foreach (GameObject speaker in allSpeakers)
-            {
-                ComfortsSpeaker component = speaker.GetComponent<ComfortsSpeaker>();
-
-                component.SetUp();
-            }
-        }
-
-        public void Start()
-        {
-            allSpeakers.Add(gameObject);
-
-            UpdateJukeboxes();
-        }
-
-        public void OnDestroy()
-        {
-            allSpeakers.Remove(gameObject);
-
-            UpdateJukeboxes();
-        }
-
-        public void SetUp()
-        {
-            fmodEmitter.Stop();
-
-            currentJukebox = FindNearestJukebox(transform.position).GetComponent<ComfortJukeboxController>();
-
-            if (currentJukebox != null)
-            {
-                fmodEmitter.asset = currentJukebox.currentSong;
-            }
-        }
-
-        private GameObject FindNearestJukebox(Vector3 position)
-        {
             float ComputeDistance(GameObject thing)
             {
                 return Vector3.Distance(position, thing.transform.position);
             }
+
             GameObject nearestJukebox = null;
+
             foreach (GameObject jukebox in allJukeboxes)
             {
                 if (nearestJukebox == null || (ComputeDistance(jukebox) < ComputeDistance(nearestJukebox)))
@@ -93,7 +66,7 @@ namespace Comforts.Monobehaviors.Controllers
 
         public void Update()
         {
-            if (currentJukebox == null || PirateChecker.isPirated)
+            if (currentJukebox == null)
             {
                 if (fmodEmitter.asset != null)
                 {
@@ -125,6 +98,18 @@ namespace Comforts.Monobehaviors.Controllers
                     }
                 }
             }
+        }
+
+        public void Start()
+        {
+            allSpeakers.Add(gameObject);
+
+            UpdateMusicConstructables();
+        }
+
+        public void OnDestroy()
+        {
+            allSpeakers.Remove(gameObject);
         }
     }
 }

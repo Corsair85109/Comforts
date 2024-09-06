@@ -16,35 +16,30 @@ namespace Comforts.Audio
         public const MODE k2DSoundModes = MODE.DEFAULT | MODE._2D | MODE.ACCURATETIME;
         public const MODE kStreamSoundModes = k2DSoundModes | MODE.CREATESTREAM;
 
+        public static FMODAsset presentAsset;
+
         public static void RegisterAudio(AssetBundle bundle)
         {
             // put audio to register here
-            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Present"), "Present");
+
+            // Present
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Present"), "Present", 0f, JukeboxSongs.range, true);
+            presentAsset = AudioUtils.GetFmodAsset("Present");
+
+
+
+
         }
 
-        public static void AddVoiceLine(AudioClip clip, string soundPath)
-        {
-            var sound = AudioUtils.CreateSound(clip, kStreamSoundModes);
-            sound.set3DMinMaxDistance(1f, 50f);
-            CustomSoundHandler.RegisterCustomSound(soundPath, sound, AudioUtils.BusPaths.VoiceOvers);
-        }
-
-        public static void AddWorldSoundEffect(AudioClip clip, string soundPath, float minDistance = 1f, float maxDistance = 100f, string overrideBus = null)
+        public static void AddWorldSoundEffect(AudioClip clip, string soundPath, float minDistance = 0f, float maxDistance = 100f, bool looping = false, string overrideBus = null)
         {
             var sound = AudioUtils.CreateSound(clip, k3DSoundModes);
-            sound.set3DMinMaxDistance(1f, 10f);
-            if (maxDistance > 0f)
+            sound.set3DMinMaxDistance(minDistance, maxDistance);
+            if (looping)
             {
-                sound.set3DMinMaxDistance(minDistance, maxDistance);
+                sound.setMode(MODE.LOOP_NORMAL);
             }
             CustomSoundHandler.RegisterCustomSound(soundPath, sound, string.IsNullOrEmpty(overrideBus) ? AudioUtils.BusPaths.PlayerSFXs : overrideBus);
-        }
-
-        public static void AddInterfaceSoundEffect(AudioClip clip, string soundPath)
-        {
-            var sound = AudioUtils.CreateSound(clip, k2DSoundModes);
-            sound.set3DMinMaxDistance(1f, 10f);
-            CustomSoundHandler.RegisterCustomSound(soundPath, sound, AudioUtils.BusPaths.PlayerSFXs);
         }
 
         public static void AddPDAVoiceline(AudioClip clip, string soundPath)
@@ -53,16 +48,10 @@ namespace Comforts.Audio
             CustomSoundHandler.RegisterCustomSound(soundPath, sound, AudioUtils.BusPaths.PDAVoice);
         }
 
-        public static void AddWorldLoopingSoundEffect(AudioClip clip, string soundPath, float minDistance = 1f, float maxDistance = 100f, string overrideBus = null)
+        public static void AddVoiceLine(AudioClip clip, string soundPath)
         {
-            var sound = AudioUtils.CreateSound(clip, k3DSoundModes);
-            sound.set3DMinMaxDistance(1f, 10f);
-            if (maxDistance > 0f)
-            {
-                sound.set3DMinMaxDistance(minDistance, maxDistance);
-            }
-            sound.setMode(MODE.LOOP_NORMAL);
-            CustomSoundHandler.RegisterCustomSound(soundPath, sound, string.IsNullOrEmpty(overrideBus) ? AudioUtils.BusPaths.PlayerSFXs : overrideBus);
+            var sound = AudioUtils.CreateSound(clip, kStreamSoundModes);
+            CustomSoundHandler.RegisterCustomSound(soundPath, sound, AudioUtils.BusPaths.VoiceOvers);
         }
     }
 }
