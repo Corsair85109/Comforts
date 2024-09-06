@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 
 namespace Comforts.Monobehaviors.Controllers
@@ -15,7 +16,13 @@ namespace Comforts.Monobehaviors.Controllers
         internal FMODAsset currentSong;
         internal int currentSongNum = 0;
         internal bool playSong;
-
+        private TMP_Text songNameText
+        {
+            get
+            {
+                return transform.Find("UI/SongNameText").GetComponent<TMP_Text>();
+            }
+        }
 
         public void Start()
         {
@@ -41,6 +48,7 @@ namespace Comforts.Monobehaviors.Controllers
             {
                 currentSong = JukeboxSongs.songs[currentSongNum];
             }
+            songNameText.SetText(currentSong.id);
         }
 
         public void Play()

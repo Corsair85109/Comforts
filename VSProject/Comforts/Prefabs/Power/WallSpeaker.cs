@@ -15,7 +15,7 @@ namespace Comforts.Prefabs.Power
     {
         public static void Register()
         {
-            CustomPrefab customPrefab = new CustomPrefab("wallSpeaker", Language.main.Get("WallSpeaker"), Language.main.Get("WallSpeakerDesc"), SpriteManager.Get(TechType.Seamoth));
+            CustomPrefab customPrefab = new CustomPrefab("wallSpeaker", Language.main.Get("WallSpeaker"), Language.main.Get("WallSpeakerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("SpeakerSprite"));
             techType = customPrefab.Info.TechType;
             customPrefab.SetGameObject(GetGameObject("wallSpeaker", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("WallSpeaker"), techType));
             RecipeData recipeData = new RecipeData

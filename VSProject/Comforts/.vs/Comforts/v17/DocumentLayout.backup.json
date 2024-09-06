@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\audio\\jukeboxsongs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:audio\\jukeboxsongs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\prefabs\\power\\jukebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\power\\jukebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\prefabs\\power\\speaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\power\\speaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\prefabs\\power\\wallspeaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\power\\wallspeaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +42,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JukeboxSongs.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\JukeboxSongs.cs",
-              "RelativeDocumentMoniker": "Audio\\JukeboxSongs.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\JukeboxSongs.cs",
-              "RelativeToolTip": "Audio\\JukeboxSongs.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwCwAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "WallSpeaker.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\WallSpeaker.cs",
+              "RelativeDocumentMoniker": "Prefabs\\Power\\WallSpeaker.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\WallSpeaker.cs",
+              "RelativeToolTip": "Prefabs\\Power\\WallSpeaker.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAACQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T08:46:51.118Z",
+              "WhenOpened": "2024-09-06T11:28:14.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Speaker.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\Speaker.cs",
+              "RelativeDocumentMoniker": "Prefabs\\Power\\Speaker.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\Speaker.cs",
+              "RelativeToolTip": "Prefabs\\Power\\Speaker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAADAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T11:28:14.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Jukebox.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\Jukebox.cs",
+              "RelativeDocumentMoniker": "Prefabs\\Power\\Jukebox.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\Jukebox.cs*",
+              "RelativeToolTip": "Prefabs\\Power\\Jukebox.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAADBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T11:28:11.338Z",
               "EditorCaption": ""
             }
           ]

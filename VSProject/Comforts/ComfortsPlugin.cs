@@ -7,9 +7,11 @@ using Comforts.Prefabs.Kitchen;
 using Comforts.Prefabs.Power;
 using HarmonyLib;
 using Nautilus.Handlers;
+using Nautilus.Utility;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.U2D;
 
 namespace Comforts
 {
@@ -23,6 +25,7 @@ namespace Comforts
         private static readonly Harmony Harmony = new Harmony(MyGUID);
 
         public static AssetBundle theUltimateBundleOfAssets;
+        public static SpriteAtlas epicAtlasOfSprites;
         public static string modFolder;
 
         private void Awake()
@@ -38,6 +41,7 @@ namespace Comforts
 
             // Find assetbundle
             theUltimateBundleOfAssets = AssetBundle.LoadFromFile(Path.Combine(modFolder, "Assets/Comforts"));
+            epicAtlasOfSprites = theUltimateBundleOfAssets.LoadAsset<SpriteAtlas>("SpriteAtlas");
 
             // Register Audio
             AudioRegistrar.RegisterAudio(theUltimateBundleOfAssets);

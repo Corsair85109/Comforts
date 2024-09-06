@@ -15,7 +15,7 @@ namespace Comforts.Prefabs.Power
     {
         public static void Register()
         {
-            CustomPrefab customPrefab = new CustomPrefab("jukebox", Language.main.Get("Jukebox"), Language.main.Get("JukeboxDesc"), SpriteManager.Get(TechType.Seamoth));
+            CustomPrefab customPrefab = new CustomPrefab("jukebox", Language.main.Get("Jukebox"), Language.main.Get("JukeboxDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("JukeboxSprite"));
             techType = customPrefab.Info.TechType;
             customPrefab.SetGameObject(GetGameObject("jukebox", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Jukebox"), techType));
             RecipeData recipeData = new RecipeData
