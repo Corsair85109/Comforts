@@ -28,6 +28,13 @@ namespace Comforts.Monobehaviors.Controllers
 
         public static void UpdateMusicConstructables()
         {
+            if (allJukeboxes.Count > 0)
+            {
+                foreach (GameObject obj in allJukeboxes)
+                {
+                    obj.GetComponent<ComfortJukeboxController>().Update();
+                }
+            }
             if (allSpeakers.Count > 0)
             {
                 foreach (GameObject obj in allSpeakers)
