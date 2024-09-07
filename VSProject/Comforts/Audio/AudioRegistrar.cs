@@ -16,7 +16,6 @@ namespace Comforts.Audio
         public const MODE k2DSoundModes = MODE.DEFAULT | MODE._2D | MODE.ACCURATETIME;
         public const MODE kStreamSoundModes = k2DSoundModes | MODE.CREATESTREAM;
 
-        public static FMODAsset presentAsset;
 
         public static void RegisterAudio(AssetBundle bundle)
         {
@@ -24,10 +23,11 @@ namespace Comforts.Audio
 
             // Present
             AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Present"), "Present", 0f, JukeboxSongs.range, true);
-            presentAsset = AudioUtils.GetFmodAsset("Present");
+            ComfortsFMODAssets.present = AudioUtils.GetFmodAsset("Present");
 
-
-
+            // Constructable sound effects
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Cook_loop"), "Cook_loop", 0f, 10f, true);
+            ComfortsFMODAssets.cookerLoop = AudioUtils.GetFmodAsset("Cook_loop");
 
         }
 

@@ -317,8 +317,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.33, y: 0.89242125, z: 0.81}
-  m_Center: {x: 0, y: 0.43810225, z: 0}
+  m_Size: {x: 1.33, y: 0.8418393, z: 0.81}
+  m_Center: {x: 0, y: 0.4633932, z: 0}
 --- !u!1 &6709480165363189073
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 3211648606687104979}
   - component: {fileID: 5700647349185192535}
   - component: {fileID: 971005945556984527}
+  - component: {fileID: 5964803654442699782}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -5073,6 +5074,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5964803654442699782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709480165363189073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 266656334, guid: 2acdebf6433a11e47bf5ef3eea8e25dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8820325386690842390
 GameObject:
   m_ObjectHideFlags: 0

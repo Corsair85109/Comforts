@@ -73,6 +73,7 @@ namespace Comforts
 
             // Kitchen
             Sink.Register();
+            Cooker.Register();
         }
     }
 }

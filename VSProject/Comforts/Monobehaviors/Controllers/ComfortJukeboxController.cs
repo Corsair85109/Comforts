@@ -42,7 +42,7 @@ namespace Comforts.Monobehaviors.Controllers
         {
             if (PirateChecker.isPirated)
             {
-                currentSong = AudioRegistrar.presentAsset;
+                currentSong = ComfortsFMODAssets.present;
             }
             else
             {

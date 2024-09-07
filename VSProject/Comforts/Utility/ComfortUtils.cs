@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comforts.Tags;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,8 +40,8 @@ namespace Comforts.Utility
 
                     bool blockShaderConversion = false;
 
-                    // stop particles getting marmo
-                    if (renderers[i].gameObject.GetComponent<ParticleSystem>() != null)
+                    // stop some things getting marmo
+                    if (renderers[i].gameObject.GetComponent<StopMarmoShader>() != null)
                     {
                         blockShaderConversion = true;
                     }
