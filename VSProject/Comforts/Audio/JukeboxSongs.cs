@@ -19,7 +19,7 @@ namespace Comforts.Audio
         {
             if (!Directory.Exists(folder))
             {
-                Debug.LogError("[Comforts]: Could not find jukebox songs file directory!");
+                Utility.Logger.LogError("Could not find jukebox songs file directory!");
                 return;
             }
 
@@ -27,15 +27,15 @@ namespace Comforts.Audio
 
             if (songFiles.Length == 0)
             {
-                Debug.LogWarning("[Comforts]: Jukebox songs file directory is empty! Your jukebox will not play anything");
+                Utility.Logger.LogWarning("Jukebox songs file directory is empty! Your jukebox will not play anything");
                 return;
             }
 
             foreach (string songFile in songFiles)
             {
-                Debug.Log("[Comforts]: songFile: " + songFile);
+                Utility.Logger.Log("[Comforts]: songFile: " + songFile);
                 string songName = Path.GetFileNameWithoutExtension(songFile);
-                Debug.Log("[Comforts]: songName: " + songName);
+                Utility.Logger.Log("[Comforts]: songName: " + songName);
 
                 string busPath = AudioUtils.BusPaths.PlayerSFXs;
                 var songSound = CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, AudioRegistrar.k3DSoundModes);

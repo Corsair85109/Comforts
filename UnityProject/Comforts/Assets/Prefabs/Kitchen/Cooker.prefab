@@ -409,9 +409,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8440902801020172802}
   - component: {fileID: 5349764686926336028}
-  - component: {fileID: 4124026433885276218}
-  - component: {fileID: 1731302651271250104}
-  - component: {fileID: 5909509690892613685}
+  - component: {fileID: 6133542131346237581}
+  - component: {fileID: 2882726070003876715}
+  - component: {fileID: 2204529649142678294}
   m_Layer: 0
   m_Name: Cooker
   m_TagString: Untagged
@@ -474,7 +474,7 @@ MonoBehaviour:
   surfaceType: 0
   _EmissiveTex: {fileID: 0}
   _NoiseTex: {fileID: 0}
---- !u!114 &4124026433885276218
+--- !u!114 &6133542131346237581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: -537348580, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1731302651271250104
+--- !u!114 &2882726070003876715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -501,7 +501,7 @@ MonoBehaviour:
   itemSpawnPoint: {fileID: 2101227983318412778}
   _EmissiveTex: {fileID: 0}
   _NoiseTex: {fileID: 0}
---- !u!114 &5909509690892613685
+--- !u!114 &2204529649142678294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -513,12 +513,8 @@ MonoBehaviour:
   m_Script: {fileID: -878207561, guid: 2acdebf6433a11e47bf5ef3eea8e25dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crafterLogic: {fileID: 4124026433885276218}
-  soundOrigin: {fileID: 4573741612558881964}
-  fabricateSound: {fileID: 0}
-  ghost: {fileID: 1731302651271250104}
-  craftTree: 1
-  closeDistance: 3
-  handOverText: UseFabricator
-  pickupOutOfRange: 0
-  isDeconstructionObstacle: 1
+  crafterLogic: {fileID: 6133542131346237581}
+  soundEmitter: {fileID: 39738946306606961}
+  ghost: {fileID: 2882726070003876715}
+  craftTree: 0
+  closeDistance: 5

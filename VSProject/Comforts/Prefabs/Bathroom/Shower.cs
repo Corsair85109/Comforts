@@ -16,7 +16,7 @@ namespace Comforts.Prefabs.Bathroom
     {
         public static void Register()
         {
-            CustomPrefab customPrefab = new CustomPrefab("shower", Language.main.Get("Shower"), Language.main.Get("ShowerDesc"), SpriteManager.Get(TechType.Seamoth));
+            CustomPrefab customPrefab = new CustomPrefab("shower", Language.main.Get("Shower"), Language.main.Get("ShowerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("ShowerSprite"));
             techType = customPrefab.Info.TechType;
             customPrefab.SetGameObject(GetGameObject("shower", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Shower"), techType));
             RecipeData recipeData = new RecipeData

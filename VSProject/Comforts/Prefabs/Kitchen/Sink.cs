@@ -14,7 +14,7 @@ namespace Comforts.Prefabs.Kitchen
     {
         public static void Register()
         {
-            CustomPrefab customPrefab = new CustomPrefab("sink", Language.main.Get("Sink"), Language.main.Get("SinkDesc"), SpriteManager.Get(TechType.Seamoth));
+            CustomPrefab customPrefab = new CustomPrefab("sink", Language.main.Get("Sink"), Language.main.Get("SinkDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("SinkSprite"));
             techType = customPrefab.Info.TechType;
             customPrefab.SetGameObject(GetGameObject("sink", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Sink"), techType));
             RecipeData recipeData = new RecipeData

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\monobehaviors\\cookerfabricator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\cookerfabricator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\monobehaviors\\handtargets\\ionfabricator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\handtargets\\ionfabricator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +35,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CookerFabricator.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\CookerFabricator.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\CookerFabricator.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\CookerFabricator.cs",
-              "RelativeToolTip": "Monobehaviors\\CookerFabricator.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAQwC0AAAA/AAAAAAAAAA==",
+              "Title": "IonFabricator.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\IonFabricator.cs",
+              "RelativeDocumentMoniker": "Monobehaviors\\Handtargets\\IonFabricator.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\IonFabricator.cs",
+              "RelativeToolTip": "Monobehaviors\\Handtargets\\IonFabricator.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwH4AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T05:48:48.622Z",
+              "WhenOpened": "2024-09-08T08:15:41.964Z",
               "EditorCaption": ""
             }
           ]

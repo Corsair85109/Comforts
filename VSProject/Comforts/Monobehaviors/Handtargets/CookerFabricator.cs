@@ -1,4 +1,5 @@
 ﻿using Comforts.Audio;
+using Comforts.Prefabs.Kitchen;
 using FMODUnity;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Comforts.Monobehaviors
+namespace Comforts.Monobehaviors.Handtargets
 {
     internal class CookerFabricator : Crafter, IHandTarget, IConstructable, IObstacle
     {
@@ -15,7 +16,7 @@ namespace Comforts.Monobehaviors
 
         public CrafterGhostModel ghost;
 
-        public CraftTree.Type craftTree = CraftTree.Type.Fabricator;
+        public CraftTree.Type craftTree = Cooker.cooker;
 
         public float closeDistance = 5f;
 
@@ -39,6 +40,8 @@ namespace Comforts.Monobehaviors
         public override void Start()
         {
             base.Start();
+
+            craftTree = Cooker.cooker;
 
             powerRelay = base.gameObject.GetComponentInParent<PowerRelay>();
 

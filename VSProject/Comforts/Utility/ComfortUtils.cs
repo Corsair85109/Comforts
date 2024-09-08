@@ -1,5 +1,6 @@
 ﻿using Comforts.Tags;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ using static Nautilus.Utility.MaterialUtils;
 
 namespace Comforts.Utility
 {
-    internal class ComfortUtils
+    internal class ComfortUtils : MonoBehaviour
     {
         public static void NautilusBasicText(string msg, float time)
         {
@@ -60,6 +61,67 @@ namespace Comforts.Utility
             Utils.PlayFMODAsset(asset, position);
         }
 
+        internal static IEnumerator TryPickupAsync(TechType techType, IOut<bool> result)
+        {
+            if (techType == TechType.None)
+            {
+                yield break;
+            }
 
+            Inventory inventory = Inventory.main;
+            bool overrideTech = false;
+            CoroutineTask<GameObject> request = CraftData.GetPrefabForTechTypeAsync(techType, true);
+            yield return request;
+            GameObject gameObject = request.GetResult();
+            if (gameObject == null)
+            {
+                gameObject = Utils.genericLootPrefab;
+                overrideTech = true;
+            }
+            if (gameObject != null)
+            {
+                Pickupable component = gameObject.GetComponent<Pickupable>();
+                if (component != null)
+                {
+                    Vector2int itemSize = CraftData.GetItemSize(component.GetTechType());
+                    if (inventory.HasRoomFor(itemSize.x, itemSize.y))
+                    {
+                        GameObject gameObject2 = Instantiate(gameObject);
+                        component = gameObject2.GetComponent<Pickupable>();
+                        if (overrideTech)
+                        {
+                            component.SetTechTypeOverride(techType, true);
+                        }
+                        CrafterLogic.NotifyCraftEnd(gameObject2, techType);
+                        inventory.ForcePickup(component);
+                        Player.main.PlayGrab();
+                        result.Set(true);
+                    }
+                    else
+                    {
+                        ErrorMessage.AddMessage(Language.main.Get("InventoryFull"));
+                        result.Set(false);
+                    }
+                }
+                else
+                {
+                    Debug.LogErrorFormat("Can't find Pickupable component on prefab for TechType.{0}", new object[]
+                    {
+                    techType
+                    });
+                    result.Set(true);
+                }
+            }
+            else
+            {
+                Debug.LogErrorFormat("Can't find prefab for TechType.{0}", new object[]
+                {
+                techType
+                });
+                result.Set(true);
+            }
+
+            yield break;
+        }
     }
 }

@@ -30,9 +30,11 @@ namespace Comforts
 
         private void Awake()
         {
-            Debug.Log($"Will load {PluginName} version {VersionString}.");
-            Harmony.PatchAll();
-            Debug.Log($"{PluginName} version {VersionString} is loaded.");
+            Utility.Logger.Log($"Will load {PluginName} version {VersionString}.");
+
+
+
+            Harmony.PatchAll();            
 
             PirateChecker.CheckPiracy();
 
@@ -58,7 +60,9 @@ namespace Comforts
             // Register prefabs
             RegisterAllPrefabs();
 
-            
+
+
+            Utility.Logger.Log($"{PluginName} version {VersionString} is loaded.");
         }
 
         private void RegisterAllPrefabs()
@@ -70,6 +74,7 @@ namespace Comforts
             Jukebox.Register();
             Speaker.Register();
             WallSpeaker.Register();
+            IonFusionReactor.Register();
 
             // Kitchen
             Sink.Register();

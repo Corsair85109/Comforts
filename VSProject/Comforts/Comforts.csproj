@@ -104,7 +104,8 @@
     <Compile Include="Monobehaviors\Controllers\ComfortJukeboxController.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortsSpeaker.cs" />
     <Compile Include="Monobehaviors\Controllers\JukeboxUIManager.cs" />
-    <Compile Include="Monobehaviors\CookerFabricator.cs" />
+    <Compile Include="Monobehaviors\Handtargets\CookerFabricator.cs" />
+    <Compile Include="Monobehaviors\Handtargets\IonFabricator.cs" />
     <Compile Include="Monobehaviors\Handtargets\JukeboxUIHandtargets.cs" />
     <Compile Include="Monobehaviors\Handtargets\ParticleSystemHandTarget.cs" />
     <Compile Include="PirateChecker.cs" />
@@ -112,12 +113,14 @@
     <Compile Include="Prefabs\ComfortsCustomPrefab.cs" />
     <Compile Include="Prefabs\Kitchen\Cooker.cs" />
     <Compile Include="Prefabs\Kitchen\Sink.cs" />
+    <Compile Include="Prefabs\Power\IonFusionReactor.cs" />
     <Compile Include="Prefabs\Power\Jukebox.cs" />
     <Compile Include="Prefabs\Power\Speaker.cs" />
     <Compile Include="Prefabs\Power\WallSpeaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tags\StopMarmoShader.cs" />
     <Compile Include="Utility\ComfortUtils.cs" />
+    <Compile Include="Utility\Logger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
