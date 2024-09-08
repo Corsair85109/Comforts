@@ -1,5 +1,6 @@
 ﻿using Comforts.Audio;
 using Comforts.Prefabs.Kitchen;
+using Comforts.Utility;
 using FMODUnity;
 using System;
 using System.Collections.Generic;
@@ -272,8 +273,15 @@ namespace Comforts.Monobehaviors.Handtargets
             }
             if (HasEnoughPower() && base.isValidHandTarget)
             {
-                opened = true;
-                uGUI.main.craftingMenu.Open(craftTree, this);
+                if (GameModeUtils.RequiresSurvival())
+                {
+                    opened = true;
+                    uGUI.main.craftingMenu.Open(craftTree, this);
+                }
+                else
+                {
+                    ComfortUtils.NautilusBasicText("This will only work in modes that require nutrition!", 200f);
+                }
             }
         }
 

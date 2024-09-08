@@ -31,6 +31,8 @@ namespace Comforts.Monobehaviors.Handtargets
 
         private void StartCrafting()
         {
+            progress = 0f;
+            progressPercentage = 0f;
             hasCraftedItem = false;
 
             isCrafting = true;
@@ -121,11 +123,7 @@ namespace Comforts.Monobehaviors.Handtargets
 
                 pickingUp = false;
 
-                Utility.Logger.Log("Pickup result: " + result.value.ToString());
-                if (result.value)
-                {
-                    StartCrafting();
-                }
+                StartCrafting();
             }
         }
     }

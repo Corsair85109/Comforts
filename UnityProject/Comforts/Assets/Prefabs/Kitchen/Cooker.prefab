@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 5349764686926336028}
   - component: {fileID: 6133542131346237581}
   - component: {fileID: 2882726070003876715}
-  - component: {fileID: 2204529649142678294}
+  - component: {fileID: 4795833883592877984}
   m_Layer: 0
   m_Name: Cooker
   m_TagString: Untagged
@@ -501,7 +501,7 @@ MonoBehaviour:
   itemSpawnPoint: {fileID: 2101227983318412778}
   _EmissiveTex: {fileID: 0}
   _NoiseTex: {fileID: 0}
---- !u!114 &2204529649142678294
+--- !u!114 &4795833883592877984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9110725750773276856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -878207561, guid: 2acdebf6433a11e47bf5ef3eea8e25dd, type: 3}
+  m_Script: {fileID: -2048278010, guid: 2acdebf6433a11e47bf5ef3eea8e25dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   crafterLogic: {fileID: 6133542131346237581}
