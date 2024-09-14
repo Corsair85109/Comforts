@@ -3,8 +3,10 @@ using BepInEx.Logging;
 using Comforts.Audio;
 using Comforts.Commands;
 using Comforts.Prefabs.Bathroom;
+using Comforts.Prefabs.Decorations;
 using Comforts.Prefabs.Kitchen;
 using Comforts.Prefabs.Power;
+using Comforts.Utility;
 using HarmonyLib;
 using Nautilus.Handlers;
 using Nautilus.Utility;
@@ -12,6 +14,7 @@ using System.IO;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.U2D;
+using static TechStringCache;
 
 namespace Comforts
 {
@@ -60,6 +63,9 @@ namespace Comforts
             // Register prefabs
             RegisterAllPrefabs();
 
+            // Register pda entries
+            RegisterEncies();
+
 
 
             Utility.Logger.Log($"{PluginName} version {VersionString} is loaded.");
@@ -79,6 +85,15 @@ namespace Comforts
             // Kitchen
             Sink.Register();
             Cooker.Register();
+
+            // Decorations
+            LavaLamp.Register();
+        }
+
+        private void RegisterEncies()
+        {
+            PDAHandler.AddEncyclopediaEntry("IonFusionReactorEncy", "Tech/Habitats/Comforts", Language.main.Get("IonFusionReactor"), Language.main.Get("IonFusionReactorEncyDesc"));
+            StoryGoalHandler.RegisterItemGoal("IonFusionReactorEncy", Story.GoalType.Encyclopedia, TechType.PrecursorIonPowerCell, 60f);
         }
     }
 }

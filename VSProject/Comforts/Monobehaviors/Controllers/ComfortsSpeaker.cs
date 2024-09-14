@@ -51,24 +51,7 @@ namespace Comforts.Monobehaviors.Controllers
 
         private GameObject FindNearestJukebox()
         {
-            Vector3 position = transform.position;
-
-            float ComputeDistance(GameObject thing)
-            {
-                return Vector3.Distance(position, thing.transform.position);
-            }
-
-            GameObject nearestJukebox = null;
-
-            foreach (GameObject jukebox in allJukeboxes)
-            {
-                if (nearestJukebox == null || (ComputeDistance(jukebox) < ComputeDistance(nearestJukebox)))
-                {
-                    nearestJukebox = jukebox;
-                }
-            }
-
-            return nearestJukebox;
+            return ComfortUtils.FindNearestGameObjectFromList(transform.position, allJukeboxes);
         }
 
         public void Update()

@@ -28,7 +28,7 @@ namespace Comforts.Prefabs.Power
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
-            GadgetExtensions.SetUnlock(customPrefab, TechType.Titanium, 1);
+            GadgetExtensions.SetUnlock(customPrefab, TechType.WiringKit, 1);
             GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.Misc);
             customPrefab.Register();
         }

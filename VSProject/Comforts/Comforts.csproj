@@ -111,6 +111,7 @@
     <Compile Include="PirateChecker.cs" />
     <Compile Include="Prefabs\Bathroom\Shower.cs" />
     <Compile Include="Prefabs\ComfortsCustomPrefab.cs" />
+    <Compile Include="Prefabs\Decorations\LavaLamp.cs" />
     <Compile Include="Prefabs\Kitchen\Cooker.cs" />
     <Compile Include="Prefabs\Kitchen\Sink.cs" />
     <Compile Include="Prefabs\Power\IonFusionReactor.cs" />

@@ -1,8 +1,13 @@
-﻿using Comforts.Tags;
+﻿using Comforts.Audio;
+using Comforts.Prefabs.Power;
+using Comforts.Tags;
+using Nautilus.Handlers;
+using Nautilus.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -61,7 +66,7 @@ namespace Comforts.Utility
             Utils.PlayFMODAsset(asset, position);
         }
 
-        internal static IEnumerator TryPickupAsync(TechType techType, IOut<bool> result)
+        public static IEnumerator TryPickupAsync(TechType techType, IOut<bool> result)
         {
             if (techType == TechType.None)
             {
@@ -122,6 +127,25 @@ namespace Comforts.Utility
             }
 
             yield break;
+        }
+
+        public static GameObject FindNearestGameObjectFromList(Vector3 position, List<GameObject> objects)
+        {
+            GameObject nearest = null;
+            float nearestDist = 0f;
+
+            foreach (GameObject obj in objects)
+            {
+                float distance = Vector3.Distance(position, obj.transform.position);
+
+                if (nearest == null || distance < nearestDist)
+                {
+                    nearest = obj;
+                    nearestDist = distance;
+                }
+            }
+
+            return nearest;
         }
     }
 }
