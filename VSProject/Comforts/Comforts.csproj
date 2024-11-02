@@ -104,6 +104,7 @@
     <Compile Include="Monobehaviors\Controllers\ComfortJukeboxController.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortsSpeaker.cs" />
     <Compile Include="Monobehaviors\Controllers\JukeboxUIManager.cs" />
+    <Compile Include="Monobehaviors\EnergyBeamVFX.cs" />
     <Compile Include="Monobehaviors\Handtargets\CookerFabricator.cs" />
     <Compile Include="Monobehaviors\Handtargets\IonFabricator.cs" />
     <Compile Include="Monobehaviors\Handtargets\JukeboxUIHandtargets.cs" />

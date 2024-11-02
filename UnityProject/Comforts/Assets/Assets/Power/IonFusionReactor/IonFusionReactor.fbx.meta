@@ -7,13 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Reactor
-    second: {fileID: 2100000, guid: ad87e9982dbe72f499394883f4337c0b, type: 2}
+      name: Black
+    second: {fileID: 2100000, guid: a5d0df8fc8433d641939dcf24176b7a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Screen
-    second: {fileID: 2100000, guid: df458f7982be7e94eaed208fb1e9bbdd, type: 2}
+      name: InformationLight
+    second: {fileID: 2100000, guid: 44b1b9c8f188d364ba7797f535ca27da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IonCube
+    second: {fileID: 2100000, guid: 8c407b8e72fd57843a1a5e74db7631dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: 6580edcfdff09d44f9d8277d9f0fceb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PrecursorLight
+    second: {fileID: 2100000, guid: 4a84b3808d4803f4ca2bf30d7c07bf88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PrecursorStone
+    second: {fileID: 2100000, guid: 3e6baf6a955bd2a42ad0bfd0dcf7d422, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Reactor
+    second: {fileID: 2100000, guid: ad87e9982dbe72f499394883f4337c0b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

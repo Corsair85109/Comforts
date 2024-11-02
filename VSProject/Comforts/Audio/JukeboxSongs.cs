@@ -33,9 +33,8 @@ namespace Comforts.Audio
 
             foreach (string songFile in songFiles)
             {
-                Utility.Logger.Log("[Comforts]: songFile: " + songFile);
                 string songName = Path.GetFileNameWithoutExtension(songFile);
-                Utility.Logger.Log("[Comforts]: songName: " + songName);
+                Utility.Logger.Log("Loading song: " + songName);
 
                 string busPath = AudioUtils.BusPaths.PlayerSFXs;
                 var songSound = CustomSoundHandler.RegisterCustomSound(songName, songFile, busPath, AudioRegistrar.k3DSoundModes);
