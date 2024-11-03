@@ -12,6 +12,7 @@ namespace Comforts.Prefabs.Kitchen
 {
     internal class Sink : ComfortsCustomPrefab
     {
+        public static TechType techType;
         public static void Register()
         {
             CustomPrefab customPrefab = new CustomPrefab("sink", Language.main.Get("Sink"), Language.main.Get("SinkDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("SinkSprite"));

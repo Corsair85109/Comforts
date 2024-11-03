@@ -11,26 +11,27 @@ namespace Comforts.Prefabs
 {
     internal class ComfortsCustomPrefab
     {
-        public static TechType techType;
-
-        public static GameObject GetGameObject(string classID, GameObject prefabGO, TechType techType)
+        public static GameObject GetGameObject(string classID, GameObject prefabGO, TechType techType, bool constructable = true)
         {
             PrefabUtils.AddBasicComponents(prefabGO, classID, techType, 0);
             
-            if (prefabGO.transform.Find("BoundingBox") != null)
+            if (constructable)
             {
-                BoxCollider boundingBox = prefabGO.transform.Find("BoundingBox").GetComponent<BoxCollider>();
-                ConstructableBounds constructableBounds = prefabGO.EnsureComponent<ConstructableBounds>();
-                constructableBounds.bounds.position = boundingBox.center;
-                constructableBounds.bounds.size = boundingBox.size;
-                boundingBox.enabled = false;
-            }
-            else if (prefabGO.transform.Find("Collider").GetComponent<BoxCollider>() != null)
-            {
-                BoxCollider collider = prefabGO.transform.Find("Collider").GetComponent<BoxCollider>();
-                ConstructableBounds constructableBounds = prefabGO.EnsureComponent<ConstructableBounds>();
-                constructableBounds.bounds.position = collider.center;
-                constructableBounds.bounds.size = collider.size;
+                if (prefabGO.transform.Find("BoundingBox") != null)
+                {
+                    BoxCollider boundingBox = prefabGO.transform.Find("BoundingBox").GetComponent<BoxCollider>();
+                    ConstructableBounds constructableBounds = prefabGO.EnsureComponent<ConstructableBounds>();
+                    constructableBounds.bounds.position = boundingBox.center;
+                    constructableBounds.bounds.size = boundingBox.size;
+                    boundingBox.enabled = false;
+                }
+                else if (prefabGO.transform.Find("Collider").GetComponent<BoxCollider>() != null)
+                {
+                    BoxCollider collider = prefabGO.transform.Find("Collider").GetComponent<BoxCollider>();
+                    ConstructableBounds constructableBounds = prefabGO.EnsureComponent<ConstructableBounds>();
+                    constructableBounds.bounds.position = collider.center;
+                    constructableBounds.bounds.size = collider.size;
+                }
             }
 
             ComfortUtils.ApplyMarmosetUBERShader(prefabGO, 10f, 1f, 1f);

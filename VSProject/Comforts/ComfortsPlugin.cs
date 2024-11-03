@@ -2,6 +2,7 @@
 using BepInEx.Logging;
 using Comforts.Audio;
 using Comforts.Commands;
+using Comforts.Patches;
 using Comforts.Prefabs.Bathroom;
 using Comforts.Prefabs.Decorations;
 using Comforts.Prefabs.Kitchen;
@@ -33,11 +34,11 @@ namespace Comforts
 
         private void Awake()
         {
-            Utility.Logger.Log($"Will load {PluginName} version {VersionString}.");
+            Utility.Logger.Log($"Will load {PluginName} version {VersionString}...");
 
 
-
-            Harmony.PatchAll();            
+            // Apply all harmony patches
+            Harmony.PatchAll();
 
             PirateChecker.CheckPiracy();
 
@@ -81,6 +82,7 @@ namespace Comforts
             Speaker.Register();
             WallSpeaker.Register();
             IonFusionReactor.Register();
+            MusicChip.Register();
 
             // Kitchen
             Sink.Register();
@@ -93,7 +95,7 @@ namespace Comforts
         private void RegisterEncies()
         {
             //PDAEncyclopedia.mapping
-            PDAHandler.AddEncyclopediaEntry("IonFusionReactorEncy", "Tech/Habitats/Comforts", Language.main.Get("IonFusionReactor"), Language.main.Get("IonFusionReactorEncyDesc"));
+            PDAHandler.AddEncyclopediaEntry("IonFusionReactorEncy", "Tech/Habitats/Comforts", Language.main.Get("IonFusionReactor"), Language.main.Get("IonFusionReactorEncyDesc"), theUltimateBundleOfAssets.LoadAsset<Texture2D>("IonFusionReactorDatabank"));
             StoryGoalHandler.RegisterItemGoal("IonFusionReactorEncy", Story.GoalType.Encyclopedia, TechType.PrecursorIonPowerCell, 60f);
         }
     }

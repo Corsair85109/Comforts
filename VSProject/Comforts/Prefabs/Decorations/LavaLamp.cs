@@ -13,6 +13,7 @@ namespace Comforts.Prefabs.Decorations
 {
     internal class LavaLamp : ComfortsCustomPrefab
     {
+        public static TechType techType;
         public static void Register()
         {
             CustomPrefab customPrefab = new CustomPrefab("lavaLamp", Language.main.Get("LavaLamp"), Language.main.Get("LavaLampDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("LavaLampSprite"));

@@ -13,6 +13,7 @@ namespace Comforts.Prefabs.Power
 {
     internal class IonFusionReactor : ComfortsCustomPrefab
     {
+        public static TechType techType;
         public static void Register()
         {
             CustomPrefab customPrefab = new CustomPrefab("ionFusionReactor", Language.main.Get("IonFusionReactor"), Language.main.Get("IonFusionReactorDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("IonFusionReactorSprite"));

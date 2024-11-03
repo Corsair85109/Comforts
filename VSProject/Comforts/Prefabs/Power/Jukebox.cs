@@ -13,6 +13,7 @@ namespace Comforts.Prefabs.Power
 {
     internal class Jukebox : ComfortsCustomPrefab
     {
+        public static TechType techType;
         public static void Register()
         {
             CustomPrefab customPrefab = new CustomPrefab("jukebox", Language.main.Get("Jukebox"), Language.main.Get("JukeboxDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("JukeboxSprite"));

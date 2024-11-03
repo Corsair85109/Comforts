@@ -14,6 +14,7 @@ namespace Comforts.Prefabs.Kitchen
     internal class Cooker : ComfortsCustomPrefab
     {
         public static CraftTree.Type cooker;
+        public static TechType techType;
         public static void Register()
         {
             CustomPrefab customPrefab = new CustomPrefab("cooker", Language.main.Get("Cooker"), Language.main.Get("CookerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("CookerSprite"));

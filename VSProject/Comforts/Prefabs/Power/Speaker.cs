@@ -12,6 +12,7 @@ namespace Comforts.Prefabs.Power
 {
     internal class Speaker : ComfortsCustomPrefab
     {
+        public static TechType techType;
         public static void Register()
         {
             CustomPrefab customPrefab = new CustomPrefab("speaker", Language.main.Get("Speaker"), Language.main.Get("SpeakerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("SpeakerSprite"));

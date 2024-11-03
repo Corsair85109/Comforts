@@ -14,6 +14,7 @@ namespace Comforts.Prefabs.Bathroom
 {
     internal class Shower : ComfortsCustomPrefab
     {
+        public static TechType techType;
         public static void Register()
         {
             CustomPrefab customPrefab = new CustomPrefab("shower", Language.main.Get("Shower"), Language.main.Get("ShowerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("ShowerSprite"));
@@ -29,7 +30,7 @@ namespace Comforts.Prefabs.Bathroom
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
-            GadgetExtensions.SetUnlock(customPrefab, TechType.Titanium, 1);
+            GadgetExtensions.SetUnlock(customPrefab, TechType.Glass, 1);
             GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.Misc);
             customPrefab.Register();
         }

@@ -13,6 +13,8 @@ namespace Comforts.Prefabs.Power
 {
     internal class WallSpeaker : ComfortsCustomPrefab
     {
+        public static TechType techType;
+
         public static void Register()
         {
             CustomPrefab customPrefab = new CustomPrefab("wallSpeaker", Language.main.Get("WallSpeaker"), Language.main.Get("WallSpeakerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("SpeakerSprite"));

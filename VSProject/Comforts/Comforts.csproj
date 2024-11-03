@@ -106,9 +106,12 @@
     <Compile Include="Monobehaviors\Controllers\JukeboxUIManager.cs" />
     <Compile Include="Monobehaviors\EnergyBeamVFX.cs" />
     <Compile Include="Monobehaviors\Handtargets\CookerFabricator.cs" />
+    <Compile Include="Monobehaviors\Handtargets\LavaLampHandTarget.cs" />
     <Compile Include="Monobehaviors\Handtargets\IonFabricator.cs" />
     <Compile Include="Monobehaviors\Handtargets\JukeboxUIHandtargets.cs" />
     <Compile Include="Monobehaviors\Handtargets\ParticleSystemHandTarget.cs" />
+    <Compile Include="Monobehaviors\MusicChipFMODEmitter.cs" />
+    <Compile Include="Patches\MusicChipPatch.cs" />
     <Compile Include="PirateChecker.cs" />
     <Compile Include="Prefabs\Bathroom\Shower.cs" />
     <Compile Include="Prefabs\ComfortsCustomPrefab.cs" />
@@ -117,6 +120,7 @@
     <Compile Include="Prefabs\Kitchen\Sink.cs" />
     <Compile Include="Prefabs\Power\IonFusionReactor.cs" />
     <Compile Include="Prefabs\Power\Jukebox.cs" />
+    <Compile Include="Prefabs\Power\MusicChip.cs" />
     <Compile Include="Prefabs\Power\Speaker.cs" />
     <Compile Include="Prefabs\Power\WallSpeaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
