@@ -1317,66 +1317,60 @@
         </member>
         <member name="T:Nautilus.Assets.Gadgets.UpgradeModuleGadget">
             <summary>
-            Represents a vehicle module (or upgrade) gadget.
+            Represents a vehicle upgrade module gadget.
             </summary>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.MaxCharge">
             <summary>
-            Max charge of this item.
-            Should apply to modules of vehicles and to chargeable items.
+            Defines the max charge in units of energy of this upgrade module when activated.
+            Applicable for chargeable vehicle modules.
             </summary>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.EnergyCost">
             <summary>
-            Energy cost of this item.
-            Should apply to modules of vehicles.
+            Defines the energy cost of this upgrade module when activated. Applicable for all usable vehicle modules.
             </summary>
+            <remarks>For chargeable modules, this defines the number of units of energy expended per second.</remarks>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.Cooldown">
             <summary>
-            Cooldown for this module.
-            Does not work with Toggleable items.
-            May not work with certain vehicles.
+            Defines the cooldown of this upgrade module after being activated. Applicable for non-toggleable vehicle modules,
+            with some potential limitations.
             </summary>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.CrushDepth">
             <summary>
-            Crush depth of this upgrade.
-            Leave to -1f to disable
+            Defines the crush depth of this upgrade module. Default value is -1. Only used when values are above 0.
             </summary>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.AbsoluteDepth">
             <summary>
-            Wether the depth provided should be absolute or added to the default depth of the vehicle.
+            Whether the crush depth provided (if any) should be absolute or added to the default depth of the vehicle.
             Default value is false.
             </summary>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.delegateOnAdded">
             <summary>
-            This happens when the module is added to the vehicle.
-            <para>Action that is executed after Nautilus' default action (if there is) on this event.</para>
+            The Action that is executed after the vehicle module is added, called after default events.
             </summary>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.delegateOnRemoved">
             <summary>
-            This happens when the module is removed from the vehicle.
-            <para>Action that is executed after Nautilus' default action (if there is) on this event.</para>
+            The Action that is executed after the vehicle module is removed.
             </summary>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.delegateOnUsed">
             <summary>
-            This happens when the module is used.
-            The delegate is not run when the module is a toggleable.
-            <para>Action that is executed after Nautilus' default action (if there is) on this event.</para>
+            The Action that is executed when the module is used. Applies to non-toggleable vehicle modules.
             </summary>
         </member>
         <member name="P:Nautilus.Assets.Gadgets.UpgradeModuleGadget.delegateOnToggled">
             <summary>
-            This happens when the module is toggled.<br/>
-            The boolean represents wether the module is on or off.<br/>
-            The delegate is not executed when the module is a selectable, selectableChargeable or a chargeable.
-            <para>Action that is executed after Nautilus' default action (if there is) on this event.</para>
+            The Action that is executed when the module is toggled. Only applies to toggleable vehicle modules.
             </summary>
+            <remarks>
+            The boolean represents whether the module is on or off.
+            </remarks>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.#ctor(Nautilus.Assets.ICustomPrefab)">
             <summary>
@@ -1386,76 +1380,71 @@
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithMaxCharge(System.Double)">
             <summary>
-            The maximum charge of the item.
-            Usually used as a multiplier for vehicle modules.
-            (Seamoth defense perimeter, Seatruck defense perimeter)
-            <para>Example: The Seamoth defense perimeter can be charged by holding the action key to make its damage bigger.</para>
+            Sets the maximum charge of an upgrade module, in units of energy.
             </summary>
-            <param name="maxCharge">Charge multiplier</param>
-            <returns>A reference to this instance after the operation has completed.</returns>
+            <param name="maxCharge">The maximum charge in total units of energy that can be expended.</param>
+            <returns>A reference to this instance after the operation has been completed.</returns>
+            <remarks>
+            This is used for the Seamoth and Seatruck Perimeter Defense Module to provide a strength modifier
+            based on how long the player holds the key.
+            </remarks>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithEnergyCost(System.Double)">
             <summary>
-            The energy cost of the item.
-            Usually used for vehicle modules to consume energy.
-            (Seamoth perimeter defense, Seamoth sonar)
+            Sets the energy cost of this upgrade module when used.
             </summary>
-            <param name="energyCost">Energy cost</param>
-            <returns>A reference to this instance after the operation has completed.</returns>
+            <param name="energyCost">The energy cost per use (or per second for chargeable modules).</param>
+            <returns>A reference to this instance after the operation has been completed.</returns>
+            <remarks>
+            For chargeable modules, this defines the number of units of energy expended per second
+            towards the total charge.
+            </remarks>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithCooldown(System.Double)">
             <summary>
-            The cooldown of the module when it is used.
-            <para>Cooldown may not work with certain vehicles.</para>
-            <para>Does not work with toggleable and passive items.</para>
+            Sets the cooldown of the module after it is used.
             </summary>
-            <param name="cooldown">Cooldown of the module in seconds.</param>
-            <returns>A reference to thihs instance after the operation has completed.</returns>
+            <param name="cooldown">The cooldown of the module in seconds.</param>
+            <returns>A reference to this instance after the operation has been completed.</returns>
+            <remarks>Does not work with toggleable or passive items, and may not be implemented by all vehicles.</remarks>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithDepthUpgrade(System.Single,System.Boolean)">
             <summary>
             Sets the crush depth given by this upgrade.
             </summary>
-            <param name="newCrushDepth">New crush depth, in meters.</param>
-            <param name="absolute">Wether the provided depth should be absolute or added to the default max depth of the vehicle.</param>
-            <returns>A reference to this instance after the operation has completed.</returns>
+            <param name="newCrushDepth">The new crush depth in meters.</param>
+            <param name="absolute">Whether the provided depth should be absolute or added to the default max depth of the vehicle.</param>
+            <returns>A reference to this instance after the operation has been completed.</returns>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithOnModuleAdded(System.Action{Vehicle,System.Int32})">
             <summary>
-            What happens when the module is added to a vehicle ?<br/>
-            This action is run <b>after</b> Nautilus' default action (if the module is a hull, the new hull of the vehicle is automatically updated).<br/>
-            For removed, see also <see cref="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithOnModuleRemoved(System.Action{Vehicle,System.Int32})"/>.
+            Defines extra functionality when this upgrade module is added.
             </summary>
-            <param name="onAdded">Action that occurs when the module is added.</param>
-            <returns>A reference to this instance after the operation has completed.</returns>
+            <param name="onAdded">Action that occurs after the module is added.</param>
+            <returns>A reference to this instance after the operation has been completed.</returns>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithOnModuleRemoved(System.Action{Vehicle,System.Int32})">
             <summary>
-            What happens when the module is removed from a vehicle ?<br/>
-            This action is run <b>after</b> Nautilus' default action (if the module is a hull, the new hull of the vehicle is automatically updated).<br/>
-            For added, see also <see cref="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithOnModuleAdded(System.Action{Vehicle,System.Int32})"/>.
+            Defines extra functionality when this upgrade module is removed.
             </summary>
-            <param name="onRemoved">Action that occurs when the module is removed.</param>
-            <returns>A reference to this instance after the operation has completed.</returns>
+            <param name="onRemoved">Action that occurs after the module is removed.</param>
+            <returns>A reference to this instance after the operation has been completed.</returns>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithOnModuleUsed(System.Action{Vehicle,System.Int32,System.Single,System.Single})">
             <summary>
-            What happens when the module is used ?<br/>
-            This action is run <b>after</b> Nautilus' default action (cooldown and energy consumption are automatically set).<br/>
-            For toggle, see also <see cref="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithOnModuleToggled(System.Action{Vehicle,System.Int32,System.Single,System.Boolean})"/>.
+            Defines extra functionality when this upgrade module is used, for non-toggleable modules.
             </summary>
             <param name="onUsed">Action that occurs when the module is used.</param>
-            <returns>A reference to this instance after the operation has completed.</returns>
+            <returns>A reference to this instance after the operation has been completed.</returns>
+            <remarks>The first <c>float</c> represents the current quick slot charge, and the second one represents the charge scalar.</remarks>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithOnModuleToggled(System.Action{Vehicle,System.Int32,System.Single,System.Boolean})">
             <summary>
-            What happens when the module is toggled ?<br/>
-            This actions is run <b>after</b> Nautilus' default action (energy consumption is automatically set).<br/>
-            For use, see also <see cref="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.WithOnModuleUsed(System.Action{Vehicle,System.Int32,System.Single,System.Single})"/>.
+            Defines extra functionality when this upgrade module is toggled.
             </summary>
-            <param name="onToggled">Action that occurs <b>when the module turns on and when it turns off</b>.<br/>
-            The boolean determines wether it is added or removed (added=true).</param>
-            <returns>A reference to this instance after the operation has completed.</returns>
+            <param name="onToggled">Action that occurs when the module is toggled.</param>
+            <returns>A reference to this instance after the operation has been completed.</returns>
+            <remarks>The boolean represents whether it is being added or removed.</remarks>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.UpgradeModuleGadget.Build">
             <inheritdoc/>
@@ -2531,6 +2520,29 @@
             <param name="index">The index.</param>
             <returns>The <see cref="T:TechType"/> at the requested the index if the index is value; Otherwise returns null.</returns>
         </member>
+        <member name="T:Nautilus.Extensions.FModExtensions">
+            <summary>
+            Contains extension methods for the FMOD system. 
+            </summary>
+        </member>
+        <member name="M:Nautilus.Extensions.FModExtensions.AddFadeOut(FMOD.Sound,System.Single)">
+            <summary>
+            Adds a fade-out point for the specified sound.
+            </summary>
+            <param name="sound">The sound to add a fade-out to</param>
+            <param name="seconds">The duration of the fade-out.</param>
+            <remarks>Fades are only triggered when an emitter respects them. E.G: when calling <c>FMOD_CustomEmitter.Stop(STOP_MODE.ALLOWFADEOUT)</c>.</remarks>
+        </member>
+        <member name="M:Nautilus.Extensions.FModExtensions.AddFadeOut(FMOD.Channel,System.Single,System.UInt64@)">
+            <summary>
+            Adds a fade-out point for the specified channel.
+            </summary>
+            <param name="channel">The channel to add a fade-out to</param>
+            <param name="seconds">The duration of the fade-out. The fade-out starts at the current time.</param>
+            <param name="dspClock">The DSP clock at the point where the fade was added.<br/>
+            DSP clock consists of 48_000 ticks per second. For more information, please refer to the <see href="https://documentation.help/fmod-studio-api/FMOD_Channel_GetDSPClock.html">FMOD docs</see>.</param>
+            <remarks>This method only applies the fade-out one time. If you want the fade to stay everytime the sound is played, consider using <see cref="M:Nautilus.Extensions.FModExtensions.AddFadeOut(FMOD.Sound,System.Single)"/>.</remarks>
+        </member>
         <member name="T:Nautilus.Extensions.GameObjectExtensions">
             <summary>
             Contains extension methods for Unity objects.
@@ -3482,6 +3494,19 @@
             <param name="id">The emitter's ID, can be retrieved by calling <c>object.GetInstanceID()</c>.</param>
             <param name="channel">Outputs the <see cref="T:FMOD.Channel"/>.</param>
             <returns>True if found, otherwise false.</returns>
+        </member>
+        <member name="M:Nautilus.Handlers.CustomSoundHandler.AttachChannelToGameObject(FMOD.Channel,UnityEngine.Transform)">
+            <summary>
+            Attaches the specified channel to the given transform. This results in the sound position following the <paramref name="transform"/>.
+            </summary>
+            <param name="channel">The channel to attach.</param>
+            <param name="transform">The transform which the channel will follow.</param>
+        </member>
+        <member name="M:Nautilus.Handlers.CustomSoundHandler.DetachChannelFromGameObject(FMOD.Channel)">
+            <summary>
+            Detaches the specified channel from any game object.
+            </summary>
+            <param name="channel">The channel to detach.</param>
         </member>
         <member name="T:Nautilus.Handlers.EnumBuilder`1">
             <summary>
@@ -7084,6 +7109,13 @@
             Or it can remove entire tabs at once, removing the tab and all the recipes it contained in one go.
             </summary>
         </member>
+        <member name="M:Nautilus.Patchers.CraftTreePatcher.CopyCraftNode(TreeNode)">
+            <summary>
+            Copy the specified node and it's inner nodes recursively.
+            </summary>
+            <param name="treeNode">The node to begin this operation on. Can be used on any node.</param>
+            <returns>A complete copy of the passed node.</returns>
+        </member>
         <member name="F:Nautilus.Patchers.ItemActionPatcher.CustomMiddleClickItemAction">
             <summary>
             A constant <see cref="T:ItemAction"/> value to represent a custom middle click item action
@@ -7829,11 +7861,91 @@
             <summary>
             Sets the <see cref="P:UnityEngine.Material.color"/> property on all materials.
             </summary>
-            <param name="color"></param>
+            <param name="color">The new color to be used.</param>
         </member>
         <member name="M:Nautilus.Utility.MaterialModifiers.ColorModifier.EditMaterial(UnityEngine.Material,UnityEngine.Renderer,System.Int32,Nautilus.Utility.MaterialUtils.MaterialType)">
             <summary>
             Applies the color changes to the material.
+            </summary>
+        </member>
+        <member name="T:Nautilus.Utility.MaterialModifiers.DoubleSidedModifier">
+            <summary>
+            A material modifier that changes materials of the specified type to be double-sided.
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.DoubleSidedModifier.#ctor(Nautilus.Utility.MaterialUtils.MaterialType[])">
+            <summary>
+            Changes all materials of the types defined in <paramref name="typesToAffect"/> to be double-sided.
+            </summary>
+            <param name="typesToAffect">Only materials with these types will be affected.</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.DoubleSidedModifier.EditMaterial(UnityEngine.Material,UnityEngine.Renderer,System.Int32,Nautilus.Utility.MaterialUtils.MaterialType)">
+            <summary>
+            Applies changes to the specified material.
+            </summary>
+        </member>
+        <member name="T:Nautilus.Utility.MaterialModifiers.FresnelModifier">
+            <summary>
+            A material modifier that changes the '_Fresnel' property of all materials.
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.FresnelModifier.#ctor(System.Single)">
+            <summary>
+            Changes the fresnel of all materials based on the '<paramref name="fresnel"/>' parameter.
+            </summary>
+            <param name="fresnel">This factor determines how much the reflection intensity changes based on the angle of incidence.</param>
+            <remarks>
+            Example values:
+            <list type="bullet">
+            <item>0.00: no fresnel; uniform reflection intensity regardless of view direction.</item>
+            <item>0.25: average fresnel; edges are shinier.</item>
+            <item>0.70: high fresnel; ideal for transparent membranes (ghost leviathans use this value).</item>
+            <item>1.00: full fresnel. Only geometry at a 90° angle is shiny, which results in essentially no reflections.</item>
+            </list></remarks>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.FresnelModifier.EditMaterial(UnityEngine.Material,UnityEngine.Renderer,System.Int32,Nautilus.Utility.MaterialUtils.MaterialType)">
+            <summary>
+            Applies changes to the specified material.
+            </summary>
+        </member>
+        <member name="T:Nautilus.Utility.MaterialModifiers.GlowStrengthNightModifier">
+            <summary>
+            A material modifier that changes the glow strength of materials with options related to the time of day.
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.GlowStrengthNightModifier.#ctor(System.Single)">
+            <summary>
+            Changes the glow strength of the materials when rendered at nighttime.
+            </summary>
+            <param name="nightGlowStrength">New nighttime glows strength. Corresponds to the '_GlowStrengthNight' property.</param>
+            <remarks>Default glow strength values are 1.</remarks>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.GlowStrengthNightModifier.#ctor(System.Single,System.Single)">
+            <summary>
+            Changes the glow strength of the materials when rendered at daytime and nighttime, individually.
+            </summary>
+            <param name="nightGlowStrength">Nighttime glow strength. Corresponds to the '_GlowStrengthNight' property.</param>
+            <param name="dayGlowStrength">Daytime glow strength. Corresponds to the '_GlowStrength' property.</param>
+            <remarks>These two properties do not interfere with each other, aside from at "dawn" and "dusk" when a mix of the two is used.</remarks>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.GlowStrengthNightModifier.EditMaterial(UnityEngine.Material,UnityEngine.Renderer,System.Int32,Nautilus.Utility.MaterialUtils.MaterialType)">
+            <summary>
+            Applies changes to the specified material.
+            </summary>
+        </member>
+        <member name="T:Nautilus.Utility.MaterialModifiers.IgnoreParticleSystemsModifier">
+            <summary>
+            A simple material modifier that prevents materials on ParticleSystems from being converted to MarmosetUBER. 
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.IgnoreParticleSystemsModifier.BlockShaderConversion(UnityEngine.Material,UnityEngine.Renderer,Nautilus.Utility.MaterialUtils.MaterialType)">
+            <summary>
+            Returns true if the given <see cref="T:UnityEngine.Renderer"/> is a <see cref="T:UnityEngine.ParticleSystemRenderer"/>.
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.IgnoreParticleSystemsModifier.EditMaterial(UnityEngine.Material,UnityEngine.Renderer,System.Int32,Nautilus.Utility.MaterialUtils.MaterialType)">
+            <summary>
+            Applies changes to the specified material.
             </summary>
         </member>
         <member name="T:Nautilus.Utility.MaterialModifiers.MaterialModifier">
@@ -7860,6 +7972,38 @@
             <param name="materialType">The type of material that this can be expected to be. Determined in <see cref="M:Nautilus.Utility.MaterialUtils.ApplySNShaders(UnityEngine.GameObject,System.Single,System.Single,System.Single,Nautilus.Utility.MaterialModifiers.MaterialModifier[])"/> based on specific keywords.</param>
             <returns></returns>
         </member>
+        <member name="T:Nautilus.Utility.MaterialModifiers.WavingEffectModifier">
+            <summary>
+            A material modifier that enables a "waving" effect on all materials, commonly used for plants.
+            </summary>
+        </member>
+        <member name="P:Nautilus.Utility.MaterialModifiers.WavingEffectModifier.Scale">
+            <summary>
+            The scale of the waving effect. X, Y and Z values refer to respective directions while W refers to "rustling".
+            </summary>
+        </member>
+        <member name="P:Nautilus.Utility.MaterialModifiers.WavingEffectModifier.Frequency">
+            <summary>
+            The frequency of the waving effect. X, Y and Z values refer to respective directions while W refers to "rustling".
+            </summary>
+        </member>
+        <member name="P:Nautilus.Utility.MaterialModifiers.WavingEffectModifier.Speed">
+            <summary>
+            The speed of the waving effect. The X value refers to speed while the Y value refers to rustling speed.
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.WavingEffectModifier.#ctor(System.Single)">
+            <summary>
+            Creates a <see cref="T:Nautilus.Utility.MaterialModifiers.WavingEffectModifier"/> that enables the plant waving effect on all materials.
+            </summary>
+            <param name="waveUpMin">Also referred to as the "influence cutoff y". Range is 0-1. Higher values tend to lead
+            to higher intensities of the waving effect towards the "base" of the plant.</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialModifiers.WavingEffectModifier.EditMaterial(UnityEngine.Material,UnityEngine.Renderer,System.Int32,Nautilus.Utility.MaterialUtils.MaterialType)">
+            <summary>
+            Applies changes to the specified material.
+            </summary>
+        </member>
         <member name="T:Nautilus.Utility.MaterialUtils">
             <summary>
             Utilities related to Materials and Shaders.
@@ -7868,6 +8012,26 @@
         <member name="P:Nautilus.Utility.MaterialUtils.IsReady">
             <summary>
             Only returns true once all relevant materials/shaders have been loaded by the MaterialUtils class and are safe to be used.
+            </summary>
+        </member>
+        <member name="P:Nautilus.Utility.MaterialUtils.GlassMaterial">
+            <summary>
+            Gets the basic glass material
+            </summary>
+        </member>
+        <member name="P:Nautilus.Utility.MaterialUtils.ExteriorGlassMaterial">
+            <summary>
+            Gets the material for the outside of glass, such as for base windows
+            </summary>
+        </member>
+        <member name="P:Nautilus.Utility.MaterialUtils.InteriorGlassMaterial">
+            <summary>
+            Gets the material for the inside of glass, such as the inside of the Cyclops windshield
+            </summary>
+        </member>
+        <member name="P:Nautilus.Utility.MaterialUtils.ShinyGlassMaterial">
+            <summary>
+            Gets a shiny glass material
             </summary>
         </member>
         <member name="T:Nautilus.Utility.MaterialUtils.Shaders">
@@ -7989,6 +8153,11 @@
             Gets the material used by unfinished constructions.
             </summary>
         </member>
+        <member name="P:Nautilus.Utility.MaterialUtils.HolographicUIMaterial">
+            <summary>
+            Gets the material used by the UI in the Cyclops
+            </summary>
+        </member>
         <member name="T:Nautilus.Utility.ModMessages.BasicModMessageReader">
             <summary>
             Basic implementation of the abstract <see cref="T:Nautilus.Utility.ModMessages.ModMessageReader"/> that runs an action when a message with the given subject is received.
@@ -8073,6 +8242,12 @@
             <param name="recipient">The address of the <see cref="T:Nautilus.Utility.ModMessages.ModInbox"/> that the message will go to. In C# terms, this is analogous to the class name.</param>
             <param name="subject">The subject of the message. Determines the purpose of a message. In C# terms, this is analogous to the method name.</param>
             <param name="contents">Any arbitrary data sent through the message. Optional. In C# terms, this is analogous to the method's parameters.</param>
+        </member>
+        <member name="M:Nautilus.Utility.ModMessages.ModMessage.ToString">
+            <summary>
+            Returns the message data represented as a string. 
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Nautilus.Utility.ModMessages.ModMessageReader">
             <summary>
@@ -8392,6 +8567,18 @@
             <para>This should be a child of <paramref name="prefab"/>, and NOT the root. If it is the same value as <paramref name="prefab"/>, you have done something wrong!</para></param>
             <returns>A reference to the added <see cref="T:Constructable"/> instance.</returns>
         </member>
+        <member name="M:Nautilus.Utility.PrefabUtils.AddConstructable``1(UnityEngine.GameObject,TechType,Nautilus.Utility.ConstructableFlags,UnityEngine.GameObject)">
+            <summary>
+            Adds and configures the <see cref="T:Constructable"/> component or a derived type on the specified prefab.
+            </summary>
+            <param name="prefab">The prefab to operate on.</param>
+            <param name="techType">The tech type associated with the specified prefab.</param>
+            <param name="constructableFlags">A bitmask comprised of one or more <see cref="T:Nautilus.Utility.ConstructableFlags"/> that specify how the prefab should be treated during placement.</param>
+            <param name="model"><para>The child GameObject that holds all the renderers that are used for the ghost model.
+            If assigned, this parameter will control the <see cref="F:Constructable.model"/> field. This field MUST BE ASSIGNED A VALUE to avoid errors when building!</para>
+            <para>This should be a child of <paramref name="prefab"/>, and NOT the root. If it is the same value as <paramref name="prefab"/>, you have done something wrong!</para></param>
+            <returns>A reference to the added <see cref="T:Constructable"/> instance.</returns>
+        </member>
         <member name="M:Nautilus.Utility.PrefabUtils.AddVFXFabricating(UnityEngine.GameObject,System.String,System.Single,System.Single,UnityEngine.Vector3,System.Single,UnityEngine.Vector3)">
             <summary>
             Adds the <see cref="T:VFXFabricating"/> component onto the child found by <paramref name="pathToModel"/>. 
@@ -8423,6 +8610,20 @@
             <param name="preventDeconstructionIfNotEmpty">If true, you cannot destroy this prefab unless all of its storage containers are empty.</param>
             <returns>A reference to the added <see cref="T:StorageContainer"/> instance.</returns>
         </member>
+        <member name="M:Nautilus.Utility.PrefabUtils.AddStorageContainer``1(UnityEngine.GameObject,System.String,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            <para>Adds a component of the type <see cref="T:StorageContainer"/> or a derived class to the given prefab, for basic use cases with lockers and such.</para>
+            <para>Due to how this component needs to be initialized, this method will disable the object and re-enable it after the component is added (assuming it was already active). This all happens within the same frame and will not be seen.</para>
+            </summary>
+            <param name="prefabRoot">The prefab that the component is added onto. This does not necessarily NEED to be the "prefab root". You can set it to a
+            child collider if you want a smaller area of interaction or to have multiple storage containers on one prefab.</param>
+            <param name="storageRootName">The name of the object that internally holds all of the items.</param>
+            <param name="storageRootClassId">A unique string for the <see cref="T:ChildObjectIdentifier"/> component.</param>
+            <param name="width">The width of this container's face.</param>
+            <param name="height">The height of this container's interface.</param>
+            <param name="preventDeconstructionIfNotEmpty">If true, you cannot destroy this prefab unless all of its storage containers are empty.</param>
+            <returns>A reference to the added <see cref="T:StorageContainer"/> instance.</returns>
+        </member>
         <member name="M:Nautilus.Utility.PrefabUtils.AddEnergyMixin(UnityEngine.GameObject,System.String,TechType,System.Collections.Generic.List{TechType},EnergyMixin.BatteryModels[],System.String)">
             <summary>
             <para>Adds the <see cref="T:EnergyMixin"/> component to an object that is expected to have a slot for one battery or other power source.</para>
@@ -8443,6 +8644,19 @@
             <param name="gameObject">the game object to add the resource tracker component to.</param>
             <param name="categoryTechType">TechType of the category in which this object will be displayed under in the Scanner Room.</param>
             <returns>A reference to the added <see cref="T:ResourceTracker"/> instance.</returns>
+        </member>
+        <member name="M:Nautilus.Utility.PrefabUtils.AddWorldForces(UnityEngine.GameObject,System.Single,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Adds the World Forces component to the prefab, which is required for proper physics handling.
+            </summary>
+            <param name="prefab">The prefab to modify.</param>
+            <param name="mass">The mass of the new rigidbody (only if a rigidbody is being added).
+            If the prefab already has a Rigidbody, this has NO EFFECT.</param>
+            <param name="underwaterGravity">The underwater gravity in m/s/s.</param>
+            <param name="underwaterDrag">The underwater drag coefficient (using Unity's arbitrary unit for drag).</param>
+            <param name="isKinematic">If true, the Rigidbody will be kinematic when spawned and therefore immovable.
+            Note that if the player picks up an item and drops it, its kinematic state will be reset to false.</param>
+            <returns>A reference to the newly added (or previously existing) <see cref="T:WorldForces"/> component.</returns>
         </member>
         <member name="T:Nautilus.Utility.ReflectionHelper">
             <summary>
@@ -8817,6 +9031,46 @@
             <returns>
             The collection of techtypes allowed in the container.
             </returns>
+        </member>
+        <member name="T:Nautilus.Utility.ThunderkitUtilities.ApplyMaterialModification">
+            <summary>
+            A MonoBehaviour component designed for Thunderkit which allows for user-friendly modification of material properties
+            on models within modded prefabs, directly from the Unity Editor. Can act either standalone or as a part of custom systems.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Utility.ThunderkitUtilities.ApplyMaterialModification.applyOnStart">
+            <summary>
+            If true, this material modification will be applied in Start. In most cases, this should be left false in favor
+            of custom implementation during prefab creation, because Start is called a frame late (meaning this change is visible to users).
+            </summary>
+        </member>
+        <member name="F:Nautilus.Utility.ThunderkitUtilities.ApplyMaterialModification.renderer">
+            <summary>
+            Defines the renderer that this material modification is applied to.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Utility.ThunderkitUtilities.ApplyMaterialModification.materialFilter">
+            <summary>
+            If this has a length greater than zero, only materials with the same name as the materials in this array will be modified.
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.ThunderkitUtilities.ApplyMaterialModification.ApplyMaterialModifications">
+            <summary>
+            Applies all material modifications that are defined in this instance.
+            </summary>
+            <remarks>This is automatically called in the behaviour's <c>Start()</c> method if <see cref="F:Nautilus.Utility.ThunderkitUtilities.ApplyMaterialModification.applyOnStart"/> is true,
+            but it is recommended to instead implement your own system to apply this during prefab creation to prevent incorrect materials in the first frame.</remarks>
+            <exception cref="T:System.NullReferenceException"></exception>
+        </member>
+        <member name="T:Nautilus.Utility.ThunderkitUtilities.ApplySNLayer.LayerName">
+            <summary>
+            These are taken from <see cref="T:LayerID"/>
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.ThunderkitUtilities.ApplySNMaterial.AssignMaterials">
+            <summary>
+            Applies the set material using the specified <see cref="T:Nautilus.Utility.ThunderkitUtilities.MaterialSetMode"/>
+            </summary>
         </member>
         <member name="T:Nautilus.Utility.WorldEntityInfoUtils">
             <summary>

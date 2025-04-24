@@ -76,6 +76,7 @@ namespace Comforts
         {
             // Bathroom
             Shower.Register();
+            RoundSink.Register();
 
             // Power
             Jukebox.Register();

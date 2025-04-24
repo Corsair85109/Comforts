@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\prefabs\\bathroom\\shower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\bathroom\\shower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\prefabs\\decorations\\lavalamp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\decorations\\lavalamp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\prefabs\\bathroom\\roundsink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\bathroom\\roundsink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,32 +42,49 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Shower.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Bathroom\\Shower.cs",
-              "RelativeDocumentMoniker": "Prefabs\\Bathroom\\Shower.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Bathroom\\Shower.cs",
-              "RelativeToolTip": "Prefabs\\Bathroom\\Shower.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAACIAAAAkAAAAAAAAAA==",
+              "Title": "ComfortsCustomPrefab.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeDocumentMoniker": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeToolTip": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T02:02:29.275Z",
+              "WhenOpened": "2025-04-24T12:04:21.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LavaLamp.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Decorations\\LavaLamp.cs",
-              "RelativeDocumentMoniker": "Prefabs\\Decorations\\LavaLamp.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Decorations\\LavaLamp.cs",
-              "RelativeToolTip": "Prefabs\\Decorations\\LavaLamp.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "RoundSink.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Bathroom\\RoundSink.cs",
+              "RelativeDocumentMoniker": "Prefabs\\Bathroom\\RoundSink.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Bathroom\\RoundSink.cs",
+              "RelativeToolTip": "Prefabs\\Bathroom\\RoundSink.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T02:02:27.744Z",
+              "WhenOpened": "2025-04-24T11:52:38.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComfortsPlugin.cs",
+              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
+              "RelativeDocumentMoniker": "ComfortsPlugin.cs",
+              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
+              "RelativeToolTip": "ComfortsPlugin.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwE4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T11:34:08.169Z",
               "EditorCaption": ""
             }
           ]

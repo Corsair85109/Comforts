@@ -113,6 +113,7 @@
     <Compile Include="Monobehaviors\MusicChipFMODEmitter.cs" />
     <Compile Include="Patches\MusicChipPatch.cs" />
     <Compile Include="PirateChecker.cs" />
+    <Compile Include="Prefabs\Bathroom\RoundSink.cs" />
     <Compile Include="Prefabs\Bathroom\Shower.cs" />
     <Compile Include="Prefabs\ComfortsCustomPrefab.cs" />
     <Compile Include="Prefabs\Decorations\LavaLamp.cs" />
