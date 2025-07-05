@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstLoad: 1
   ShowOnStartup: 1
-  GameExecutable: Subnautica.exe
-  GamePath: C:\Program Files (x86)\Steam\steamapps\common\Subnautica
-  Is64Bit: 1
+  GameExecutable: 
+  GamePath: 
+  Is64Bit: 0
   DateTimeFormat: HH:mm:ss:fff
   CreatedDateFormat: MMM/dd HH:mm:ss
   ShowLogWindow: 1
@@ -31,5 +31,4 @@ MonoBehaviour:
   SelectedManifest: {fileID: 0}
   QuickAccessPipelines: []
   QuickAccessManifests: []
-  ImportConfiguration: {fileID: 11400000, guid: 8d71e51001ec7bb42962bded6312cac8,
-    type: 2}
+  ImportConfiguration: {fileID: 0}
