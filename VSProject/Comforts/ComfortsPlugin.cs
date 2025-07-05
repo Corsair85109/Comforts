@@ -4,13 +4,17 @@ using Comforts.Audio;
 using Comforts.Commands;
 using Comforts.Patches;
 using Comforts.Prefabs.Bathroom;
+using Comforts.Prefabs.Bedroom.Beds;
 using Comforts.Prefabs.Decorations;
+using Comforts.Prefabs.Decorations.Curtains;
 using Comforts.Prefabs.Kitchen;
 using Comforts.Prefabs.Power;
 using Comforts.Utility;
+using Comforts.Utility.References;
 using HarmonyLib;
 using Nautilus.Handlers;
 using Nautilus.Utility;
+using System.Collections;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
@@ -31,6 +35,8 @@ namespace Comforts
         public static AssetBundle theUltimateBundleOfAssets;
         public static SpriteAtlas epicAtlasOfSprites;
         public static string modFolder;
+
+        public static ComfortsConfig ModConfig { get; } = OptionsPanelHandler.RegisterModOptions<ComfortsConfig>();
 
         private void Awake()
         {
@@ -70,6 +76,10 @@ namespace Comforts
 
 
             Utility.Logger.Log($"{PluginName} version {VersionString} is loaded.");
+
+
+            // Get all references
+            GetAllReferences();
         }
 
         private void RegisterAllPrefabs()
@@ -91,6 +101,13 @@ namespace Comforts
 
             // Decorations
             LavaLamp.Register();
+            RedCurtain.Register();
+            BlueCurtain.Register();
+            GreenCurtain.Register();
+            Beanbag.Register();
+
+            // Bedroom
+            BlueBed.Register();
         }
 
         private void RegisterEncies()
@@ -98,6 +115,12 @@ namespace Comforts
             //PDAEncyclopedia.mapping
             PDAHandler.AddEncyclopediaEntry("IonFusionReactorEncy", "Tech/Habitats/Comforts", Language.main.Get("IonFusionReactor"), Language.main.Get("IonFusionReactorEncyDesc"), theUltimateBundleOfAssets.LoadAsset<Texture2D>("IonFusionReactorDatabank"));
             StoryGoalHandler.RegisterItemGoal("IonFusionReactorEncy", Story.GoalType.Encyclopedia, TechType.PrecursorIonPowerCell, 60f);
+        }
+
+        private void GetAllReferences()
+        {
+            UWE.CoroutineHost.StartCoroutine(BenchReferenceManager.EnsureBenchReferenceExists());
+            UWE.CoroutineHost.StartCoroutine(BedReferenceManager.EnsureBedReferencesExist());
         }
     }
 }

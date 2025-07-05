@@ -7,34 +7,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using static HandReticle;
 
 namespace Comforts.Monobehaviors.Handtargets
 {
     internal class IonFabricator : HandTarget, IHandTarget
     {
-        public FMOD_CustomLoopingEmitter soundEmitter;
-        public PowerConsumer powerConsumer;
+        [SerializeField]
+        private FMOD_CustomLoopingEmitter soundEmitter;
+        [SerializeField]
+        private PowerConsumer powerConsumer;
 
-        public GameObject ionCube;
-        public GameObject beam1;
-        public GameObject beam2;
-        public GameObject beam3;
-        public GameObject beam4;
-        public GameObject beam5;
-        public GameObject beam6;
-        public GameObject beam7;
-        public GameObject beam8;
-        public GameObject beam9;
-        public GameObject beam10;
-        public GameObject beam11;
-        public GameObject beam12;
-        public GameObject beam13;
-        public GameObject beam14;
-        public GameObject beam15;
-        public GameObject beam16;
+        [SerializeField]
+        private GameObject ionCube;
 
-        public Color beamColour;
+        [SerializeField]
+        private GameObject beam1;
+        [SerializeField]
+        private GameObject beam2;
+        [SerializeField]
+        private GameObject beam3;
+        [SerializeField]
+        private GameObject beam4;
+        [SerializeField]
+        private GameObject beam5;
+        [SerializeField]
+        private GameObject beam6;
+        [SerializeField]
+        private GameObject beam7;
+        [SerializeField]
+        private GameObject beam8;
+        [SerializeField]
+        private GameObject beam9;
+        [SerializeField]
+        private GameObject beam10;
+        [SerializeField]
+        private GameObject beam11;
+        [SerializeField]
+        private GameObject beam12;
+        [SerializeField]
+        private GameObject beam13;
+        [SerializeField]
+        private GameObject beam14;
+        [SerializeField]
+        private GameObject beam15;
+        [SerializeField]
+        private GameObject beam16;
+
+        [SerializeField]
+        private Color beamColour;
 
         private float progressPercentage = 0f;
         private float progress = 0f;
@@ -42,10 +64,18 @@ namespace Comforts.Monobehaviors.Handtargets
         private bool hasCraftedItem = false;
         private bool enoughPower = false;
 
+        private bool requirePower = true;
+
+        private int frameCounter = 0;
+
+        [SerializeField]
         private readonly TechType craftingTechType = TechType.PrecursorIonCrystal;
-        private readonly float timeToCraft = 60f;
-        private readonly float energyCost = 1000f;
-        private readonly float powerEndThreshhold = 100f;
+        [SerializeField]
+        private float timeToCraft = 60f;
+        [SerializeField]
+        private float energyCost = 1000f;
+        [SerializeField]
+        private float powerEndThreshhold = 100f;
         
         private bool pickingUp = false;
 
@@ -60,8 +90,9 @@ namespace Comforts.Monobehaviors.Handtargets
 
         private bool beamsSet = false;
 
-        private float inactiveIllum = 1.4f;
-        private float activeIllum = 3f;
+        [SerializeField]
+        private GameObject light;
+
 
         private void StartCrafting()
         {
@@ -72,40 +103,59 @@ namespace Comforts.Monobehaviors.Handtargets
             isCrafting = true;
         }
 
-        private void EndCrafting()
+        private void EndCrafting(bool item)
         {
             isCrafting = false;
 
-            hasCraftedItem = true;
+            hasCraftedItem = item;
         }
-
 
         public void Update()
         {
+            // check gamemode every 20th frame
+            frameCounter++;
+            if (frameCounter >= 20)
+            {
+                requirePower = GameModeUtils.RequiresPower();
+                frameCounter = 0;
+            }
+
+            float powerToConsume = energyCost / timeToCraft * Time.deltaTime;
+
+            if (requirePower)
+            {
+                if (enoughPower && powerConsumer.powerRelay.GetPower() < powerToConsume + powerEndThreshhold)
+                {
+
+                    enoughPower = false;
+                    progress = 0f;
+                }
+                else if (!enoughPower && powerConsumer.powerRelay.GetPower() > powerToConsume + powerEndThreshhold * 2)
+                {
+                    enoughPower = true;
+                }
+            }
+            else
+            {
+                enoughPower = true;
+            }
+
             // control crafting
             if (isCrafting)
             {
                 if (progress >= timeToCraft)
                 {
-                    EndCrafting();
+                    EndCrafting(true);
                 }
                 else
                 {
-                    float powerToConsume = energyCost / timeToCraft * Time.deltaTime;
-                    if (powerConsumer.powerRelay.GetPower() >= powerToConsume + powerEndThreshhold || !GameModeUtils.RequiresPower())
+                    if (enoughPower)
                     {
-                        enoughPower = true;
-                        powerConsumer.ConsumePower(powerToConsume, out float consumed);
+                        powerConsumer.ConsumePower(powerToConsume, out _);
                         progress += Time.deltaTime;
-                    }
-                    else
-                    {
-                        enoughPower = false;
                     }
                     progressPercentage = progress / timeToCraft * 100;
                 }
-
-
             }
 
             // control visuals
@@ -114,11 +164,13 @@ namespace Comforts.Monobehaviors.Handtargets
 
             if (isCrafting && !beamsSet)
             {
-                SetEnergyBeams(isCrafting);
+                SetEnergyBeams(true);
+                light.SetActive(true);
             }
-            else if (!isCrafting && beamsSet)
+            if (!isCrafting && beamsSet)
             {
-                SetEnergyBeams(isCrafting);
+                SetEnergyBeams(false);
+                light.SetActive(false);
             }
         }
 
@@ -126,6 +178,7 @@ namespace Comforts.Monobehaviors.Handtargets
         {
             string text = craftingTechType.AsString(false);
             string text2 = string.Empty;
+            GameInput.Button button = GameInput.Button.LeftHand;
 
             if (hasCraftedItem)
             {
@@ -133,19 +186,32 @@ namespace Comforts.Monobehaviors.Handtargets
             }
             else if (isCrafting)
             {
-                if (!enoughPower)
+                if (enoughPower)
                 {
-                    text = Language.main.Get("IonFabricatorNoPower");
+                    text = Language.main.Get("IonFabricatorProgress");
+                    HandReticle.main.SetProgress(progressPercentage / 100);
+                    HandReticle.main.SetIcon(HandReticle.IconType.Progress, 1.5f);
+                    button = GameInput.Button.None;
                 }
-                HandReticle.main.SetProgress(progressPercentage / 100);
-                HandReticle.main.SetIcon(HandReticle.IconType.Progress, 1.5f);
+                else
+                {
+                    text = Language.main.Get("IonFabricatorStop");
+                    text2 = Language.main.Get("IonFabricatorNoPower");
+                    HandReticle.main.SetIcon(HandReticle.IconType.Hand, 1f);
+                }
+            }
+            else if (!enoughPower)
+            {
+                text = Language.main.Get("IonFabricatorNoPower");
+                button = GameInput.Button.None;
             }
             else
             {
                 text = Language.main.Get("IonFabricatorStart");
                 HandReticle.main.SetIcon(HandReticle.IconType.Hand, 1f);
             }
-            HandReticle.main.SetText(HandReticle.TextType.Hand, text, true, GameInput.Button.LeftHand);
+
+            HandReticle.main.SetText(HandReticle.TextType.Hand, text, true, button);
             HandReticle.main.SetText(HandReticle.TextType.HandSubscript, text2, true, GameInput.Button.None);
         }
         public void OnHandClick(GUIHand hand)
@@ -154,9 +220,13 @@ namespace Comforts.Monobehaviors.Handtargets
             {
                 TryPickup();
             }
-            else if (!isCrafting)
+            else if (!isCrafting && enoughPower)
             {
                 StartCrafting();
+            }
+            else if (isCrafting && !enoughPower)
+            {
+                EndCrafting(false);
             }
         }
 
@@ -185,25 +255,19 @@ namespace Comforts.Monobehaviors.Handtargets
             six = beam6.EnsureComponent<EnergyBeamVFX>();
             seven = beam7.EnsureComponent<EnergyBeamVFX>();
             eight = beam8.EnsureComponent<EnergyBeamVFX>();
+
+            requirePower = GameModeUtils.RequiresPower();
         }
 
         private void SetEnergyBeams(bool active)
         {
-            Utility.Logger.Log("Setting grav beam 1");
             one.SetGravityBeam(active ? beam13.transform : null, beamColour);
-            Utility.Logger.Log("Setting grav beam 2");
             two.SetGravityBeam(active ? beam14.transform : null, beamColour);
-            Utility.Logger.Log("Setting grav beam 3");
             three.SetGravityBeam(active? beam15.transform: null, beamColour);
-            Utility.Logger.Log("Setting grav beam 4");
             four.SetGravityBeam(active ? beam16.transform : null, beamColour);
-            Utility.Logger.Log("Setting grav beam 5");
             five.SetGravityBeam(active ? beam9.transform : null, beamColour);
-            Utility.Logger.Log("Setting grav beam 6");
             six.SetGravityBeam(active ? beam10.transform : null, beamColour);
-            Utility.Logger.Log("Setting grav beam 7");
             seven.SetGravityBeam(active ? beam11.transform : null, beamColour);
-            Utility.Logger.Log("Setting grav beam 8");
             eight.SetGravityBeam(active ? beam12.transform : null, beamColour);
 
             beamsSet = active;

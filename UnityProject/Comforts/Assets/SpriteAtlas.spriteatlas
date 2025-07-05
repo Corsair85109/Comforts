@@ -37,14 +37,24 @@ SpriteAtlas:
     - {fileID: 21300000, guid: 4f8809af34b339d4b9d5620724f785bf, type: 3}
     - {fileID: 21300000, guid: ec60ef4ded2e8ff45b5c003a6608c06f, type: 3}
     - {fileID: 21300000, guid: f9a3d1d7621d9b64ca6827a502c6fa4a, type: 3}
-    - {fileID: 2800000, guid: d27342d85b5230a48a1126057b06d3cb, type: 3}
+    - {fileID: 21300000, guid: d27342d85b5230a48a1126057b06d3cb, type: 3}
+    - {fileID: 21300000, guid: 4679a90ae6fe88e4ca8923a4caadfdfc, type: 3}
+    - {fileID: 21300000, guid: 8f957363adfb73848954cd9c18dae7ca, type: 3}
+    - {fileID: 21300000, guid: 56b0ce35c4d4c2b439f995b6557d7438, type: 3}
+    - {fileID: 21300000, guid: ff256baaacab27e4f9628ed54929d90d, type: 3}
+    - {fileID: 2800000, guid: acf4dfd781e5a9546aaed261d0be4fb8, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: dbcb22b01109c4e489fe053854a44d83, type: 3}
   - {fileID: 21300000, guid: 003570b25e8176e4f9d7ca9c3cb665da, type: 3}
+  - {fileID: 21300000, guid: 8f957363adfb73848954cd9c18dae7ca, type: 3}
+  - {fileID: 21300000, guid: 56b0ce35c4d4c2b439f995b6557d7438, type: 3}
   - {fileID: 21300000, guid: f9a3d1d7621d9b64ca6827a502c6fa4a, type: 3}
+  - {fileID: 21300000, guid: acf4dfd781e5a9546aaed261d0be4fb8, type: 3}
   - {fileID: 21300000, guid: d27342d85b5230a48a1126057b06d3cb, type: 3}
+  - {fileID: 21300000, guid: 4679a90ae6fe88e4ca8923a4caadfdfc, type: 3}
+  - {fileID: 21300000, guid: ff256baaacab27e4f9628ed54929d90d, type: 3}
   - {fileID: 21300000, guid: 3b12d47bbc0af8645b0e75aa51bf64d2, type: 3}
   - {fileID: 21300000, guid: 46088f8b32a16d4468756d58865e5a43, type: 3}
   - {fileID: 21300000, guid: ec60ef4ded2e8ff45b5c003a6608c06f, type: 3}
@@ -52,8 +62,13 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - ShowerSprite
   - SpeakerSprite
+  - BlueCurtainSprite
+  - GreenCurtainSprite
   - LavaLampSprite
+  - BlueBedSprite
   - RoundSinkSprite
+  - RedCurtainSprite
+  - BeanbagSprite
   - CookerSprite
   - JukeboxSprite
   - IonFusionReactorSprite
