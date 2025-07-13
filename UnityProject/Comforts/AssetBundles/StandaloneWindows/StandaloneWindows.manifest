@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 2330706177
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: comforts
+      Dependencies: {}

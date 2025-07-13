@@ -20,6 +20,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.U2D;
 using static TechStringCache;
+using Comforts.Saving;
 
 namespace Comforts
 {
@@ -35,6 +36,8 @@ namespace Comforts
         public static AssetBundle theUltimateBundleOfAssets;
         public static SpriteAtlas epicAtlasOfSprites;
         public static string modFolder;
+
+        public static SaveData save { get; set; } = SaveDataHandler.RegisterSaveDataCache<SaveData>();
 
         public static ComfortsConfig ModConfig { get; } = OptionsPanelHandler.RegisterModOptions<ComfortsConfig>();
 
@@ -73,7 +76,8 @@ namespace Comforts
             // Register pda entries
             RegisterEncies();
 
-
+            save.OnStartedSaving += SaveHandler.OnSaveStart;
+            save.OnFinishedLoading += SaveHandler.OnLoadFinish;
 
             Utility.Logger.Log($"{PluginName} version {VersionString} is loaded.");
 
@@ -94,6 +98,7 @@ namespace Comforts
             WallSpeaker.Register();
             IonFusionReactor.Register();
             MusicChip.Register();
+            FloorLocker.Register();
 
             // Kitchen
             Sink.Register();

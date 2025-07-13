@@ -42,7 +42,8 @@ SpriteAtlas:
     - {fileID: 21300000, guid: 8f957363adfb73848954cd9c18dae7ca, type: 3}
     - {fileID: 21300000, guid: 56b0ce35c4d4c2b439f995b6557d7438, type: 3}
     - {fileID: 21300000, guid: ff256baaacab27e4f9628ed54929d90d, type: 3}
-    - {fileID: 2800000, guid: acf4dfd781e5a9546aaed261d0be4fb8, type: 3}
+    - {fileID: 21300000, guid: acf4dfd781e5a9546aaed261d0be4fb8, type: 3}
+    - {fileID: 21300000, guid: 24fb7b4f14383234e90b6027357860c7, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -58,6 +59,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3b12d47bbc0af8645b0e75aa51bf64d2, type: 3}
   - {fileID: 21300000, guid: 46088f8b32a16d4468756d58865e5a43, type: 3}
   - {fileID: 21300000, guid: ec60ef4ded2e8ff45b5c003a6608c06f, type: 3}
+  - {fileID: 21300000, guid: 24fb7b4f14383234e90b6027357860c7, type: 3}
   - {fileID: 21300000, guid: 4f8809af34b339d4b9d5620724f785bf, type: 3}
   m_PackedSpriteNamesToIndex:
   - ShowerSprite
@@ -72,6 +74,7 @@ SpriteAtlas:
   - CookerSprite
   - JukeboxSprite
   - IonFusionReactorSprite
+  - FloorLockerSprite
   - SinkSprite
   m_Tag: SpriteAtlas
   m_IsVariant: 0
