@@ -119,6 +119,7 @@
     <Compile Include="Monobehaviors\Handtargets\LavaLampHandTarget.cs" />
     <Compile Include="Monobehaviors\Handtargets\IonFabricator.cs" />
     <Compile Include="Monobehaviors\Handtargets\JukeboxUIHandtargets.cs" />
+    <Compile Include="Monobehaviors\Handtargets\LightHandTarget.cs" />
     <Compile Include="Monobehaviors\Handtargets\ParticleSystemHandTarget.cs" />
     <Compile Include="Monobehaviors\HealPlayerInCollider.cs" />
     <Compile Include="Monobehaviors\MusicChipFMODEmitter.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Prefabs\Decorations\Beanbag.cs" />
     <Compile Include="Prefabs\Decorations\Curtains\GreenCurtain.cs" />
     <Compile Include="Prefabs\Decorations\Curtains\BlueCurtain.cs" />
+    <Compile Include="Prefabs\Decorations\Lamp.cs" />
     <Compile Include="Prefabs\Decorations\LavaLamp.cs" />
     <Compile Include="Prefabs\Decorations\Curtains\RedCurtain.cs" />
     <Compile Include="Prefabs\Kitchen\Cooker.cs" />

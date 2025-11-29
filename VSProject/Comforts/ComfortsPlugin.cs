@@ -110,6 +110,7 @@ namespace Comforts
             BlueCurtain.Register();
             GreenCurtain.Register();
             Beanbag.Register();
+            Lamp.Register();
 
             // Bedroom
             BlueBed.Register();
