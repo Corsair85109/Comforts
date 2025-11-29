@@ -21,9 +21,9 @@ namespace Comforts.Prefabs.Kitchen
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,
-                Ingredients = new List<CraftData.Ingredient>
+                Ingredients = new List<Ingredient>
                 {
-                    new CraftData.Ingredient(TechType.Titanium, 2)
+                    new Ingredient(TechType.Titanium, 2)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);

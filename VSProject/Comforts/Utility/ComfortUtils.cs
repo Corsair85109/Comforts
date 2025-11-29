@@ -88,7 +88,7 @@ namespace Comforts.Utility
                 Pickupable component = gameObject.GetComponent<Pickupable>();
                 if (component != null)
                 {
-                    Vector2int itemSize = CraftData.GetItemSize(component.GetTechType());
+                    Vector2int itemSize = TechData.GetItemSize(component.GetTechType());
                     if (inventory.HasRoomFor(itemSize.x, itemSize.y))
                     {
                         GameObject gameObject2 = Instantiate(gameObject);

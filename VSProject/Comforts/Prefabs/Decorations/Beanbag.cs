@@ -25,10 +25,10 @@ namespace Comforts.Prefabs.Decorations
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,
-                Ingredients = new List<CraftData.Ingredient>
+                Ingredients = new List<Ingredient>
                 {
-                    new CraftData.Ingredient(TechType.FiberMesh, 2),
-                    new CraftData.Ingredient(TechType.CoralChunk, 2)
+                    new Ingredient(TechType.FiberMesh, 2),
+                    new Ingredient(TechType.CoralChunk, 2)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);

@@ -25,9 +25,9 @@ namespace Comforts.Prefabs.Decorations.Curtains
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,
-                Ingredients = new List<CraftData.Ingredient>
+                Ingredients = new List<Ingredient>
                 {
-                    new CraftData.Ingredient(TechType.Titanium, 1)
+                    new Ingredient(TechType.Titanium, 1)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);

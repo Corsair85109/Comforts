@@ -151,7 +151,7 @@ namespace Comforts.Monobehaviors.Handtargets
             {
                 return;
             }
-            if (CraftData.GetCraftTime(techType, out duration))
+            if (TechData.GetCraftTime(techType, out duration))
             {
                 duration = Mathf.Max(spawnAnimationDelay + spawnAnimationDuration, duration);
             }

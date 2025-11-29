@@ -22,13 +22,13 @@ namespace Comforts.Prefabs.Power
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,
-                Ingredients = new List<CraftData.Ingredient>
+                Ingredients = new List<Ingredient>
                 {
-                    new CraftData.Ingredient(TechType.Titanium, 2),
-                    new CraftData.Ingredient(TechType.Lithium, 2),
-                    new CraftData.Ingredient(TechType.Kyanite, 4),
-                    new CraftData.Ingredient(TechType.AdvancedWiringKit, 4),
-                    new CraftData.Ingredient(TechType.PrecursorIonPowerCell, 4)
+                    new Ingredient(TechType.Titanium, 2),
+                    new Ingredient(TechType.Lithium, 2),
+                    new Ingredient(TechType.Kyanite, 4),
+                    new Ingredient(TechType.AdvancedWiringKit, 4),
+                    new Ingredient(TechType.PrecursorIonPowerCell, 4)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(10f);
