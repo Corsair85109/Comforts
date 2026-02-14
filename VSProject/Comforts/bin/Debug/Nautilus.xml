@@ -3723,6 +3723,12 @@
             </summary>
             <returns>A string whose value is the same as this instance.</returns>
         </member>
+        <member name="T:Nautilus.Handlers.OnEnumRegistered`1">
+            <summary>
+            Delegate used when a custom enum is registered via <see cref="M:Nautilus.Handlers.EnumHandler.AddEntry``1(System.String,System.Reflection.Assembly)"/>.
+            </summary>
+            <typeparam name="TEnum">The type of the enum to process.</typeparam>
+        </member>
         <member name="T:Nautilus.Handlers.EnumHandler">
             <summary>
             Class responsible to resolve anything related to adding custom enum objects.
@@ -3813,6 +3819,19 @@
             <typeparam name="TEnum">Type of the enum to search for.</typeparam>
             <returns><see langword="true"/> if the object was found; otherwise <see langword="false"/>.</returns>
         </member>
+        <member name="M:Nautilus.Handlers.EnumHandler.AddOnEnumRegistered``1(Nautilus.Handlers.OnEnumRegistered{``0})">
+            <summary>
+            Adds a callback that's executed every time a custom enum of a certain type is created.
+            </summary>
+            <param name="callback">The callback that will be executed.</param>
+            <typeparam name="TEnum">The type of the enum this callback is for.</typeparam>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumHandler.RemoveOnEnumRegistered``1(Nautilus.Handlers.OnEnumRegistered{``0})">
+            <summary>
+            Removes a callback that was previously added to the OnEnumRegistered event.
+            </summary>
+            <param name="callback">The callback to remove.</param>
+        </member>
         <member name="T:Nautilus.Handlers.EnumExtensions">
             <summary>
             Extensions to interact more with custom enum objects.
@@ -3844,6 +3863,126 @@
             <param name="useCircularIcon">If true, the 'splice 9' setting will be applied, allowing tall rectangular
             sprites (usually 2x23) to become circular.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.CreateInput(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String,System.String,UnityEngine.InputSystem.InputActionType)">
+            <summary>
+            Initializes the action input for this button.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="displayName">The display name of the button, can be anything. If null or empty, this will use the language line "Option{enumName}" instead.</param>
+            <param name="tooltip">The tooltip that's shown once the button is hovered in the Mod Input tab, can be anything. If null or empty, this will use the language line "OptionDesc_{enumName}" instead.</param>
+            <param name="language">The language for the display name and tooltip. Defaults to English.</param>
+            <param name="actionType">Determines the behavior with which an <see cref="T:UnityEngine.InputSystem.InputAction"/> triggers.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputActionType.html"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device,GameInput.BindingSet,System.String)">
+            <summary>
+            Sets the default bindings for this button.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="device">The device this binding is for.</param>
+            <param name="bindingSet">Whether this is the primary binding or the secondary binding.</param>
+            <param name="bindingPath">The binding path to bind this button to.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <remarks>By default, the binding will be bindable in the Mod Input tab. If you wish to make the button unbindable, consider using <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
+            <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.2/api/UnityEngine.InputSystem.InputControlPath.html"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device,System.String,System.String)">
+            <summary>
+            Sets the default bindings for this button.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="device">The device this binding is for.</param>
+            <param name="primaryBindingPath">The binding path to bind the primary hotkey of this button.</param>
+            <param name="secondaryBindingPath">The binding path to bind the secondary hotkey of this button. If null or empty, the button will have an empty secondary binding.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <remarks>By default, the binding will be bindable in the Mod Input tab. If you wish to make the button unbindable, consider using <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
+            <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.2/api/UnityEngine.InputSystem.InputControlPath.html"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithKeyboardBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String)">
+            <summary>
+            Sets the default bindings for keyboard controls for this button.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="primaryBindingPath">The binding path to bind the primary hotkey of this button.</param>
+            <param name="secondaryBindingPath">The binding path to bind the secondary hotkey of this button. If null or empty, the button will have an empty secondary binding.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <remarks>By default, the binding will be bindable in the Mod Input tab. If you wish to make the button unbindable, consider using <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
+            <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.2/api/UnityEngine.InputSystem.InputControlPath.html"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithControllerBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String)">
+            <summary>
+            Sets the default bindings for controller controls for this button.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="primaryBindingPath">The binding path to bind the primary hotkey of this button.</param>
+            <param name="secondaryBindingPath">The binding path to bind the secondary hotkey of this button. If null or empty, the button will have an empty secondary binding.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <remarks>By default, the binding will be bindable in the Mod Input tab. If you wish to make the button unbindable, consider using <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
+            <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.2/api/UnityEngine.InputSystem.InputControlPath.html"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithCategory(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String)">
+            <summary>
+            Defines a custom category in which this button will appear in the Mod Input tab.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="category">The category name.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <remarks>If the specified category was already added by another mod, both buttons will be merged under one category.</remarks>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+            <summary>
+            Assigns this button to be bindable for all devices in the Mod Input tab.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <remarks>By default, all custom buttons are bindable, unless explicitly set as unbindable by calling <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
+            <seealso cref="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+            <summary>
+            Assigns this button to be bindable for a device in the Mod Input tab.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="device">The device that was set to be bindable.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <remarks>By default, all custom buttons are bindable, unless explicitly set as unbindable by calling <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)"/>.</remarks>
+            <seealso cref="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+            <summary>
+            Removes this button from being bindable in the Mod Input tab.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <seealso cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+            <summary>
+            Removes this button from being bindable for a specific device in the Mod Input tab.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="device">The device in which this button cannot be bound.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <seealso cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+            <summary>
+            Assigns this button to force its bindings to work regardless of whether another vanilla button or custom button have similar bindings.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <seealso cref="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+            <summary>
+            Assigns this button to force its bindings to work regardless of whether another vanilla button or custom button have similar bindings in a device.
+            </summary>
+            <param name="builder">The current custom enum object instance.</param>
+            <param name="device">The devices in which this button avoids conflicts.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+            <seealso cref="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>
         </member>
         <member name="M:Nautilus.Handlers.EnumExtensions.CreateCraftTreeRoot(Nautilus.Handlers.EnumBuilder{CraftTree.Type},Nautilus.Crafting.ModCraftTreeRoot@)">
             <summary>
@@ -3919,6 +4058,718 @@
             <param name="builder">The current custom enum object instance.</param>
             <param name="size">The 2x2 vector size</param>
             <returns>A reference to this instance after the operation has completed.</returns>
+        </member>
+        <member name="T:Nautilus.Handlers.GameInputHandler">
+            <summary>
+            A handler class for dealing with the game's UnityEngine.InputSystem implementation.
+            </summary>
+        </member>
+        <member name="T:Nautilus.Handlers.GameInputHandler.Paths">
+            <summary>
+            A super class that then refers to all valid buttons for a respective device.
+            </summary>
+        </member>
+        <member name="T:Nautilus.Handlers.GameInputHandler.Paths.Keyboard">
+            <summary>
+            A class containing all valid binding paths for keyboards.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Escape">
+            <summary>
+            Represents the 'Escape' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Space">
+            <summary>
+            Represents the 'Space' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Enter">
+            <summary>
+            Represents the 'Enter' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Tab">
+            <summary>
+            Represents the 'Tab' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Backquote">
+            <summary>
+            Represents the (`) in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Quote">
+            <summary>
+            Represents the (') in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Semicolon">
+            <summary>
+            Represents the (;) in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Comma">
+            <summary>
+            Represents the (,) in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Period">
+            <summary>
+            Represents the (.) in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Slash">
+            <summary>
+            Represents the (/) in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Backslash">
+            <summary>
+            Represents the (\) in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.LeftBracket">
+            <summary>
+            Represents the '[' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.RightBracket">
+            <summary>
+            Represents the ']' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Minus">
+            <summary>
+            Represents the (-) in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Equals">
+            <summary>
+            Represents the (=) in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.UpArrow">
+            <summary>
+            Represents the 'Up Arrow' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.DownArrow">
+            <summary>
+            Represents the 'Down Arrow' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.LeftArrow">
+            <summary>
+            Represents the 'Left Arrow' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.RightArrow">
+            <summary>
+            Represents the 'Right Arrow' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.A">
+            <summary>
+            Represents the 'A' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.B">
+            <summary>
+            Represents the 'B' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.C">
+            <summary>
+            Represents the 'C' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.D">
+            <summary>
+            Represents the 'D' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.E">
+            <summary>
+            Represents the 'E' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F">
+            <summary>
+            Represents the 'F' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.G">
+            <summary>
+            Represents the 'G' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.H">
+            <summary>
+            Represents the 'H' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.I">
+            <summary>
+            Represents the 'I' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.J">
+            <summary>
+            Represents the 'J' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.K">
+            <summary>
+            Represents the 'K' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.L">
+            <summary>
+            Represents the 'L' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.M">
+            <summary>
+            Represents the 'M' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.N">
+            <summary>
+            Represents the 'N' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.O">
+            <summary>
+            Represents the 'O' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.P">
+            <summary>
+            Represents the 'P' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Q">
+            <summary>
+            Represents the 'Q' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.R">
+            <summary>
+            Represents the 'R' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.S">
+            <summary>
+            Represents the 'S' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.T">
+            <summary>
+            Represents the 'T' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.U">
+            <summary>
+            Represents the 'U' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.V">
+            <summary>
+            Represents the 'V' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.W">
+            <summary>
+            Represents the 'W' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.X">
+            <summary>
+            Represents the 'X' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Y">
+            <summary>
+            Represents the 'Y' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Z">
+            <summary>
+            Represents the 'Z' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key1">
+            <summary>
+            Represents the '1' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key2">
+            <summary>
+            Represents the '2' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key3">
+            <summary>
+            Represents the '3' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key4">
+            <summary>
+            Represents the '4' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key5">
+            <summary>
+            Represents the '5' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key6">
+            <summary>
+            Represents the '6' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key7">
+            <summary>
+            Represents the '7' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key8">
+            <summary>
+            Represents the '8' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key9">
+            <summary>
+            Represents the '9' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Key0">
+            <summary>
+            Represents the '0' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Shift">
+            <summary>
+            Represents the 'Shift' in the Keyboard. This is triggered when either left shift or right shift are pressed.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.LeftShift">
+            <summary>
+            Represents the 'Left Shift' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.RightShift">
+            <summary>
+            Represents the 'Right Shift' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Alt">
+            <summary>
+            Represents the 'Alt' in the Keyboard. This is triggered when either left alt or right alt are pressed.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.LeftAlt">
+            <summary>
+            Represents the 'Left Alt' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.RightAlt">
+            <summary>
+            Represents the 'Right Alt' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Ctrl">
+            <summary>
+            Represents the 'Control' in the Keyboard. This is triggered when either left ctrl or right ctrl are pressed.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.LeftCtrl">
+            <summary>
+            Represents the 'Left Ctrl' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.RightCtrl">
+            <summary>
+            Represents the 'Right Ctrl' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.LeftMeta">
+            <summary>
+            Represents the 'Left System' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.RightMeta">
+            <summary>
+            Represents the 'Right System' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.ContextMenu">
+            <summary>
+            Represents the 'Context Menu' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Backspace">
+            <summary>
+            Represents the 'Backspace' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.PageDown">
+            <summary>
+            Represents the 'Page Down' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.PageUp">
+            <summary>
+            Represents the 'Page Up' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Home">
+            <summary>
+            Represents the 'Home' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.End">
+            <summary>
+            Represents the 'End' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Insert">
+            <summary>
+            Represents the 'Insert' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Delete">
+            <summary>
+            Represents the 'Delete' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.CapsLock">
+            <summary>
+            Represents the 'Caps Lock' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.NumLock">
+            <summary>
+            Represents the 'Num Lock' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.PrintScreen">
+            <summary>
+            Represents the 'Print Screen' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.ScrollLock">
+            <summary>
+            Represents the 'Scroll Lock' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Pause">
+            <summary>
+            Represents the 'Pause/Break' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.NumpadEnter">
+            <summary>
+            Represents the 'Numpad Enter' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.NumpadDivide">
+            <summary>
+            Represents the 'Numpad /' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.NumpadMultiply">
+            <summary>
+            Represents the 'Numpad *' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.NumpadPlus">
+            <summary>
+            Represents the 'Numpad +' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.NumpadMinus">
+            <summary>
+            Represents the 'Numpad -' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.NumpadPeriod">
+            <summary>
+            Represents the 'Numpad .' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.NumpadEquals">
+            <summary>
+            Represents the 'Numpad =' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad1">
+            <summary>
+            Represents the 'Numpad 1' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad2">
+            <summary>
+            Represents the 'Numpad 2' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad3">
+            <summary>
+            Represents the 'Numpad 3' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad4">
+            <summary>
+            Represents the 'Numpad 4' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad5">
+            <summary>
+            Represents the 'Numpad 5' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad6">
+            <summary>
+            Represents the 'Numpad 6' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad7">
+            <summary>
+            Represents the 'Numpad 7' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad8">
+            <summary>
+            Represents the 'Numpad 8' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad9">
+            <summary>
+            Represents the 'Numpad 9' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Numpad0">
+            <summary>
+            Represents the 'Numpad 0' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F1">
+            <summary>
+            Represents the 'F1' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F2">
+            <summary>
+            Represents the 'F2' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F3">
+            <summary>
+            Represents the 'F3' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F4">
+            <summary>
+            Represents the 'F4' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F5">
+            <summary>
+            Represents the 'F5' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F6">
+            <summary>
+            Represents the 'F6' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F7">
+            <summary>
+            Represents the 'F7' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F8">
+            <summary>
+            Represents the 'F8' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F9">
+            <summary>
+            Represents the 'F9' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F10">
+            <summary>
+            Represents the 'F10' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F11">
+            <summary>
+            Represents the 'F11' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.F12">
+            <summary>
+            Represents the 'F12' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Oem1">
+            <summary>
+            Represents the 'OEM1' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Oem2">
+            <summary>
+            Represents the 'OEM2' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Oem3">
+            <summary>
+            Represents the 'OEM3' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Oem4">
+            <summary>
+            Represents the 'OEM4' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.Oem5">
+            <summary>
+            Represents the 'OEM5' in the Keyboard.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Keyboard.ImeSelected">
+            <summary>
+            Represents the 'IMESelected' in the Keyboard.
+            </summary>
+        </member>
+        <member name="T:Nautilus.Handlers.GameInputHandler.Paths.Mouse">
+            <summary>
+            A class containing all valid binding paths for mice.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Mouse.ScrollUp">
+            <summary>
+            Represents the 'Scroll' in the Mouse.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Mouse.ScrollDown">
+            <summary>
+            Represents the 'Scroll' in the Mouse.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Mouse.LeftButton">
+            <summary>
+            Represents the 'Left Button' in the Mouse.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Mouse.RightButton">
+            <summary>
+            Represents the 'Right Button' in the Mouse.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Mouse.MiddleButton">
+            <summary>
+            Represents the 'Middle Button' in the Mouse.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Mouse.ForwardButton">
+            <summary>
+            Represents the 'Northern button' in the Mouse.
+            </summary>
+            <remarks>Only some mouse, especially macro mouse have this button.</remarks>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Mouse.BackButton">
+            <summary>
+            Represents the 'Southern button' in the Mouse.
+            </summary>
+            <remarks>Only some mouse, especially macro mouse have this button.</remarks>
+        </member>
+        <member name="T:Nautilus.Handlers.GameInputHandler.Paths.Gamepad">
+            <summary>
+            A class containing all valid binding paths for controllers.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.DpadUp">
+            <summary>
+            Represents the 'D-Pad Up' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.DpadDown">
+            <summary>
+            Represents the 'D-Pad Down' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.DpadLeft">
+            <summary>
+            Represents the 'D-Pad Left' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.DpadRight">
+            <summary>
+            Represents the 'D-Pad Right' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.Start">
+            <summary>
+            Represents the 'Start' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.Select">
+            <summary>
+            Represents the 'Select' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.LeftStick">
+            <summary>
+            Represents the 'Left Stick' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.RightStick">
+            <summary>
+            Represents the 'Right Stick' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.LeftBumper">
+            <summary>
+            Represents the 'Left Bumper' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.RightBumper">
+            <summary>
+            Represents the 'Right Bumper' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.ButtonSouth">
+            <summary>
+            Represents the 'A' or 'Cross' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.ButtonEas">
+            <summary>
+            Represents the 'B' or 'Cricle' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.ButtonWest">
+            <summary>
+            Represents the 'X' or 'Square' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.ButtonNorth">
+            <summary>
+            Represents the 'Y' 'Triangle' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.LeftTrigger">
+            <summary>
+            Represents the 'Left Trigger' in the Gamepad.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Handlers.GameInputHandler.Paths.Gamepad.RightTrigger">
+            <summary>
+            Represents the 'Right Trigger' in the Gamepad.
+            </summary>
         </member>
         <member name="T:Nautilus.Handlers.ItemActionHandler">
             <summary>
@@ -5101,11 +5952,12 @@
             scene and any GameObjects you create now will be destroyed once the in-game Main scene is loaded. Consider using
             <see cref="M:Nautilus.Handlers.WaitScreenHandler.RegisterAsyncLoadTask(System.String,System.Func{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask,System.Collections.IEnumerator},System.String)"/> or <see cref="M:Nautilus.Handlers.WaitScreenHandler.RegisterLateAsyncLoadTask(System.String,System.Func{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask,System.Collections.IEnumerator},System.String)"/> for that instead.
             </summary>
-            <param name="modName">The name of your mod. Will be displayed while this task is being worked on.</param>
+            <param name="modName">The name of your mod. Will be displayed while this task is being worked on. Accepts a
+            language key and can optionally be localised with <see cref="T:Nautilus.Handlers.LanguageHandler"/>.</param>
             <param name="loadingFunction">The function that will be called.</param>
             <param name="description">An optional description to give users detailed information about what your task is
             doing. Can be updated even while your task is executing by setting
-            <see cref="T:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask"/>.<see cref="P:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask.Status"/>.</param>
+            <see cref="T:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask"/>.<see cref="P:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask.Status"/>. Accepts language keys for localisation.</param>
         </member>
         <member name="M:Nautilus.Handlers.WaitScreenHandler.RegisterEarlyAsyncLoadTask(System.String,System.Func{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask,System.Collections.IEnumerator},System.String)">
             <inheritdoc cref="M:Nautilus.Handlers.WaitScreenHandler.RegisterEarlyLoadTask(System.String,System.Action{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask},System.String)"/>
@@ -5121,11 +5973,12 @@
             similar at this time during the loading process. For that purpose, consider using
             <see cref="M:Nautilus.Handlers.WaitScreenHandler.RegisterLateAsyncLoadTask(System.String,System.Func{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask,System.Collections.IEnumerator},System.String)"/>.
             </summary>
-            <param name="modName">The name of your mod. Will be displayed while this task is being worked on.</param>
+            <param name="modName">The name of your mod. Will be displayed while this task is being worked on. Accepts a
+            language key and can optionally be localised with <see cref="T:Nautilus.Handlers.LanguageHandler"/>.</param>
             <param name="loadingFunction">The function that will be called.</param>
             <param name="description">An optional description to give users detailed information about what your task is
             doing. Can be updated even while your task is executing by setting
-            <see cref="T:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask"/>.<see cref="P:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask.Status"/>.</param>
+            <see cref="T:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask"/>.<see cref="P:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask.Status"/>. Accepts language keys for localisation.</param>
         </member>
         <member name="M:Nautilus.Handlers.WaitScreenHandler.RegisterAsyncLoadTask(System.String,System.Func{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask,System.Collections.IEnumerator},System.String)">
             <inheritdoc cref="M:Nautilus.Handlers.WaitScreenHandler.RegisterLoadTask(System.String,System.Action{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask},System.String)"/>
@@ -5138,11 +5991,12 @@
             setup at this point and is only waiting for any tasks registered through this method. Use this method for tasks
             that heavily rely on other GameObjects or singletons to be present, such as the Player, Inventory, or other mods.
             </summary>
-            <param name="modName">The name of your mod. Will be displayed while this task is being worked on.</param>
+            <param name="modName">The name of your mod. Will be displayed while this task is being worked on. Accepts a
+            language key and can optionally be localised with <see cref="T:Nautilus.Handlers.LanguageHandler"/>.</param>
             <param name="loadingFunction">The function that will be called.</param>
             <param name="description">An optional description to give users detailed information about what your task is
             doing. Can be updated even while your task is executing by setting
-            <see cref="T:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask"/>.<see cref="P:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask.Status"/>.</param>
+            <see cref="T:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask"/>.<see cref="P:Nautilus.Handlers.WaitScreenHandler.WaitScreenTask.Status"/>. Accepts language keys for localisation.</param>
         </member>
         <member name="M:Nautilus.Handlers.WaitScreenHandler.RegisterLateAsyncLoadTask(System.String,System.Func{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask,System.Collections.IEnumerator},System.String)">
             <inheritdoc cref="M:Nautilus.Handlers.WaitScreenHandler.RegisterLateLoadTask(System.String,System.Action{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask},System.String)"/>
@@ -5161,6 +6015,8 @@
             <summary>
             Optional detailed information about what the mod is working on during this task. Can be updated during
             tasks to give the user detailed feedback about what exactly the mod is doing.
+            <br />
+            Accepts a language key and can be localised with <see cref="T:Nautilus.Handlers.LanguageHandler"/> if desired.
             </summary>
         </member>
         <member name="T:Nautilus.Handlers.WorldEntityDatabaseHandler">
@@ -6259,16 +7115,6 @@
             <param name="sender">The sender of the original keybind changed event.</param>
             <param name="e">The <see cref="T:Nautilus.Options.ColorChangedEventArgs"/> for the keybind changed event.</param>
         </member>
-        <member name="M:Nautilus.Options.Attributes.ConfigFileMetadata`1.HandleKeybindChanged(System.Object,Nautilus.Options.KeybindChangedEventArgs)">
-            <summary>
-            Sets the value in the <see cref="P:Nautilus.Options.Attributes.ConfigFileMetadata`1.Config"/>, optionally saving the <see cref="P:Nautilus.Options.Attributes.ConfigFileMetadata`1.Config"/> to disk if the
-            <see cref="F:Nautilus.Options.Attributes.MenuAttribute.SaveEvents.ChangeValue"/> flag is set, before passing off to
-            <see cref="M:Nautilus.Options.Attributes.ConfigFileMetadata`1.InvokeOnChangeEvents``1(Nautilus.Options.Attributes.ModOptionAttributeMetadata{`0},System.Object,``0)"/>
-            to invoke any methods specified with an <see cref="T:Nautilus.Options.Attributes.OnChangeAttribute"/>.
-            </summary>
-            <param name="sender">The sender of the original keybind changed event.</param>
-            <param name="e">The <see cref="T:Nautilus.Options.KeybindChangedEventArgs"/> for the keybind changed event.</param>
-        </member>
         <member name="M:Nautilus.Options.Attributes.ConfigFileMetadata`1.HandleSliderChanged(System.Object,Nautilus.Options.SliderChangedEventArgs)">
             <summary>
             Sets the value in the <see cref="P:Nautilus.Options.Attributes.ConfigFileMetadata`1.Config"/>, optionally saving the <see cref="P:Nautilus.Options.Attributes.ConfigFileMetadata`1.Config"/> to disk if the
@@ -6363,7 +7209,7 @@
         <member name="T:Nautilus.Options.Attributes.KeybindAttribute">
             <summary>
             Attribute used to signify the decorated <see cref="T:UnityEngine.KeyCode"/> should be represented in the mod's
-            option menu as a <see cref="T:Nautilus.Options.ModKeybindOption"/>.
+            option menu as a <see cref="!:ModKeybindOption"/>.
             </summary>
             <example>
             <code>
@@ -6385,14 +7231,14 @@
         <member name="M:Nautilus.Options.Attributes.KeybindAttribute.#ctor(System.String)">
             <summary>
             Signifies the decorated <see cref="T:UnityEngine.KeyCode"/> should be represented in the mod's option menu
-            as a <see cref="T:Nautilus.Options.ModKeybindOption"/>.
+            as a <see cref="!:ModKeybindOption"/>.
             </summary>
             <param name="label">The label for the keybind. If none is set, the name of the member will be used.</param>
         </member>
         <member name="M:Nautilus.Options.Attributes.KeybindAttribute.#ctor">
             <summary>
             Signifies the decorated <see cref="T:UnityEngine.KeyCode"/> should be represented in the mod's option menu
-            as a <see cref="T:Nautilus.Options.ModKeybindOption"/>.
+            as a <see cref="!:ModKeybindOption"/>.
             </summary>
         </member>
         <member name="M:Nautilus.Options.Attributes.MemberInfoMetadata`1.GetValue``1(`0)">
@@ -6707,8 +7553,8 @@
             - <see cref="T:System.EventArgs"/> eventArgs: The generalized event arguments of the event<br/>
             - <see cref="T:Nautilus.Options.ChoiceChangedEventArgs`1"/> choiceChangedEventArgs: Only when the member corresponds to a
               <see cref="T:Nautilus.Options.ModChoiceOption`1"/><br/>
-            - <see cref="T:Nautilus.Options.KeybindChangedEventArgs"/> keybindChangedEventArgs: Only when the member correspends to a
-              <see cref="T:Nautilus.Options.ModKeybindOption"/><br/>
+            - <see cref="!:KeybindChangedEventArgs"/> keybindChangedEventArgs: Only when the member correspends to a
+              <see cref="!:ModKeybindOption"/><br/>
             - <see cref="T:Nautilus.Options.SliderChangedEventArgs"/> sliderChangedEventArgs: Only when the member corresponds to a
               <see cref="T:Nautilus.Options.ModSliderOption"/><br/>
             - <see cref="T:Nautilus.Options.ToggleChangedEventArgs"/> toggleChangedEventArgs: Only when the member corresponds to a
@@ -6761,7 +7607,7 @@
             <seealso cref="T:Nautilus.Options.Attributes.ToggleAttribute"/>
             <seealso cref="T:System.EventArgs"/>
             <seealso cref="T:Nautilus.Options.ChoiceChangedEventArgs`1"/>
-            <seealso cref="T:Nautilus.Options.KeybindChangedEventArgs"/>
+            <seealso cref="!:KeybindChangedEventArgs"/>
             <seealso cref="T:Nautilus.Options.SliderChangedEventArgs"/>
             <seealso cref="T:Nautilus.Options.ToggleChangedEventArgs"/>
             <seealso cref="T:Nautilus.Json.ConfigFile"/>
@@ -6877,7 +7723,7 @@
         </member>
         <member name="M:Nautilus.Options.Attributes.OptionsMenuBuilder`1.BuildModKeybindOption(System.String,System.String,Nautilus.Options.Attributes.MemberInfoMetadata{`0})">
             <summary>
-            Adds a <see cref="T:Nautilus.Options.ModKeybindOption"/> to the <see cref="T:Nautilus.Options.ModOptions"/> menu.
+            Adds a <see cref="!:ModKeybindOption"/> to the <see cref="T:Nautilus.Options.ModOptions"/> menu.
             </summary>
             <param name="id"></param>
             <param name="label"></param>
@@ -7085,20 +7931,13 @@
             <remarks>Does not support use of <see cref="T:BepInEx.Configuration.AcceptableValueList`1"/>.</remarks>
             <returns><see cref="T:Nautilus.Options.ModColorOption"/></returns>
         </member>
-        <member name="M:Nautilus.Options.ConfigEntryExtensions.ToModKeybindOption(BepInEx.Configuration.ConfigEntry{UnityEngine.KeyCode})">
-            <summary>
-            Converts a Bepinex ConfigEntry/<KeyCode/> into a ModKeyBindOption that will update the value when the keybind changes.
-            </summary>
-            <param name="configEntry">A </param>
-            <returns><see cref="T:Nautilus.Options.ModKeybindOption"/></returns>
-        </member>
         <member name="M:Nautilus.Options.ConfigEntryExtensions.ToModChoiceOption``1(BepInEx.Configuration.ConfigEntry{``0},System.Collections.Generic.IEnumerable{``0})">
             <summary>
             Converts an Enum ConfigEntry into a ModChoiceOption that will update the value when the choice changes.
             </summary>
             <param name="configEntry">A </param>
             <param name="options">Array of valid options if not using the whole Enum</param>
-            <returns><see cref="T:Nautilus.Options.ModKeybindOption"/></returns>
+            <returns><see cref="!:ModKeybindOption"/></returns>
         </member>
         <member name="M:Nautilus.Options.ConfigEntryExtensions.ToModChoiceOption``1(BepInEx.Configuration.ConfigEntry{``0},``0[])">
             <summary>
@@ -7106,7 +7945,7 @@
             </summary>
             <param name="configEntry">A </param>
             <param name="options"></param>
-            <returns><see cref="T:Nautilus.Options.ModKeybindOption"/></returns>
+            <returns><see cref="!:ModKeybindOption"/></returns>
         </member>
         <member name="T:Nautilus.Options.ButtonClickedEventArgs">
             <summary>
@@ -7262,6 +8101,11 @@
             The tooltip to show when hovering over the option's items.
             </summary>
         </member>
+        <member name="P:Nautilus.Options.ModColorOption.AdvancedExposeAlphaChannel">
+            <summary>
+            When using Advanced UI, whether to show the Alpha controls
+            </summary>
+        </member>
         <member name="M:Nautilus.Options.ModColorOption.AddToPanel(uGUI_TabbedControlsPanel,System.Int32)">
             <summary>
             The base method for adding an object to the options panel
@@ -7269,7 +8113,7 @@
             <param name="panel">The panel to add the option to.</param>
             <param name="tabIndex">Where in the panel to add the option.</param>
         </member>
-        <member name="M:Nautilus.Options.ModColorOption.Create(System.String,System.String,UnityEngine.Color,System.Boolean,System.String)">
+        <member name="M:Nautilus.Options.ModColorOption.Create(System.String,System.String,UnityEngine.Color,System.Boolean,System.String,System.Boolean)">
             <summary>
             Creates a new <see cref="T:Nautilus.Options.ModColorOption"/> instance.
             </summary>
@@ -7278,6 +8122,7 @@
             <param name="value">The starting value.</param>
             <param name="advanced">Whether to use an advanced display.</param>
             <param name="tooltip">The tooltip to show when hovering over the options.</param>
+            <param name="advancedExposeAlphaChannel">When using advanced display. Whether to expose alpha channel control.</param>
         </member>
         <member name="M:Nautilus.Options.ModColorOption.Create(System.String,System.String)">
             <summary>
@@ -7287,55 +8132,6 @@
             <param name="label">The display text to use in the in-game menu.</param>
         </member>
         <member name="P:Nautilus.Options.ModColorOption.AdjusterComponent">
-            <summary>
-            The Adjuster for this <see cref="T:Nautilus.Options.OptionItem"/>.
-            </summary>
-        </member>
-        <member name="T:Nautilus.Options.KeybindChangedEventArgs">
-            <summary>
-            Contains all the information about a keybind changed event.
-            </summary>
-        </member>
-        <member name="M:Nautilus.Options.KeybindChangedEventArgs.#ctor(System.String,UnityEngine.KeyCode)">
-            <summary>
-            Constructs a new <see cref="T:Nautilus.Options.KeybindChangedEventArgs"/>.
-            </summary>
-            <param name="id">The ID of the <see cref="T:Nautilus.Options.ModKeybindOption"/> that was changed.</param>
-            <param name="key">The new value for the <see cref="T:Nautilus.Options.ModKeybindOption"/>.</param>
-        </member>
-        <member name="T:Nautilus.Options.ModKeybindOption">
-            <summary>
-            A mod option class for handling an option that is a keybind.
-            </summary>
-        </member>
-        <member name="P:Nautilus.Options.ModKeybindOption.Device">
-            <summary>
-            The currently select input source device for the <see cref="T:Nautilus.Options.ModKeybindOption"/>.
-            </summary>
-        </member>
-        <member name="P:Nautilus.Options.ModKeybindOption.Tooltip">
-            <summary>
-            The tooltip to show when hovering over the option.
-            </summary>
-        </member>
-        <member name="M:Nautilus.Options.ModKeybindOption.Create(System.String,System.String,GameInput.Device,UnityEngine.KeyCode,System.String)">
-            <summary>
-            Creates a new <see cref="T:Nautilus.Options.ModKeybindOption"/> for handling an option that is a keybind.
-            </summary>
-            <param name="id">The internal ID for the toggle option.</param>
-            <param name="label">The display text to use in the in-game menu.</param>
-            <param name="device">The device name.</param>
-            <param name="key">The starting keybind value.</param>
-            <param name="tooltip">The tooltip to show when hovering over the option.</param>
-        </member>
-        <member name="M:Nautilus.Options.ModKeybindOption.AddToPanel(uGUI_TabbedControlsPanel,System.Int32)">
-            <summary>
-            The base method for adding an object to the options panel
-            </summary>
-            <param name="panel">The panel to add the option to.</param>
-            <param name="tabIndex">Where in the panel to add the option.</param>
-        </member>
-        <member name="P:Nautilus.Options.ModKeybindOption.AdjusterComponent">
             <summary>
             The Adjuster for this <see cref="T:Nautilus.Options.OptionItem"/>.
             </summary>
@@ -7827,10 +8623,20 @@
             you can do anything without your GameObjects getting destroyed by the loading of the Main scene.
             </summary>
         </member>
+        <member name="M:Nautilus.Patchers.WaitScreenPatcher.ProcessModTasks(System.Collections.Generic.List{Nautilus.Handlers.WaitScreenHandler.WaitScreenTask},WaitScreen.ManualWaitItem)">
+            <summary>
+            Let each mod work through their tasks in turn while catching any errors along the way.
+            </summary>
+        </member>
         <member name="M:Nautilus.Patchers.WaitScreenPatcher.UpdateStatusText">
             <summary>
             Update the text above the loading bar according to the wait screen's status.
             Runs every time the loading bar progress updates, i.e. only during update cycles in loading screens.
+            </summary>
+        </member>
+        <member name="M:Nautilus.Patchers.WaitScreenPatcher.SetModError(System.String,System.String)">
+            <summary>
+            Make it very clear to the user that something has gone wrong if a task throws.
             </summary>
         </member>
         <member name="M:Nautilus.Patchers.WaitScreenPatcher.CreateStatusText">

@@ -1,9 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\",
+  "WorkspaceRootPath": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\users\\aaron\\documents\\github\\comforts\\vsproject\\comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\prefabs\\power\\floorlocker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\power\\floorlocker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -47,15 +55,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ComfortsPlugin.cs",
-              "DocumentMoniker": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
-              "RelativeDocumentMoniker": "ComfortsPlugin.cs",
-              "ToolTip": "C:\\Users\\Aaron\\Documents\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs*",
-              "RelativeToolTip": "ComfortsPlugin.cs*",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAwwHAAAAAcAAAAAAAAAA==",
+              "Title": "FloorLocker.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\FloorLocker.cs",
+              "RelativeDocumentMoniker": "Prefabs\\Power\\FloorLocker.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\FloorLocker.cs",
+              "RelativeToolTip": "Prefabs\\Power\\FloorLocker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T06:51:42.397Z",
+              "WhenOpened": "2026-02-14T10:40:44.675Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ComfortsCustomPrefab.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeDocumentMoniker": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeToolTip": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T05:39:53.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComfortsPlugin.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
+              "RelativeDocumentMoniker": "ComfortsPlugin.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
+              "RelativeToolTip": "ComfortsPlugin.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowD8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T06:51:42.397Z"
             }
           ]
         }
