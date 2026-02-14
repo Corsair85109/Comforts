@@ -145,9 +145,7 @@
     <Compile Include="Prefabs\Power\Speaker.cs" />
     <Compile Include="Prefabs\Power\WallSpeaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Saving\FloorLockerSaveHandler.cs" />
     <Compile Include="Saving\SaveData.cs" />
-    <Compile Include="Saving\SaveInits\SaveInitFloorLocker.cs" />
     <Compile Include="Tags\StopMarmoShader.cs" />
     <Compile Include="Tags\UniqueMarmoShaderSettings.cs" />
     <Compile Include="Utility\References\BedReferenceManager.cs" />
@@ -157,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
+    <Folder Include="Saving\SaveInits\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

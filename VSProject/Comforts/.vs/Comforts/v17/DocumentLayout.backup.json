@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\comfortscustomprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\prefabs\\power\\floorlocker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\power\\floorlocker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\prefabs\\power\\lightswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\power\\lightswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\handtargets\\lightswitchhandtarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\handtargets\\lightswitchhandtarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,41 +54,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ComfortsPlugin.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
-              "RelativeDocumentMoniker": "ComfortsPlugin.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs*",
-              "RelativeToolTip": "ComfortsPlugin.cs*",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAwwGQAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FloorLocker.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\FloorLocker.cs",
+              "RelativeDocumentMoniker": "Prefabs\\Power\\FloorLocker.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\FloorLocker.cs",
+              "RelativeToolTip": "Prefabs\\Power\\FloorLocker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T15:26:49.35Z",
+              "WhenOpened": "2026-02-14T17:37:07.238Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LightSwitch.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\LightSwitch.cs",
-              "RelativeDocumentMoniker": "Prefabs\\Power\\LightSwitch.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\LightSwitch.cs",
-              "RelativeToolTip": "Prefabs\\Power\\LightSwitch.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ComfortsCustomPrefab.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeDocumentMoniker": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\ComfortsCustomPrefab.cs",
+              "RelativeToolTip": "Prefabs\\ComfortsCustomPrefab.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T15:20:27.958Z",
+              "WhenOpened": "2026-02-14T17:37:02.147Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LightSwitchHandTarget.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\LightSwitchHandTarget.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\Handtargets\\LightSwitchHandTarget.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\LightSwitchHandTarget.cs",
-              "RelativeToolTip": "Monobehaviors\\Handtargets\\LightSwitchHandTarget.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA9AAAAAAAAAA==",
+              "Title": "ComfortsPlugin.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
+              "RelativeDocumentMoniker": "ComfortsPlugin.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
+              "RelativeToolTip": "ComfortsPlugin.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAIwH4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T15:08:52.625Z",
+              "WhenOpened": "2026-02-14T15:26:49.35Z",
               "EditorCaption": ""
             }
           ]

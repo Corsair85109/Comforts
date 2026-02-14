@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2640677408730276166}
   - component: {fileID: 1630699850957951480}
   - component: {fileID: 4780447625166531092}
-  - component: {fileID: 4734512774380036050}
   m_Layer: 0
   m_Name: FloorLocker
   m_TagString: Untagged
@@ -97,18 +96,6 @@ MonoBehaviour:
   errorSound: {fileID: 0}
   storageRoot: {fileID: 304483489262087488}
   preventDeconstructionIfNotEmpty: 1
---- !u!114 &4734512774380036050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2640677408730276185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -576698282, guid: 2acdebf6433a11e47bf5ef3eea8e25dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2910728118323138833
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: -1824715710, guid: a6a460bc9cda68a8c89553f1ec5be757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  classId: 
+  classId: c8ea903f-53af-47f8-bdaf-43aa59babc12
 --- !u!1 &8781247848385118215
 GameObject:
   m_ObjectHideFlags: 0

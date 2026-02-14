@@ -1,6 +1,8 @@
-﻿using Nautilus.Assets;
+﻿using Comforts.Utility;
+using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Crafting;
+using Nautilus.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,8 @@ namespace Comforts.Prefabs.Power
 {
     internal class FloorLocker : ComfortsCustomPrefab
     {
+        // thank you metious and indigocoder for helping me to get the saving to work for this
+
         public static TechType techType;
 
         public static void Register()

@@ -13,17 +13,7 @@ namespace Comforts.Saving
     [FileName("ComfortsSaveData")]
     public class SaveData : SaveDataCache
     {
-        // (locker prefabid, list of ItemData)
-        public Dictionary<string, List<ItemData>> floorLockerContents;
-    }
-
-
-    public class ItemData
-    {
-        public TechType itemType;
-        public int amount;
-        public TechType batteryType;
-        public float batteryCharge;
+        
     }
 
 
@@ -31,7 +21,7 @@ namespace Comforts.Saving
     {
         public static void OnSaveStart(object sender, JsonFileEventArgs args)
         {
-            SaveFloorLockers();
+            
             
         }
 
