@@ -9,10 +9,6 @@ namespace Comforts.Commands
 {
     internal class ComfortsConsoleCommands
     {
-        [ConsoleCommand("SetPiracy")]
-        public static void SetPiracy(bool pirated)
-        {
-            PirateChecker.isPirated = pirated;
-        }
+        
     }
 }

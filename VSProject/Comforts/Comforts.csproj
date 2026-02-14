@@ -120,11 +120,11 @@
     <Compile Include="Monobehaviors\Handtargets\IonFabricator.cs" />
     <Compile Include="Monobehaviors\Handtargets\JukeboxUIHandtargets.cs" />
     <Compile Include="Monobehaviors\Handtargets\LightHandTarget.cs" />
+    <Compile Include="Monobehaviors\Handtargets\LightSwitchHandTarget.cs" />
     <Compile Include="Monobehaviors\Handtargets\ParticleSystemHandTarget.cs" />
     <Compile Include="Monobehaviors\HealPlayerInCollider.cs" />
     <Compile Include="Monobehaviors\MusicChipFMODEmitter.cs" />
     <Compile Include="Patches\MusicChipPatch.cs" />
-    <Compile Include="PirateChecker.cs" />
     <Compile Include="Prefabs\Bathroom\RoundSink.cs" />
     <Compile Include="Prefabs\Bathroom\Shower.cs" />
     <Compile Include="Prefabs\Bedroom\Beds\BlueBed.cs" />
@@ -140,6 +140,7 @@
     <Compile Include="Prefabs\Power\FloorLocker.cs" />
     <Compile Include="Prefabs\Power\IonFusionReactor.cs" />
     <Compile Include="Prefabs\Power\Jukebox.cs" />
+    <Compile Include="Prefabs\Power\LightSwitch.cs" />
     <Compile Include="Prefabs\Power\MusicChip.cs" />
     <Compile Include="Prefabs\Power\Speaker.cs" />
     <Compile Include="Prefabs\Power\WallSpeaker.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Saving\SaveData.cs" />
     <Compile Include="Saving\SaveInits\SaveInitFloorLocker.cs" />
     <Compile Include="Tags\StopMarmoShader.cs" />
+    <Compile Include="Tags\UniqueMarmoShaderSettings.cs" />
     <Compile Include="Utility\References\BedReferenceManager.cs" />
     <Compile Include="Utility\References\BenchReferenceManager.cs" />
     <Compile Include="Utility\ComfortUtils.cs" />

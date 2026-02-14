@@ -44,17 +44,30 @@ namespace Comforts.Utility
                     else if (alphaClip)
                         materialType = MaterialType.Cutout;
 
-                    bool blockShaderConversion = false;
+                    bool blockShader = false;
 
                     // stop some things getting marmo
                     if (renderers[i].gameObject.GetComponent<StopMarmoShader>() != null)
                     {
-                        blockShaderConversion = true;
+                        blockShader = true;
                     }
 
-                    if (!blockShaderConversion)
+                    // some things should have different shader settings to the rest eg. mattress on a bed
+                    float uniqueShininess = shininess;
+                    float uniqueSpecIntensity = specularIntensity;
+                    float uniqueGlowStrength = glowStrength;
+
+                    renderers[i].gameObject.TryGetComponent(out UniqueMarmoShaderSettings settings);
+                    if (settings != null)
                     {
-                        ApplyUBERShader(material, shininess, specularIntensity, glowStrength, materialType);
+                        uniqueShininess = settings.shininess;
+                        uniqueSpecIntensity = settings.specularIntensity;
+                        uniqueGlowStrength = settings.glowStrength;
+                    }
+
+                    if (!blockShader)
+                    {
+                        ApplyUBERShader(material, uniqueShininess, uniqueSpecIntensity, uniqueGlowStrength, materialType);
                     }
                 }
             }

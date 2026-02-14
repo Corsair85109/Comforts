@@ -20,7 +20,7 @@ namespace Comforts.Prefabs.Bedroom.Beds
 
 
             // error line
-            customPrefab.SetGameObject(GetGameObject("blueBed", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("BlueBed"), techType, false));
+            customPrefab.SetGameObject(GetGameObject("blueBed", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("BlueBed"), techType, false, 6.4f));
 
 
 

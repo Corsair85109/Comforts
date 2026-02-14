@@ -47,6 +47,7 @@ namespace Comforts.Saving
 
 
                 List<ItemData> contents = new List<ItemData>();
+                List<TechType> itemsAddedAlready = new List<TechType>();
 
                 Transform storageRoot;
                 if (locker.GetComponent<StorageContainer>() == null)
@@ -74,6 +75,9 @@ namespace Comforts.Saving
                     }
 
                     TechType techType = pickupable.GetTechType();
+
+                    
+
                     ItemData data = new ItemData
                     {
                         itemType = techType,
@@ -82,7 +86,8 @@ namespace Comforts.Saving
                         batteryCharge = 0f
                     };
 
-                    EnergyMixin energyMixin = child.GetComponent<EnergyMixin>();
+                    EnergyMixin energyMixin;
+                    child.TryGetComponent(out energyMixin);
                     if (energyMixin != null)
                     {
                         data.batteryCharge = energyMixin.charge;

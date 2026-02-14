@@ -7,11 +7,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Black
-    second: {fileID: 2100000, guid: a5d0df8fc8433d641939dcf24176b7a6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: InformationLight
     second: {fileID: 2100000, guid: 44b1b9c8f188d364ba7797f535ca27da, type: 2}
   - first:
@@ -19,11 +14,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: IonCube
     second: {fileID: 2100000, guid: 8c407b8e72fd57843a1a5e74db7631dd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Orange
-    second: {fileID: 2100000, guid: 6580edcfdff09d44f9d8277d9f0fceb2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

@@ -12,13 +12,7 @@ namespace Comforts.Monobehaviors.ChildInits
     internal class ConstructableChildInitialiseBed : MonoBehaviour
     {
         [SerializeField]
-        private bool skipModel = true;
-
-        [SerializeField]
         private GameObject modelReplacement;
-
-        [SerializeField]
-        private bool skipCollider = true;
 
         [SerializeField]
         private Bed goBed;
@@ -40,15 +34,15 @@ namespace Comforts.Monobehaviors.ChildInits
             GameObject bed = BedReferenceManager.BedReference;
 
             // Make sure the prefab is instantiated, not just accessed directly from assets
-            GameObject bedInstance = GameObject.Instantiate(bed);
+            GameObject bedInstance = Instantiate(bed);
 
             // Copy bed child
-            GameObject clone = GameObject.Instantiate(bedInstance.transform.Find("bed_01").gameObject);
+            GameObject clone = Instantiate(bedInstance.transform.Find("bed_01").gameObject);
             clone.transform.SetParent(gameObject.transform, false);
             clone.name = "bed_01"; // remove (Clone)
 
             // Replace model
-            GameObject.DestroyImmediate(clone.transform.Find("bed").gameObject);
+            DestroyImmediate(clone.transform.Find("bed").gameObject);
             modelReplacement.transform.SetParent(clone.transform, false);
 
 
@@ -93,7 +87,7 @@ namespace Comforts.Monobehaviors.ChildInits
 
 
             // Clean up the temporary clone
-            GameObject.Destroy(bedInstance);
+            Destroy(bedInstance);
 
             goBed.enabled = true;
         }

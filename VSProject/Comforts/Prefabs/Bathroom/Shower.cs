@@ -19,7 +19,7 @@ namespace Comforts.Prefabs.Bathroom
         {
             CustomPrefab customPrefab = new CustomPrefab("shower", Language.main.Get("Shower"), Language.main.Get("ShowerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("ShowerSprite"));
             techType = customPrefab.Info.TechType;
-            customPrefab.SetGameObject(GetGameObject("shower", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Shower"), techType));
+            customPrefab.SetGameObject(GetGameObject("shower", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Shower"), techType, true, 6f));
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,

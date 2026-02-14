@@ -17,7 +17,7 @@ namespace Comforts.Prefabs.Decorations
         {
             CustomPrefab customPrefab = new CustomPrefab("lavaLamp", Language.main.Get("LavaLamp"), Language.main.Get("LavaLampDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("LavaLampSprite"));
             techType = customPrefab.Info.TechType;
-            customPrefab.SetGameObject(GetGameObject("lavaLamp", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("LavaLamp"), techType));
+            customPrefab.SetGameObject(GetGameObject("lavaLamp", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("LavaLamp"), techType, true, 6.5f));
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,

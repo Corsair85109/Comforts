@@ -11,7 +11,7 @@ namespace Comforts.Prefabs
 {
     internal class ComfortsCustomPrefab
     {
-        public static GameObject GetGameObject(string classID, GameObject prefabGO, TechType techType, bool addConstructableBounds = true)
+        public static GameObject GetGameObject(string classID, GameObject prefabGO, TechType techType, bool addConstructableBounds = true, float shininess = 6.5f, float specIntensity = 1f, float glowStrength = 1f)
         {
             PrefabUtils.AddBasicComponents(prefabGO, classID, techType, 0);
             
@@ -42,7 +42,7 @@ namespace Comforts.Prefabs
                 }
             }
 
-            ComfortUtils.ApplyMarmosetUBERShader(prefabGO, 10f, 1f, 1f);
+            ComfortUtils.ApplyMarmosetUBERShader(prefabGO, shininess, specIntensity, glowStrength);
 
             return prefabGO;
         }

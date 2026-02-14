@@ -49,14 +49,14 @@ namespace Comforts
             // Apply all harmony patches
             Harmony.PatchAll();
 
-            PirateChecker.CheckPiracy();
-
             // Get mod folder
             modFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             // Find assetbundle
             theUltimateBundleOfAssets = AssetBundle.LoadFromFile(Path.Combine(modFolder, "Assets/Comforts"));
             epicAtlasOfSprites = theUltimateBundleOfAssets.LoadAsset<SpriteAtlas>("SpriteAtlas");
+
+            
 
             // Register Audio
             AudioRegistrar.RegisterAudio(theUltimateBundleOfAssets);
@@ -76,14 +76,13 @@ namespace Comforts
             // Register pda entries
             RegisterEncies();
 
+            // Get all references
+            GetAllReferences();
+
             save.OnStartedSaving += SaveHandler.OnSaveStart;
             save.OnFinishedLoading += SaveHandler.OnLoadFinish;
 
             Utility.Logger.Log($"{PluginName} version {VersionString} is loaded.");
-
-
-            // Get all references
-            GetAllReferences();
         }
 
         private void RegisterAllPrefabs()
@@ -99,6 +98,7 @@ namespace Comforts
             IonFusionReactor.Register();
             MusicChip.Register();
             FloorLocker.Register();
+            LightSwitch.Register();
 
             // Kitchen
             Sink.Register();

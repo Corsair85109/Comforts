@@ -21,7 +21,7 @@ namespace Comforts.Prefabs.Decorations.Curtains
         {
             CustomPrefab customPrefab = new CustomPrefab("redCurtain", Language.main.Get("RedCurtain"), Language.main.Get("RedCurtainDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("RedCurtainSprite"));
             techType = customPrefab.Info.TechType;
-            customPrefab.SetGameObject(GetGameObject("redCurtain", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("RedCurtain"), techType));
+            customPrefab.SetGameObject(GetGameObject("redCurtain", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("RedCurtain"), techType, true, 4f));
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,

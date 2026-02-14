@@ -19,7 +19,7 @@ namespace Comforts.Prefabs.Bathroom
         {
             CustomPrefab customPrefab = new CustomPrefab("roundSink", Language.main.Get("RoundSink"), Language.main.Get("RoundSinkDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("RoundSinkSprite"));
             techType = customPrefab.Info.TechType;
-            customPrefab.SetGameObject(GetGameObject("roundSink", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("RoundSink"), techType));
+            customPrefab.SetGameObject(GetGameObject("roundSink", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("RoundSink"), techType, true, 7f));
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,

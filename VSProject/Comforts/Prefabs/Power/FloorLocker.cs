@@ -18,7 +18,7 @@ namespace Comforts.Prefabs.Power
         {
             CustomPrefab customPrefab = new CustomPrefab("floorLocker", Language.main.Get("FloorLocker"), Language.main.Get("FloorLockerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("FloorLockerSprite"));
             techType = customPrefab.Info.TechType;
-            customPrefab.SetGameObject(GetGameObject("floorLocker", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("FloorLocker"), techType));
+            customPrefab.SetGameObject(GetGameObject("floorLocker", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("FloorLocker"), techType, true, 5.7f));
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,

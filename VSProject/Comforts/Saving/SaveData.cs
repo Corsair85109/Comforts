@@ -32,15 +32,7 @@ namespace Comforts.Saving
         public static void OnSaveStart(object sender, JsonFileEventArgs args)
         {
             SaveFloorLockers();
-            try
-            {
-                //SaveFloorLockers();
-            }
-            catch (Exception ex)
-            {
-                Utility.Logger.Log("Failed to save data with exception:");
-                Debug.LogException(ex);
-            }
+            
         }
 
         public static void OnLoadFinish(object sender, JsonFileEventArgs args)

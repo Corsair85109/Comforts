@@ -40,7 +40,7 @@ namespace Comforts.Monobehaviors.Controllers
 
         public void Update()
         {
-            if (PirateChecker.isPirated || ComfortsPlugin.ModConfig.jukeboxPresent)
+            if (ComfortsPlugin.ModConfig.jukeboxPresent)
             {
                 currentSong = ComfortsFMODAssets.present;
             }

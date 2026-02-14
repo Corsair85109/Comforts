@@ -21,7 +21,7 @@ namespace Comforts.Prefabs.Decorations
             CustomPrefab customPrefab = new CustomPrefab("beanbag", Language.main.Get("Beanbag"), Language.main.Get("BeanbagDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("BeanbagSprite"));
             techType = customPrefab.Info.TechType;
 
-            customPrefab.SetGameObject(GetGameObject("beanbag", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Beanbag"), techType, false));
+            customPrefab.SetGameObject(GetGameObject("beanbag", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Beanbag"), techType, false, 4f));
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,
