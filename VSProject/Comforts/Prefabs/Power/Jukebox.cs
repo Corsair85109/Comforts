@@ -18,7 +18,7 @@ namespace Comforts.Prefabs.Power
         {
             CustomPrefab customPrefab = new CustomPrefab("jukebox", Language.main.Get("Jukebox"), Language.main.Get("JukeboxDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("JukeboxSprite"));
             techType = customPrefab.Info.TechType;
-            customPrefab.SetGameObject(GetGameObject("jukebox", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Jukebox"), techType));
+            customPrefab.SetGameObject(GetGameObject("jukebox", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("Jukebox"), techType, true, 5.8f));
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,
@@ -30,7 +30,7 @@ namespace Comforts.Prefabs.Power
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
             GadgetExtensions.SetUnlock(customPrefab, TechType.ComputerChip, 1);
-            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.Misc);
+            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.InteriorModule);
             customPrefab.Register();
         }
     }

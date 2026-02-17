@@ -19,7 +19,7 @@ namespace Comforts.Prefabs.Power
         {
             CustomPrefab customPrefab = new CustomPrefab("wallSpeaker", Language.main.Get("WallSpeaker"), Language.main.Get("WallSpeakerDesc"), ComfortsPlugin.epicAtlasOfSprites.GetSprite("SpeakerSprite"));
             techType = customPrefab.Info.TechType;
-            customPrefab.SetGameObject(GetGameObject("wallSpeaker", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("WallSpeaker"), techType));
+            customPrefab.SetGameObject(GetGameObject("wallSpeaker", ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("WallSpeaker"), techType, true, 5.8f));
             RecipeData recipeData = new RecipeData
             {
                 craftAmount = 1,
@@ -31,7 +31,7 @@ namespace Comforts.Prefabs.Power
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
             GadgetExtensions.SetUnlock(customPrefab, TechType.WiringKit, 1);
-            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.Misc);
+            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.InteriorModule);
             customPrefab.Register();
         }
     }

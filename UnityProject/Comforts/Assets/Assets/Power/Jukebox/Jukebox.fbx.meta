@@ -7,16 +7,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Black
-    second: {fileID: 2100000, guid: 86b38cda16709cb4fbff8294918e2ff9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Grey
-    second: {fileID: 2100000, guid: e5ef661aa8e32584f858667a412922da, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Screen
     second: {fileID: 2100000, guid: e0f3b5864d8df3e44b1c74439a8e0450, type: 2}
   - first:
