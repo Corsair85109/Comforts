@@ -23,12 +23,12 @@ namespace Comforts.Prefabs.Decorations
                 craftAmount = 1,
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient(TechType.Titanium, 1),
+                    new Ingredient(TechType.Titanium, 2),
                     new Ingredient(TechType.CopperWire, 1)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
-            GadgetExtensions.SetUnlock(customPrefab, TechType.CopperWire, 1);
+            GadgetExtensions.SetUnlock(customPrefab, TechType.Techlight, 1);
             GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.Misc);
             customPrefab.Register();
         }

@@ -28,7 +28,7 @@ namespace Comforts.Prefabs.Decorations
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
-            GadgetExtensions.SetUnlock(customPrefab, TechType.CopperWire, 1);
+            GadgetExtensions.SetUnlock(customPrefab, TechType.Spotlight, 1);
             GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.Misc);
             customPrefab.Register();
         }

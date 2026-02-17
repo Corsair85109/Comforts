@@ -24,7 +24,7 @@ namespace Comforts.Prefabs.Power
                 craftAmount = 1,
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient(TechType.Titanium, 2),
+                    new Ingredient(TechType.Titanium, 4),
                     new Ingredient(TechType.Lithium, 2),
                     new Ingredient(TechType.Kyanite, 4),
                     new Ingredient(TechType.AdvancedWiringKit, 4),

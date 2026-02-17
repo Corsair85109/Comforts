@@ -29,8 +29,7 @@ namespace Comforts.Prefabs.Power
                 craftAmount = 1,
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient(TechType.ComputerChip, 2),
-                    new Ingredient(TechType.AdvancedWiringKit, 2)
+                    new Ingredient(TechType.AdvancedWiringKit, 1)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(2f).WithFabricatorType(CraftTree.Type.Fabricator).WithStepsToFabricatorTab("Personal", "Equipment");

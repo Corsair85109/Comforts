@@ -26,7 +26,7 @@ namespace Comforts.Prefabs.Kitchen
                 Ingredients = new List<Ingredient>
                 {
                     new Ingredient(TechType.Titanium, 2),
-                    new Ingredient(TechType.WiringKit, 1)
+                    new Ingredient(TechType.WiringKit, 1),
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);

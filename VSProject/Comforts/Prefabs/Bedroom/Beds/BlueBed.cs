@@ -29,8 +29,8 @@ namespace Comforts.Prefabs.Bedroom.Beds
                 craftAmount = 1,
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient(TechType.FiberMesh, 2),
-                    new Ingredient(TechType.CoralChunk, 2)
+                    new Ingredient(TechType.Titanium, 2),
+                    new Ingredient(TechType.FiberMesh, 1)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);

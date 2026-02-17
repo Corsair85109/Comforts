@@ -27,7 +27,7 @@ namespace Comforts.Prefabs.Decorations
                 craftAmount = 1,
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient(TechType.FiberMesh, 2),
+                    new Ingredient(TechType.FiberMesh, 1),
                     new Ingredient(TechType.CoralChunk, 2)
                 }
             };

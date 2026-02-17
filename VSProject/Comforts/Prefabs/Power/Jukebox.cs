@@ -25,12 +25,12 @@ namespace Comforts.Prefabs.Power
                 Ingredients = new List<Ingredient>
                 {
                     new Ingredient(TechType.Titanium, 2),
-                    new Ingredient(TechType.ComputerChip, 2)
+                    new Ingredient(TechType.ComputerChip, 1)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
             GadgetExtensions.SetUnlock(customPrefab, TechType.ComputerChip, 1);
-            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.InteriorModule);
+            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.InteriorModules, TechCategory.InteriorModule);
             customPrefab.Register();
         }
     }

@@ -1,4 +1,4 @@
-﻿using Nautilus.Assets.Gadgets;
+﻿    using Nautilus.Assets.Gadgets;
 using Nautilus.Assets;
 using Nautilus.Crafting;
 using System;
@@ -27,7 +27,7 @@ namespace Comforts.Prefabs.Kitchen
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
-            GadgetExtensions.SetUnlock(customPrefab, TechType.Titanium, 1);
+            GadgetExtensions.SetUnlock(customPrefab, TechType.BaseFiltrationMachine, 1);
             GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.Misc);
             customPrefab.Register();
         }

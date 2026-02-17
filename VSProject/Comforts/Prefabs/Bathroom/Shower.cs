@@ -30,7 +30,7 @@ namespace Comforts.Prefabs.Bathroom
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
-            GadgetExtensions.SetUnlock(customPrefab, TechType.Glass, 1);
+            GadgetExtensions.SetUnlock(customPrefab, TechType.BaseFiltrationMachine, 1);
             GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.Misc);
             customPrefab.Register();
         }

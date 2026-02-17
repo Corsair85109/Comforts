@@ -25,13 +25,13 @@ namespace Comforts.Prefabs.Power
                 craftAmount = 1,
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient(TechType.Titanium, 2),
-                    new Ingredient(TechType.WiringKit, 2)
+                    new Ingredient(TechType.Titanium, 1),
+                    new Ingredient(TechType.WiringKit, 1)
                 }
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
             GadgetExtensions.SetUnlock(customPrefab, TechType.WiringKit, 1);
-            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.Miscellaneous, TechCategory.InteriorModule);
+            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.InteriorModules, TechCategory.InteriorModule);
             customPrefab.Register();
         }
     }
