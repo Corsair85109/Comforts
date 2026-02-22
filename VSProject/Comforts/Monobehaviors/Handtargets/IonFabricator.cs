@@ -1,4 +1,5 @@
-﻿using Comforts.Utility;
+﻿using Comforts.Monobehaviors.ChildInits;
+using Comforts.Utility;
 using Discord;
 using System;
 using System.Collections;
@@ -18,6 +19,9 @@ namespace Comforts.Monobehaviors.Handtargets
         private FMOD_CustomLoopingEmitter soundEmitter;
         [SerializeField]
         private PowerConsumer powerConsumer;
+
+        [SerializeField]
+        private IonFusionReactorChildInit childInit;
 
         [SerializeField]
         private GameObject ionCube;
@@ -112,6 +116,8 @@ namespace Comforts.Monobehaviors.Handtargets
 
         public void Update()
         {
+            childInit.constructed = true;
+
             // check gamemode every 20th frame
             frameCounter++;
             if (frameCounter >= 20)

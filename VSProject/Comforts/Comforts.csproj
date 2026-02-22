@@ -108,6 +108,7 @@
     <Compile Include="ComfortsConfig.cs" />
     <Compile Include="Monobehaviors\ChildInits\ConstructableChildInitialiseBed.cs" />
     <Compile Include="Monobehaviors\ChildInits\ConstructableChildInitialiseBench.cs" />
+    <Compile Include="Monobehaviors\ChildInits\IonFusionReactorChildInit.cs" />
     <Compile Include="Monobehaviors\ClothColourSetter.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortJukeboxController.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortsClothPhysController.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Monobehaviors\Controllers\ComfortsSpeaker.cs" />
     <Compile Include="Monobehaviors\Controllers\JukeboxUIManager.cs" />
     <Compile Include="Monobehaviors\EnergyBeamVFX.cs" />
+    <Compile Include="Monobehaviors\FlickeringLight.cs" />
     <Compile Include="Monobehaviors\Handtargets\CookerFabricator.cs" />
     <Compile Include="Monobehaviors\Handtargets\LavaLampHandTarget.cs" />
     <Compile Include="Monobehaviors\Handtargets\IonFabricator.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="Utility\References\BenchReferenceManager.cs" />
     <Compile Include="Utility\ComfortUtils.cs" />
     <Compile Include="Utility\Logger.cs" />
+    <Compile Include="Utility\References\IoncubeReferenceManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

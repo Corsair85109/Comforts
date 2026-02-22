@@ -320,8 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8026893837843854682}
-  - component: {fileID: 354852745774471838}
-  - component: {fileID: 5513821305933101034}
+  - component: {fileID: 6634315824273786724}
   m_Layer: 0
   m_Name: IonCube
   m_TagString: Untagged
@@ -338,58 +337,25 @@ Transform:
   m_GameObject: {fileID: 1787870791782170199}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0.000000038431608, y: 1.4201847, z: -0.0000000048700413}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2844779137859835153}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &354852745774471838
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787870791782170199}
-  m_Mesh: {fileID: 8415470004685676664, guid: 0dcd6ca4edd56cb479183f3f8e7ccfa0, type: 3}
---- !u!23 &5513821305933101034
-MeshRenderer:
+--- !u!114 &6634315824273786724
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787870791782170199}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 8c407b8e72fd57843a1a5e74db7631dd, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 589123327, guid: 2acdebf6433a11e47bf5ef3eea8e25dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rendererWithTheGlowMaterial: {fileID: 7125211617518332967}
+  constructed: 0
 --- !u!1 &1892059170530197807
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundEmitter: {fileID: 3586869643922368954}
   powerConsumer: {fileID: 8097779070574197520}
+  childInit: {fileID: 6634315824273786724}
   ionCube: {fileID: 1787870791782170199}
   beam1: {fileID: 1372925239064674127}
   beam2: {fileID: 142068582605659016}
@@ -546,7 +513,7 @@ MonoBehaviour:
   beam14: {fileID: 5026037989096825153}
   beam15: {fileID: 6778880784686493603}
   beam16: {fileID: 6531928565477370084}
-  beamColour: {r: 0.16470589, g: 1, b: 0.14901961, a: 0}
+  beamColour: {r: 0.38420567, g: 1, b: 0.3726415, a: 0}
   timeToCraft: 90
   energyCost: 2000
   powerEndThreshhold: 100
@@ -1552,6 +1519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7646542362298500260}
   - component: {fileID: 3702148800766154534}
+  - component: {fileID: 6211741056223201775}
   m_Layer: 0
   m_Name: LightEmitter
   m_TagString: Untagged
@@ -1634,3 +1602,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &6211741056223201775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554462441090572260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1914943861, guid: 2acdebf6433a11e47bf5ef3eea8e25dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minIntensity: 2
+  maxIntensity: 10
+  speed: 5

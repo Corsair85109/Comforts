@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UWE;
+using Logger = Comforts.Utility.Logger;
 
 namespace Comforts.Monobehaviors
 {
     public class EnergyBeamVFX : MonoBehaviour
     {
-        public static float VectorRandomRange = 0.35f;
+        public static float VectorRandomRange = 0.1f;
         public static float centerOffset = 0f;
 
 
@@ -99,7 +101,6 @@ namespace Comforts.Monobehaviors
             var task = CraftData.GetPrefabForTechTypeAsync(TechType.PropulsionCannon);
             yield return task;
             _beamFXPrefab = task.GetResult().FindChild("xPropulsionCannon_Beams");
-
 
             _beamFX = Instantiate(_beamFXPrefab, transform.position, transform.rotation, transform);
             _coroutineRunning = false;
