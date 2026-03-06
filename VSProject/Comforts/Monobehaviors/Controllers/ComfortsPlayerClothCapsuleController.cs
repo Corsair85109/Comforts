@@ -21,6 +21,7 @@ namespace Comforts.Monobehaviors.Controllers
 
         public void Update()
         {
+            return;
             if (player.IsInSub())
             {
                 collider.enabled = true;

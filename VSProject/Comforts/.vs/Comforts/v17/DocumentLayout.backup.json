@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\energybeamvfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\energybeamvfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\controllers\\comfortsclothphyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortsclothphyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\flickeringlight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\flickeringlight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\childinits\\ionfusionreactorchildinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\childinits\\ionfusionreactorchildinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\commands\\comfortsconsolecommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:commands\\comfortsconsolecommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\monobehaviors\\controllers\\comfortsplayerclothcapsulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortsplayerclothcapsulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,53 +51,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FlickeringLight.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\FlickeringLight.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\FlickeringLight.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\FlickeringLight.cs",
-              "RelativeToolTip": "Monobehaviors\\FlickeringLight.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Title": "ComfortsPlayerClothCapsuleController.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsPlayerClothCapsuleController.cs",
+              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortsPlayerClothCapsuleController.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsPlayerClothCapsuleController.cs",
+              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortsPlayerClothCapsuleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T10:21:08.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T03:23:25.86Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EnergyBeamVFX.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\EnergyBeamVFX.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\EnergyBeamVFX.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\EnergyBeamVFX.cs*",
-              "RelativeToolTip": "Monobehaviors\\EnergyBeamVFX.cs*",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAcwG8AAAAnAAAAAAAAAA==",
+              "Title": "ComfortsClothPhysController.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsClothPhysController.cs",
+              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortsClothPhysController.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsClothPhysController.cs",
+              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortsClothPhysController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T10:06:09.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ComfortsConsoleCommands.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Commands\\ComfortsConsoleCommands.cs",
-              "RelativeDocumentMoniker": "Commands\\ComfortsConsoleCommands.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Commands\\ComfortsConsoleCommands.cs",
-              "RelativeToolTip": "Commands\\ComfortsConsoleCommands.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T09:04:50.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IonFusionReactorChildInit.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\ChildInits\\IonFusionReactorChildInit.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\ChildInits\\IonFusionReactorChildInit.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\ChildInits\\IonFusionReactorChildInit.cs",
-              "RelativeToolTip": "Monobehaviors\\ChildInits\\IonFusionReactorChildInit.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwDAAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T08:09:25.501Z",
+              "WhenOpened": "2026-02-28T03:07:49.902Z",
               "EditorCaption": ""
             }
           ]

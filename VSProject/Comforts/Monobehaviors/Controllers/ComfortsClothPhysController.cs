@@ -21,8 +21,10 @@ namespace Comforts.Monobehaviors.Controllers
                 cloth.enabled = true;
 
                 EnsurePlayerCapsuleColliderChild();
-
-                SetCapsuleCollider();
+            }
+            else
+            {
+                cloth.enabled = false;
             }
         }
 
@@ -34,14 +36,16 @@ namespace Comforts.Monobehaviors.Controllers
             {
                 capsuleChild = ComfortsPlugin.theUltimateBundleOfAssets.LoadAsset<GameObject>("ComfortsCapsuleCollider");
 
-                GameObject.Instantiate(capsuleChild, player);
+                GameObject clone = Instantiate(capsuleChild, player);
+
+                cloth.capsuleColliders = new CapsuleCollider[1];
+                cloth.capsuleColliders[0] = clone.GetComponent<CapsuleCollider>();
             }
         }
 
         private void SetCapsuleCollider()
         {
-            cloth.capsuleColliders = new CapsuleCollider[1];
-            cloth.capsuleColliders[0] = Player.main.transform.Find("ComfortsCapsuleCollider(Clone)").GetComponent<CapsuleCollider>();
+            
         }
     }
 }

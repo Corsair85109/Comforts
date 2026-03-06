@@ -3035,7 +3035,6 @@ MonoBehaviour:
   m_Script: {fileID: 1967505271, guid: 2acdebf6433a11e47bf5ef3eea8e25dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinnedMeshRenderer: {fileID: 2744404806380434933}
   renderer: {fileID: 2744404806380434933}
   colour: 0
 --- !u!1 &4570938058433324979

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\energybeamvfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\energybeamvfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\controllers\\comfortsclothphyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortsclothphyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\childinits\\ionfusionreactorchildinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\childinits\\ionfusionreactorchildinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\monobehaviors\\controllers\\comfortsplayerclothcapsulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\controllers\\comfortsplayerclothcapsulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,28 +50,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EnergyBeamVFX.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\EnergyBeamVFX.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\EnergyBeamVFX.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\EnergyBeamVFX.cs",
-              "RelativeToolTip": "Monobehaviors\\EnergyBeamVFX.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAcwGYAAABSAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ComfortsPlayerClothCapsuleController.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsPlayerClothCapsuleController.cs",
+              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortsPlayerClothCapsuleController.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsPlayerClothCapsuleController.cs",
+              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortsPlayerClothCapsuleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T10:06:09.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T03:23:25.86Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IonFusionReactorChildInit.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\ChildInits\\IonFusionReactorChildInit.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\ChildInits\\IonFusionReactorChildInit.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\ChildInits\\IonFusionReactorChildInit.cs",
-              "RelativeToolTip": "Monobehaviors\\ChildInits\\IonFusionReactorChildInit.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAQwDMAAAApAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ComfortsClothPhysController.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsClothPhysController.cs",
+              "RelativeDocumentMoniker": "Monobehaviors\\Controllers\\ComfortsClothPhysController.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Controllers\\ComfortsClothPhysController.cs",
+              "RelativeToolTip": "Monobehaviors\\Controllers\\ComfortsClothPhysController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T08:09:25.501Z",
+              "WhenOpened": "2026-02-28T03:07:49.902Z",
               "EditorCaption": ""
             }
           ]
