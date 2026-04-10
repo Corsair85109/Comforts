@@ -12,6 +12,8 @@ namespace Comforts.Audio
 {
     internal class JukeboxSongs
     {
+        public static bool hasSongs;
+
         internal static List<FMODAsset> songs = new List<FMODAsset>();
 
         internal static float range = 15f;
@@ -28,8 +30,11 @@ namespace Comforts.Audio
             if (songFiles.Length == 0)
             {
                 Utility.Logger.LogWarning("Jukebox songs file directory is empty! Your jukebox will not play anything");
+                hasSongs = false;
                 return;
             }
+
+            hasSongs = true;
 
             foreach (string songFile in songFiles)
             {

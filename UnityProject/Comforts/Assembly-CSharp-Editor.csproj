@@ -299,6 +299,9 @@
     <Reference Include="Nautilus">
       <HintPath>Packages\Subnautica\Nautilus.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Packages\Subnautica\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="Comforts">
       <HintPath>Packages\Subnautica\Comforts\Comforts.dll</HintPath>
     </Reference>

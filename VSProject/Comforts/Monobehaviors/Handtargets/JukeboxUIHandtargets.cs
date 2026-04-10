@@ -1,4 +1,5 @@
-﻿using Comforts.Monobehaviors.Controllers;
+﻿using Comforts.Audio;
+using Comforts.Monobehaviors.Controllers;
 using Comforts.Utility;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,9 @@ namespace Comforts.Monobehaviors.Handtargets
 {
     internal class JukeboxUIHandtarget : HandTarget, IHandTarget
     {
+        [SerializeField]
+        private FMOD_CustomEmitter soundEmitter;
+
         internal virtual string useKey
         {
             get
@@ -32,7 +36,22 @@ namespace Comforts.Monobehaviors.Handtargets
             HandReticle.main.SetText(HandReticle.TextType.HandSubscript, string.Empty, false, GameInput.Button.None);
             HandReticle.main.SetIcon(HandReticle.IconType.Hand, 1f);
         }
-        public virtual void OnHandClick(GUIHand hand) { }
+        public virtual void OnHandClick(GUIHand hand)
+        {
+            if (soundEmitter != null)
+            {
+                soundEmitter.Play();
+            }
+        }
+
+
+        public void Start()
+        {
+            if (soundEmitter != null)
+            {
+                soundEmitter.asset = ComfortsFMODAssets.switchSound;
+            }
+        }
     }
 
 
@@ -50,6 +69,7 @@ namespace Comforts.Monobehaviors.Handtargets
 
         public override void OnHandClick(GUIHand hand)
         {
+            base.OnHandClick(hand);
             jukebox.Play();
         }
     }
@@ -66,6 +86,7 @@ namespace Comforts.Monobehaviors.Handtargets
 
         public override void OnHandClick(GUIHand hand)
         {
+            base.OnHandClick(hand);
             jukebox.Stop();
         }
     }
@@ -82,6 +103,7 @@ namespace Comforts.Monobehaviors.Handtargets
 
         public override void OnHandClick(GUIHand hand)
         {
+            base.OnHandClick(hand);
             jukebox.Skip();
         }
     }
@@ -98,6 +120,7 @@ namespace Comforts.Monobehaviors.Handtargets
 
         public override void OnHandClick(GUIHand hand)
         {
+            base.OnHandClick(hand);
             jukebox.Back();
         }
     }

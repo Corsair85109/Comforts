@@ -1,4 +1,5 @@
-﻿using Comforts.Monobehaviors.ChildInits;
+﻿using Comforts.Audio;
+using Comforts.Monobehaviors.ChildInits;
 using Comforts.Utility;
 using Discord;
 using System;
@@ -104,12 +105,16 @@ namespace Comforts.Monobehaviors.Handtargets
             progressPercentage = 0f;
             hasCraftedItem = false;
 
+            soundEmitter.Play();
+
             isCrafting = true;
         }
 
         private void EndCrafting(bool item)
         {
             isCrafting = false;
+
+            soundEmitter.Stop();
 
             hasCraftedItem = item;
         }
@@ -263,6 +268,10 @@ namespace Comforts.Monobehaviors.Handtargets
             eight = beam8.EnsureComponent<EnergyBeamVFX>();
 
             requirePower = GameModeUtils.RequiresPower();
+
+            soundEmitter.assetStart = ComfortsFMODAssets.FusionStart;
+            soundEmitter.asset = ComfortsFMODAssets.FusionLoop;
+            soundEmitter.assetStop = ComfortsFMODAssets.FusionEnd;
         }
 
         private void SetEnergyBeams(bool active)

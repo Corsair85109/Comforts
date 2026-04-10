@@ -40,7 +40,7 @@ namespace Comforts.Monobehaviors.Controllers
 
         public void Update()
         {
-            if (ComfortsPlugin.ModConfig.jukeboxPresent)
+            if (ComfortsPlugin.ModConfig.jukeboxPresent || !JukeboxSongs.hasSongs)
             {
                 currentSong = ComfortsFMODAssets.present;
             }
@@ -48,11 +48,16 @@ namespace Comforts.Monobehaviors.Controllers
             {
                 currentSong = JukeboxSongs.songs[currentSongNum];
             }
-            songNameText.SetText(currentSong.id);
+            SetText(currentSong.id);
         }
 
         public void Play()
         {
+            if (!JukeboxSongs.hasSongs)
+            {
+                ComfortUtils.NautilusBasicText(Language.main.Get("JukeboxInstructions"), 1000);
+            }
+
             playSong = true;
 
             ComfortsSpeaker.UpdateMusicConstructables();
@@ -91,6 +96,21 @@ namespace Comforts.Monobehaviors.Controllers
             }
 
             ComfortsSpeaker.UpdateMusicConstructables();
+        }
+
+
+        private void SetText(string text)
+        {
+            if (JukeboxSongs.hasSongs || ComfortsPlugin.ModConfig.jukeboxPresent)
+            {
+                songNameText.SetText(text);
+                songNameText.enabled = true;
+            }
+            else
+            {
+                songNameText.SetText(Language.main.Get("NoJukeboxSongs"));
+                songNameText.enabled = true;
+            }
         }
     }
 }

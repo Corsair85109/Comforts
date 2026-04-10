@@ -223,7 +223,7 @@ MonoBehaviour:
   placeMaxDistance: 5
   placeMinDistance: 1.2
   placeDefaultDistance: 2
-  surfaceType: 0
+  surfaceType: 5
   _EmissiveTex: {fileID: 0}
   _NoiseTex: {fileID: 0}
 --- !u!114 &80134419800230111

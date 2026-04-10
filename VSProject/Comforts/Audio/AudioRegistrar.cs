@@ -32,6 +32,22 @@ namespace Comforts.Audio
             AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Cook_loop"), "Cook_loop", 0f, 10f, true);
             ComfortsFMODAssets.cookerLoop = AudioUtils.GetFmodAsset("Cook_loop");
 
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Sink"), "Sink", 0f, 10f, false);
+            ComfortsFMODAssets.sink = AudioUtils.GetFmodAsset("Sink");
+
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Shower"), "Shower", 0f, 10f, false);
+            ComfortsFMODAssets.shower = AudioUtils.GetFmodAsset("Shower");
+
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Fusion_start"), "Fusion_start", 0f, 30f, false);
+            ComfortsFMODAssets.FusionStart = AudioUtils.GetFmodAsset("Fusion_start");
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Fusion_loop"), "Fusion_loop", 0f, 30f, true);
+            ComfortsFMODAssets.FusionLoop = AudioUtils.GetFmodAsset("Fusion_loop");
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("Fusion_end"), "Fusion_end", 0f, 30f, false);
+            ComfortsFMODAssets.FusionEnd = AudioUtils.GetFmodAsset("Fusion_end");
+
+            AddWorldSoundEffect(bundle.LoadAsset<AudioClip>("button_click"), "button_click", 0f, 10f, false);
+            ComfortsFMODAssets.switchSound = AudioUtils.GetFmodAsset("button_click");
+
         }
 
         public static void AddWorldSoundEffect(AudioClip clip, string soundPath, float minDistance = 0f, float maxDistance = 100f, bool looping = false, string overrideBus = null)

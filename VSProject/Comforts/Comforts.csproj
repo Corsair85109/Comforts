@@ -109,6 +109,7 @@
     <Compile Include="Monobehaviors\ChildInits\ConstructableChildInitialiseBed.cs" />
     <Compile Include="Monobehaviors\ChildInits\ConstructableChildInitialiseBench.cs" />
     <Compile Include="Monobehaviors\ChildInits\IonFusionReactorChildInit.cs" />
+    <Compile Include="Monobehaviors\ChildInits\TextMeshProAdder.cs" />
     <Compile Include="Monobehaviors\ClothColourSetter.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortJukeboxController.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortsClothPhysController.cs" />
@@ -126,6 +127,8 @@
     <Compile Include="Monobehaviors\Handtargets\ParticleSystemHandTarget.cs" />
     <Compile Include="Monobehaviors\HealPlayerInCollider.cs" />
     <Compile Include="Monobehaviors\MusicChipFMODEmitter.cs" />
+    <Compile Include="Monobehaviors\SoundEmitters\ShowerFMODEmitter.cs" />
+    <Compile Include="Monobehaviors\SoundEmitters\SinkFMODEmitter.cs" />
     <Compile Include="Patches\MusicChipPatch.cs" />
     <Compile Include="Prefabs\Bathroom\RoundSink.cs" />
     <Compile Include="Prefabs\Bathroom\Shower.cs" />
@@ -139,6 +142,7 @@
     <Compile Include="Prefabs\Decorations\Curtains\RedCurtain.cs" />
     <Compile Include="Prefabs\Kitchen\Cooker.cs" />
     <Compile Include="Prefabs\Kitchen\Sink.cs" />
+    <Compile Include="Prefabs\Power\AnchoredBeacon.cs" />
     <Compile Include="Prefabs\Power\FloorLocker.cs" />
     <Compile Include="Prefabs\Power\IonFusionReactor.cs" />
     <Compile Include="Prefabs\Power\Jukebox.cs" />

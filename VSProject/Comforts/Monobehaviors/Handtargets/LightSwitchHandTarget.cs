@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comforts.Audio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,9 @@ namespace Comforts.Monobehaviors.Handtargets
 {
     internal class LightSwitchHandTarget : HandTarget, IHandTarget
     {
+        [SerializeField]
+        private FMOD_CustomEmitter soundEmitter;
+
         private SubRoot _subRoot = null;
         internal SubRoot SubRoot
         {
@@ -31,7 +35,21 @@ namespace Comforts.Monobehaviors.Handtargets
         }
         public virtual void OnHandClick(GUIHand hand)
         {
+            if (soundEmitter != null)
+            {
+                soundEmitter.Play();
+            }
+
             SubRoot.ForceLightingState(!SubRoot.subLightsOn);
+        }
+
+
+        public void Start()
+        {
+            if (soundEmitter != null)
+            {
+                soundEmitter.asset = ComfortsFMODAssets.switchSound;
+            }
         }
     }
 }

@@ -280,7 +280,7 @@ namespace Comforts.Monobehaviors.Handtargets
                 }
                 else
                 {
-                    ComfortUtils.NautilusBasicText("This will only work in modes that require nutrition!", 200f);
+                    ComfortUtils.NautilusBasicText(Language.main.Get("CantUseCooker"), 200f);
                 }
             }
         }

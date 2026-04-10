@@ -983,35 +983,76 @@
             </summary>
         </member>
         <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetRecipe(Nautilus.Assets.ICustomPrefab,Nautilus.Crafting.RecipeData)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetRecipe(Nautilus.Crafting.RecipeData)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetRecipeFromJson(Nautilus.Assets.ICustomPrefab,System.String)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetRecipeFromJson(System.String)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetUnlock(Nautilus.Assets.ICustomPrefab,TechType,System.Int32)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetUnlock(TechType,System.Int32)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.CreateFragment(Nautilus.Assets.ICustomPrefab,TechType,System.Single,System.Int32,System.String,System.Boolean,System.Boolean)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.CreateFragment(TechType,System.Single,System.Int32,System.String,System.Boolean,System.Boolean)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetPdaGroupCategory(Nautilus.Assets.ICustomPrefab,TechGroup,TechCategory)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetPdaGroupCategory(TechGroup,TechCategory)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetPdaGroupCategoryAfter(Nautilus.Assets.ICustomPrefab,TechGroup,TechCategory,TechType)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetPdaGroupCategoryAfter(TechGroup,TechCategory,TechType)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetPdaGroupCategoryBefore(Nautilus.Assets.ICustomPrefab,TechGroup,TechCategory,TechType)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetPdaGroupCategoryBefore(TechGroup,TechCategory,TechType)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetEquipment(Nautilus.Assets.ICustomPrefab,EquipmentType)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetEquipment(EquipmentType)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetVehicleUpgradeModule(Nautilus.Assets.ICustomPrefab,EquipmentType,QuickSlotType)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetVehicleUpgradeModule(EquipmentType,QuickSlotType)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.CreateFabricator(Nautilus.Assets.ICustomPrefab,CraftTree.Type@)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.CreateFabricator(CraftTree.Type@)"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetSpawns(Nautilus.Assets.ICustomPrefab,Nautilus.Assets.SpawnLocation[])">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetSpawns(Nautilus.Assets.SpawnLocation[])"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetSpawns(Nautilus.Assets.ICustomPrefab,LootDistributionData.BiomeData[])">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetSpawns(LootDistributionData.BiomeData[])"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetSpawns(Nautilus.Assets.ICustomPrefab,UWE.WorldEntityInfo,LootDistributionData.BiomeData[])">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetSpawns(UWE.WorldEntityInfo,LootDistributionData.BiomeData[])"/>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.CreateCreatureEgg(Nautilus.Assets.ICustomPrefab,System.Int32)">
+            <inheritdoc cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.CreateCreatureEgg(System.Int32)"/>
+        </member>
+        <member name="T:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.&lt;M&gt;$7F6E6C8744981A639FF7D555B6DB66BB">
+            <param name="customPrefab">The custom prefab to add recipe to.</param>
+        </member>
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetRecipe(Nautilus.Crafting.RecipeData)">
             <summary>
             Adds recipe to this custom prefab.
             </summary>
-            <param name="customPrefab">The custom prefab to add recipe to.</param>
             <param name="recipeData">The recipe to add.</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.CraftingGadget"/> to continue the recipe settings on.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetRecipeFromJson(Nautilus.Assets.ICustomPrefab,System.String)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetRecipeFromJson(System.String)">
             <summary>
             Adds recipe from a json file to this custom prefab.
             </summary>
-            <param name="customPrefab">The custom prefab to add recipe to.</param>
             <param name="filePath">The path to the recipe json file. A string with valid recipe data json is also acceptable.</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.CraftingGadget"/> to continue the recipe settings on.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetUnlock(Nautilus.Assets.ICustomPrefab,TechType,System.Int32)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetUnlock(TechType,System.Int32)">
             <summary>
             Adds unlocks to this custom prefab.
             </summary>
-            <param name="customPrefab">The custom prefab to add unlocks to.</param>
             <param name="requiredForUnlock">The blueprint to set as a requirement.</param>
             <param name="fragmentsToScan">Amount of <paramref name="requiredForUnlock"/> that must be scanned to unlock this item.</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.ScanningGadget"/> to continue the scanning settings on.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.CreateFragment(Nautilus.Assets.ICustomPrefab,TechType,System.Single,System.Int32,System.String,System.Boolean,System.Boolean)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.CreateFragment(TechType,System.Single,System.Int32,System.String,System.Boolean,System.Boolean)">
             <summary>
             Makes this prefab a fragment.
             </summary>
-            <param name="customPrefab">The fragment custom prefab.</param>
             <param name="blueprint">The blueprint that gets unlocked once this item is scanned</param>
             <param name="scanTime">The amount of seconds it takes to scan this item.</param>
             <param name="fragmentsToScan">The amount of fragments required to be scanned before the blueprint is unlocked.</param>
@@ -1021,22 +1062,20 @@
             This is the default behaviour for almost all of the vanilla fragments.</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.ScanningGadget"/> to continue the scanning settings on.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetPdaGroupCategory(Nautilus.Assets.ICustomPrefab,TechGroup,TechCategory)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetPdaGroupCategory(TechGroup,TechCategory)">
             <summary>
             Adds this item into a blueprint category to appear in.
             </summary>
-            <param name="customPrefab">The custom prefab to add unlocks to.</param>
             <param name="group">The main group in the PDA blueprints where this item appears</param>
             <param name="category">The category within the group in the PDA blueprints where this item appears.</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.ScanningGadget"/> to continue the scanning settings on.</returns>
             <remarks>If the specified <paramref name="group"/> is a tech group that is present in the <see cref="F:uGUI_BuilderMenu.groups"/> list, this item will automatically
             become buildable. To avoid this, or make this item a buildable manually, use the <see cref="M:Nautilus.Assets.Gadgets.ScanningGadget.SetBuildable(System.Boolean)"/> method.</remarks>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetPdaGroupCategoryAfter(Nautilus.Assets.ICustomPrefab,TechGroup,TechCategory,TechType)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetPdaGroupCategoryAfter(TechGroup,TechCategory,TechType)">
             <summary>
             Adds this item into a blueprint category to appear in.
             </summary>
-            <param name="customPrefab">The custom prefab to add unlocks to.</param>
             <param name="group">The main group in the PDA blueprints where this item appears.</param>
             <param name="category">The category within the group in the PDA blueprints where this item appears.</param>
             <param name="target">It will be added after this target item or at the end if not found.</param>
@@ -1044,11 +1083,10 @@
             <remarks>If the specified <paramref name="group"/> is a tech group that is present in the <see cref="F:uGUI_BuilderMenu.groups"/> list, this item will automatically
             become buildable. To avoid this, or make this item a buildable manually, use the <see cref="M:Nautilus.Assets.Gadgets.ScanningGadget.SetBuildable(System.Boolean)"/> method.</remarks>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetPdaGroupCategoryBefore(Nautilus.Assets.ICustomPrefab,TechGroup,TechCategory,TechType)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetPdaGroupCategoryBefore(TechGroup,TechCategory,TechType)">
             <summary>
             Adds this item into a blueprint category to appear in.
             </summary>
-            <param name="customPrefab">The custom prefab to add unlocks to.</param>
             <param name="group">The main group in the PDA blueprints where this item appears.</param>
             <param name="category">The category within the group in the PDA blueprints where this item appears.</param>
             <param name="target">It will be inserted before this target item or at the beginning if not found.</param>
@@ -1056,63 +1094,56 @@
             <remarks>If the specified <paramref name="group"/> is a tech group that is present in the <see cref="F:uGUI_BuilderMenu.groups"/> list, this item will automatically
             become buildable. To avoid this, or make this item a buildable manually, use the <see cref="M:Nautilus.Assets.Gadgets.ScanningGadget.SetBuildable(System.Boolean)"/> method.</remarks>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetEquipment(Nautilus.Assets.ICustomPrefab,EquipmentType)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetEquipment(EquipmentType)">
             <summary>
             Sets the type of equipment slot this item can fit into.
             </summary>
-            <param name="customPrefab">The custom prefab to set equipment slot for.</param>
             <param name="equipmentType">The type of equipment slot this item can fit into.</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.EquipmentGadget"/> to continue the equipment settings on.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetVehicleUpgradeModule(Nautilus.Assets.ICustomPrefab,EquipmentType,QuickSlotType)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetVehicleUpgradeModule(EquipmentType,QuickSlotType)">
             <summary>
             Sets this item as a vehicle upgrade module. Cyclops upgrades are not supported by this function.
             <para>If you're using this function, please do not use <see cref="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetEquipment(Nautilus.Assets.ICustomPrefab,EquipmentType)"/>,<br/>
             it would interfere with this and possibly make the game crash or cause the mod to not work.</para>
             </summary>
-            <param name="customPrefab">The custom prefab to set vehicle upgrade for.</param>
             <param name="equipmentType">The type of equipment slot this item can fit into. Preferably use something related to vehicles.</param>
             <param name="slotType">The quick slot type</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.UpgradeModuleGadget"/> to continue the upgrade settings on.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.CreateFabricator(Nautilus.Assets.ICustomPrefab,CraftTree.Type@)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.CreateFabricator(CraftTree.Type@)">
             <summary>
             Creates a craft tree for this prefab. The created craft tree is immediately returned after this method is executed. 
             </summary>
-            <param name="customPrefab">The custom prefab to set equipment slot for.</param>
             <param name="treeType">The created custom craft tree type.</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.FabricatorGadget"/> to continue the fabricator settings on.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetSpawns(Nautilus.Assets.ICustomPrefab,Nautilus.Assets.SpawnLocation[])">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetSpawns(Nautilus.Assets.SpawnLocation[])">
             <summary>
             Adds coordinated spawns for this custom prefab.
             </summary>
-            <param name="customPrefab">The custom prefab to add coordinated spawns for.</param>
             <param name="spawnLocations">The spawn locations to spawn in.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetSpawns(Nautilus.Assets.ICustomPrefab,LootDistributionData.BiomeData[])">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetSpawns(LootDistributionData.BiomeData[])">
             <summary>
             Adds biome spawns for this custom prefab with default <see cref="T:UWE.WorldEntityInfo"/> values.
             </summary>
-            <param name="customPrefab">The custom prefab to add biome spawns for.</param>
             <param name="biomesToSpawnIn">The biomes to spawn in.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.SetSpawns(Nautilus.Assets.ICustomPrefab,UWE.WorldEntityInfo,LootDistributionData.BiomeData[])">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.SetSpawns(UWE.WorldEntityInfo,LootDistributionData.BiomeData[])">
             <summary>
             Adds biome spawns for this custom prefab.
             </summary>
-            <param name="customPrefab">The custom prefab to add biome spawns for.</param>
             <param name="entityInfo">Data on how the biome spawner should treat this object as.</param>
             <param name="biomesToSpawnIn">The biomes to spawn in.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.CreateCreatureEgg(Nautilus.Assets.ICustomPrefab,System.Int32)">
+        <member name="M:Nautilus.Assets.Gadgets.GadgetExtensions.&lt;G&gt;$8B13DB971FD4E9E468A5E51DEBEF5E4A.CreateCreatureEgg(System.Int32)">
             <summary>
             Makes this item have additional creature-egg-related functionality.
             </summary>
-            <param name="customPrefab">The custom prefab the creature egg gadget is created for.</param>
             <param name="requiredAcuSize">The total amount of ACU floors required for the egg to be dropped in the ACU. This value is shared between the normal and the large ACU.</param>
             <returns>A reference to the created <see cref="T:Nautilus.Assets.Gadgets.EggGadget"/> instance after the operation has completed.</returns>
         </member>
@@ -2610,6 +2641,15 @@
             <param name="this">The string to perform this action on.</param>
             <returns>The new string without "(Clone)". If the specified string does not contain "(Clone)", it simply returns the string as-is.</returns>
         </member>
+        <member name="M:Nautilus.Extensions.GeneralExtensions.TrimInstance(System.String)">
+            <summary>
+            Removes the (Instance) text from the end of names, recursively. Primarily helpful for programmatic
+            material name comparisons.
+            </summary>
+            <param name="originalString">The name from which to remove the Instance string.</param>
+            <returns>The altered name if any trailing '(Instance)' strings were found, otherwise the uneffected
+            name.</returns>
+        </member>
         <member name="M:Nautilus.Extensions.GeneralExtensions.AddHint(ErrorMessage,System.String)">
             <summary>
             Adds a message and increases the life of it, instead of spamming it.
@@ -2648,17 +2688,24 @@
             <returns><see cref="T:JsonValue"/> or null</returns>
         </member>
         <member name="M:Nautilus.Extensions.TypeExtensions.GetFriendlyName(System.Type)">
+            <inheritdoc cref="M:Nautilus.Extensions.TypeExtensions.&lt;G&gt;$6B6159A298CA62A8C577E514BE40E3DD.GetFriendlyName"/>
+        </member>
+        <member name="M:Nautilus.Extensions.TypeExtensions.GetUnderlyingType(System.Type)">
+            <inheritdoc cref="M:Nautilus.Extensions.TypeExtensions.&lt;G&gt;$6B6159A298CA62A8C577E514BE40E3DD.GetUnderlyingType"/>
+        </member>
+        <member name="T:Nautilus.Extensions.TypeExtensions.&lt;G&gt;$6B6159A298CA62A8C577E514BE40E3DD.&lt;M&gt;$617E2A5EAF7361856B5033D63F3EB12E">
+            <param name="type"></param>
+        </member>
+        <member name="M:Nautilus.Extensions.TypeExtensions.&lt;G&gt;$6B6159A298CA62A8C577E514BE40E3DD.GetFriendlyName">
             <summary>
             Format the given <paramref name="type"/>'s name into a more developer-friendly form.
             </summary>
-            <param name="type"></param>
             <returns></returns>
         </member>
-        <member name="M:Nautilus.Extensions.TypeExtensions.GetUnderlyingType(System.Type)">
+        <member name="M:Nautilus.Extensions.TypeExtensions.&lt;G&gt;$6B6159A298CA62A8C577E514BE40E3DD.GetUnderlyingType">
             <summary>
             "Unwraps" the inner <paramref name="type"/> from an array and/or nullable type.
             </summary>
-            <param name="type"></param>
             <returns>
             The inner type - for example, <see cref="T:System.String"/> from a <see cref="T:System.Array">string[]</see>, or <see cref="T:System.Boolean"/> from <see cref="T:System.Nullable`1">bool?</see>.<br/>
             If the <paramref name="type"/> isn't wrapped, it is returned as-is.
@@ -3231,8 +3278,14 @@
             <para>Can be used for existing TechTypes too.</para>
             </summary>
             <param name="techType">The TechType whose RecipeData you want to edit.</param>
-            <param name="recipeData">The RecipeData for that TechType.</param>
+            <param name="recipeData">The RecipeData for that TechType. If null and the tech type already has a recipe, it will get removed instead.</param>
             <seealso cref="T:Nautilus.Crafting.RecipeData"/>
+        </member>
+        <member name="M:Nautilus.Handlers.CraftDataHandler.RemoveRecipeData(TechType)">
+            <summary>
+            Removes the recipe data from an item.
+            </summary>
+            <param name="techType">The item Tech type.</param>
         </member>
         <member name="M:Nautilus.Handlers.CraftDataHandler.SetIngredients(TechType,System.Collections.Generic.ICollection{Ingredient})">
             <summary>
@@ -3846,29 +3899,98 @@
             <returns><see langword="true"/> if the specified enum value is defined by default, otherwise; <see langword="false"/>.</returns>
         </member>
         <member name="M:Nautilus.Handlers.EnumExtensions.WithBackground(Nautilus.Handlers.EnumBuilder{CraftData.BackgroundType},UnityEngine.Sprite)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$97C5B7F68F8E5D7EC24F2D258C4A596B.WithBackground(UnityEngine.Sprite)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithBackground(Nautilus.Handlers.EnumBuilder{CraftData.BackgroundType},UnityEngine.Sprite,System.Boolean)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$97C5B7F68F8E5D7EC24F2D258C4A596B.WithBackground(UnityEngine.Sprite,System.Boolean)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.CreateInput(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String,System.String,UnityEngine.InputSystem.InputActionType)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.CreateInput(System.String,System.String,System.String,UnityEngine.InputSystem.InputActionType)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device,GameInput.BindingSet,System.String)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithBinding(GameInput.Device,GameInput.BindingSet,System.String)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device,System.String,System.String)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithBinding(GameInput.Device,System.String,System.String)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithKeyboardBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithKeyboardBinding(System.String,System.String)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithControllerBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithControllerBinding(System.String,System.String)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithCategory(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithCategory(System.String)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.SetBindable"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.SetBindable(GameInput.Device)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.SetUnbindable"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.SetUnbindable(GameInput.Device)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.AvoidConflicts"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.AvoidConflicts(GameInput.Device)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.CreateCraftTreeRoot(Nautilus.Handlers.EnumBuilder{CraftTree.Type},Nautilus.Crafting.ModCraftTreeRoot@)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$4AEE7610AA13171D656A65855FA343CA.CreateCraftTreeRoot(Nautilus.Crafting.ModCraftTreeRoot@)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithIcon(Nautilus.Handlers.EnumBuilder{PingType},UnityEngine.Sprite)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$9BB222223A539CC492E3F62471C2BA4A.WithIcon(UnityEngine.Sprite)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithPdaInfo(Nautilus.Handlers.EnumBuilder{TechCategory},System.String,System.String)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$E5A36A31ACA655C2B0696D4A0AF7DEF5.WithPdaInfo(System.String,System.String)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.RegisterToTechGroup(Nautilus.Handlers.EnumBuilder{TechCategory},TechGroup)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$E5A36A31ACA655C2B0696D4A0AF7DEF5.RegisterToTechGroup(TechGroup)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithPdaInfo(Nautilus.Handlers.EnumBuilder{TechGroup},System.String,System.String)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$379252636B3A4C9A0FB27BB87CF0FC94.WithPdaInfo(System.String,System.String)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithPdaInfo(Nautilus.Handlers.EnumBuilder{TechType},System.String,System.String,System.String,System.Boolean)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$41DD6F252CD203A892CD460AE59DF444.WithPdaInfo(System.String,System.String,System.String,System.Boolean)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithIcon(Nautilus.Handlers.EnumBuilder{TechType},UnityEngine.Sprite)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$41DD6F252CD203A892CD460AE59DF444.WithIcon(UnityEngine.Sprite)"/>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.WithSizeInInventory(Nautilus.Handlers.EnumBuilder{TechType},Vector2int)">
+            <inheritdoc cref="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$41DD6F252CD203A892CD460AE59DF444.WithSizeInInventory(Vector2int)"/>
+        </member>
+        <member name="T:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$97C5B7F68F8E5D7EC24F2D258C4A596B.&lt;M&gt;$AEEEF0185A64A9EEF463C6B0A4EE7F13">
+            <param name="builder">The current custom enum object instance</param>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$97C5B7F68F8E5D7EC24F2D258C4A596B.WithBackground(UnityEngine.Sprite)">
             <summary>
             Adds a sprite for this instance.
             </summary>
-            <param name="builder">The current custom enum object instance</param>
             <param name="backgroundSprite">The sprite to add for this instance.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <remarks>This overload always registers background icons with a circular background.</remarks>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithBackground(Nautilus.Handlers.EnumBuilder{CraftData.BackgroundType},UnityEngine.Sprite,System.Boolean)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$97C5B7F68F8E5D7EC24F2D258C4A596B.WithBackground(UnityEngine.Sprite,System.Boolean)">
             <summary>
             Adds a sprite for this instance.
             </summary>
-            <param name="builder">The current custom enum object instance</param>
             <param name="backgroundSprite">The sprite to add for this instance.</param>
             <param name="useCircularIcon">If true, the 'splice 9' setting will be applied, allowing tall rectangular
             sprites (usually 2x23) to become circular.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.CreateInput(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String,System.String,UnityEngine.InputSystem.InputActionType)">
+        <member name="T:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.&lt;M&gt;$E1B56575F4BA0A615738925708F7AD78">
+            <param name="builder">The current custom enum object instance.</param>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.CreateInput(System.String,System.String,System.String,UnityEngine.InputSystem.InputActionType)">
             <summary>
             Initializes the action input for this button.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="displayName">The display name of the button, can be anything. If null or empty, this will use the language line "Option{enumName}" instead.</param>
             <param name="tooltip">The tooltip that's shown once the button is hovered in the Mod Input tab, can be anything. If null or empty, this will use the language line "OptionDesc_{enumName}" instead.</param>
             <param name="language">The language for the display name and tooltip. Defaults to English.</param>
@@ -3876,11 +3998,10 @@
             <returns>A reference to this instance after the operation has completed.</returns>
             <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputActionType.html"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device,GameInput.BindingSet,System.String)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithBinding(GameInput.Device,GameInput.BindingSet,System.String)">
             <summary>
             Sets the default bindings for this button.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="device">The device this binding is for.</param>
             <param name="bindingSet">Whether this is the primary binding or the secondary binding.</param>
             <param name="bindingPath">The binding path to bind this button to.</param>
@@ -3888,11 +4009,10 @@
             <remarks>By default, the binding will be bindable in the Mod Input tab. If you wish to make the button unbindable, consider using <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
             <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.2/api/UnityEngine.InputSystem.InputControlPath.html"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device,System.String,System.String)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithBinding(GameInput.Device,System.String,System.String)">
             <summary>
             Sets the default bindings for this button.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="device">The device this binding is for.</param>
             <param name="primaryBindingPath">The binding path to bind the primary hotkey of this button.</param>
             <param name="secondaryBindingPath">The binding path to bind the secondary hotkey of this button. If null or empty, the button will have an empty secondary binding.</param>
@@ -3900,96 +4020,89 @@
             <remarks>By default, the binding will be bindable in the Mod Input tab. If you wish to make the button unbindable, consider using <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
             <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.2/api/UnityEngine.InputSystem.InputControlPath.html"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithKeyboardBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithKeyboardBinding(System.String,System.String)">
             <summary>
             Sets the default bindings for keyboard controls for this button.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="primaryBindingPath">The binding path to bind the primary hotkey of this button.</param>
             <param name="secondaryBindingPath">The binding path to bind the secondary hotkey of this button. If null or empty, the button will have an empty secondary binding.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <remarks>By default, the binding will be bindable in the Mod Input tab. If you wish to make the button unbindable, consider using <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
             <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.2/api/UnityEngine.InputSystem.InputControlPath.html"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithControllerBinding(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String,System.String)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithControllerBinding(System.String,System.String)">
             <summary>
             Sets the default bindings for controller controls for this button.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="primaryBindingPath">The binding path to bind the primary hotkey of this button.</param>
             <param name="secondaryBindingPath">The binding path to bind the secondary hotkey of this button. If null or empty, the button will have an empty secondary binding.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <remarks>By default, the binding will be bindable in the Mod Input tab. If you wish to make the button unbindable, consider using <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
             <seealso href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.2/api/UnityEngine.InputSystem.InputControlPath.html"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithCategory(Nautilus.Handlers.EnumBuilder{GameInput.Button},System.String)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.WithCategory(System.String)">
             <summary>
             Defines a custom category in which this button will appear in the Mod Input tab.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="category">The category name.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <remarks>If the specified category was already added by another mod, both buttons will be merged under one category.</remarks>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.SetBindable">
             <summary>
             Assigns this button to be bindable for all devices in the Mod Input tab.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <remarks>By default, all custom buttons are bindable, unless explicitly set as unbindable by calling <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>.</remarks>
             <seealso cref="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.SetBindable(GameInput.Device)">
             <summary>
             Assigns this button to be bindable for a device in the Mod Input tab.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="device">The device that was set to be bindable.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <remarks>By default, all custom buttons are bindable, unless explicitly set as unbindable by calling <see cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)"/>.</remarks>
             <seealso cref="M:Nautilus.Handlers.EnumExtensions.SetBindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.SetUnbindable">
             <summary>
             Removes this button from being bindable in the Mod Input tab.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <seealso cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.SetUnbindable(GameInput.Device)">
             <summary>
             Removes this button from being bindable for a specific device in the Mod Input tab.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="device">The device in which this button cannot be bound.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <seealso cref="M:Nautilus.Handlers.EnumExtensions.SetUnbindable(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button})">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.AvoidConflicts">
             <summary>
             Assigns this button to force its bindings to work regardless of whether another vanilla button or custom button have similar bindings.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <seealso cref="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button},GameInput.Device)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$8F62D203A76DA176A769FAA09C868CB4.AvoidConflicts(GameInput.Device)">
             <summary>
             Assigns this button to force its bindings to work regardless of whether another vanilla button or custom button have similar bindings in a device.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="device">The devices in which this button avoids conflicts.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
             <seealso cref="M:Nautilus.Handlers.EnumExtensions.AvoidConflicts(Nautilus.Handlers.EnumBuilder{GameInput.Button})"/>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.CreateCraftTreeRoot(Nautilus.Handlers.EnumBuilder{CraftTree.Type},Nautilus.Crafting.ModCraftTreeRoot@)">
+        <member name="T:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$4AEE7610AA13171D656A65855FA343CA.&lt;M&gt;$5197813EB51A6F5B7F84C4A8F896A966">
+            <param name="builder">The custom enum object to make a crafting tree for.</param>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$4AEE7610AA13171D656A65855FA343CA.CreateCraftTreeRoot(Nautilus.Crafting.ModCraftTreeRoot@)">
             <summary>
             Creates a custom crafting tree.<br/>
             Creating a new CraftTree only makes sense if you're going to use it in a new type of <see cref="T:GhostCrafter"/>.
             </summary>
-            <param name="builder">The custom enum object to make a crafting tree for.</param>
             <param name="craftTreeRoot">
             The root node for your custom craft tree, as a new <see cref="T:Nautilus.Crafting.ModCraftTreeRoot"/> instance.<br/>
             Build up your custom crafting tree from this root node.<br/>
@@ -3998,64 +4111,69 @@
             </param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithIcon(Nautilus.Handlers.EnumBuilder{PingType},UnityEngine.Sprite)">
+        <member name="T:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$9BB222223A539CC492E3F62471C2BA4A.&lt;M&gt;$375074118382A5172DE70785079F7275">
+            <param name="builder">The current custom enum object instance.</param>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$9BB222223A539CC492E3F62471C2BA4A.WithIcon(UnityEngine.Sprite)">
             <summary>
             Adds an icon for this instance.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="sprite">The icon to add for this instance.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithPdaInfo(Nautilus.Handlers.EnumBuilder{TechCategory},System.String,System.String)">
+        <member name="T:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$E5A36A31ACA655C2B0696D4A0AF7DEF5.&lt;M&gt;$741F75FEF67990A132F8882D676B4FA3">
+            <param name="builder">The current enum object instance.</param>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$E5A36A31ACA655C2B0696D4A0AF7DEF5.WithPdaInfo(System.String,System.String)">
             <summary>
             Adds a display name to this instance.
             </summary>
-            <param name="builder">The current enum object instance.</param>
             <param name="displayName">The display name of the Tech Category, can be anything. If null or empty, this will use the language line "TechCategory{enumName}" instead.</param>
             <param name="language">The language for the display name. Defaults to English.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.RegisterToTechGroup(Nautilus.Handlers.EnumBuilder{TechCategory},TechGroup)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$E5A36A31ACA655C2B0696D4A0AF7DEF5.RegisterToTechGroup(TechGroup)">
             <summary>
             Registers this TechCategory instance to a TechGroup.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="techGroup">The Tech Group to add this TechCategory to.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithPdaInfo(Nautilus.Handlers.EnumBuilder{TechGroup},System.String,System.String)">
+        <member name="T:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$379252636B3A4C9A0FB27BB87CF0FC94.&lt;M&gt;$7B84151BF8556EE55DFE92440DB48014">
+            <param name="builder">The current custom enum object instance.</param>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$379252636B3A4C9A0FB27BB87CF0FC94.WithPdaInfo(System.String,System.String)">
             <summary>
             Adds a display name to this instance.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="displayName">The display name of the Tech Group, can be anything. If null or empty, this will use the language line "Group{enumName}" instead.</param>
             <param name="language">The language for the display name. Defaults to English.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithPdaInfo(Nautilus.Handlers.EnumBuilder{TechType},System.String,System.String,System.String,System.Boolean)">
+        <member name="T:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$41DD6F252CD203A892CD460AE59DF444.&lt;M&gt;$B138F925E8F52F92B9A91F6401C511E4">
+            <param name="builder">The current custom enum object instance.</param>
+        </member>
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$41DD6F252CD203A892CD460AE59DF444.WithPdaInfo(System.String,System.String,System.String,System.Boolean)">
             <summary>
             Adds a display name, tooltip to this instance.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="displayName">The display name of this Tech Type, can be anything. If null or empty, this will use the language line "{enumName}" instead.</param>
             <param name="tooltip">The tooltip displayed when hovered in the PDA, can be anything. If null or empty, this will use the language line "Tooltip_{enumName}" instead.</param>
             <param name="language">The language for this entry. Defaults to English.</param>
             <param name="unlockAtStart">Whether this instance should be unlocked on game start or not.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithIcon(Nautilus.Handlers.EnumBuilder{TechType},UnityEngine.Sprite)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$41DD6F252CD203A892CD460AE59DF444.WithIcon(UnityEngine.Sprite)">
             <summary>
             Adds an icon for this instance.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="sprite">The icon to add for this instance.</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
-        <member name="M:Nautilus.Handlers.EnumExtensions.WithSizeInInventory(Nautilus.Handlers.EnumBuilder{TechType},Vector2int)">
+        <member name="M:Nautilus.Handlers.EnumExtensions.&lt;G&gt;$41DD6F252CD203A892CD460AE59DF444.WithSizeInInventory(Vector2int)">
             <summary>
             Sets the size in inventory for this instance.
             </summary>
-            <param name="builder">The current custom enum object instance.</param>
             <param name="size">The 2x2 vector size</param>
             <returns>A reference to this instance after the operation has completed.</returns>
         </member>
@@ -5336,9 +5454,9 @@
         </member>
         <member name="M:Nautilus.Handlers.PDAHandler.AddEncyclopediaEntry(System.String,System.String,System.String,System.String,UnityEngine.Texture2D,UnityEngine.Sprite,FMODAsset,FMODAsset)">
             <summary>
-            Registers a single encyclopedia entry into the game.
+            Registers a single encyclopedia (databank) entry into the game.
             </summary>
-            <param name="key">Key (internal ID) of this PDA entry, primarily used for the language system.</param>
+            <param name="key">The unique internal ID of this PDA entry. Used for the language and story goal systems.</param>
             <param name="path"><para>Path to this entry in the databank.</para>
             <para>To find examples of this string, open "Subnautica_Data\StreamingAssets\SNUnmanagedData\LanguageFiles\English.json" and search for "EncyPath".
             Remember to omit the "EncyPath_" prefix from these language keys. An example of a proper value is: "Lifeforms/Fauna/Leviathans".</para>
@@ -5352,6 +5470,40 @@
             <param name="popupImage">Small popup image in the notification. Can be null.</param>
             <param name="unlockSound">Sound on unlock. Typical values are <see cref="P:Nautilus.Handlers.PDAHandler.UnlockBasic"/> and <see cref="P:Nautilus.Handlers.PDAHandler.UnlockImportant"/>. If unassigned, will have a default value of <see cref="P:Nautilus.Handlers.PDAHandler.UnlockBasic"/>.</param>
             <param name="voiceLog">Audio player that will be displayed inside this PDA entry, typically used for voice logs. Can be null.</param>
+        </member>
+        <member name="M:Nautilus.Handlers.PDAHandler.AddEncyclopediaEntry(System.String,System.String,FMODAsset,UnityEngine.Texture2D,UnityEngine.Sprite,FMODAsset)">
+            <summary>
+            Registers a single encyclopedia (databank) entry into the game.
+            </summary>
+            <param name="key">The unique internal ID of this PDA entry. Used for the language and story goal systems.</param>
+            <param name="path"><para>Path to this entry in the databank.</para>
+            <para>To find examples of this string, open "Subnautica_Data\StreamingAssets\SNUnmanagedData\LanguageFiles\English.json" and search for "EncyPath".
+            Remember to omit the "EncyPath_" prefix from these language keys. An example of a proper value is: "Lifeforms/Fauna/Leviathans".</para>
+            <para>A list of all Databank paths can also be found in
+            <see href="https://subnauticamodding.github.io/Nautilus/tutorials/databank-entries.html#creating-an-entry-path">this section</see>
+            of Nautilus's documentation.</para>
+            </param>
+            <param name="image">Databank entry image. Can be null.</param>
+            <param name="popupImage">Small popup image in the notification. Can be null.</param>
+            <param name="unlockSound">Sound on unlock. Typical values are <see cref="P:Nautilus.Handlers.PDAHandler.UnlockBasic"/> and <see cref="P:Nautilus.Handlers.PDAHandler.UnlockImportant"/>. If unassigned, will have a default value of <see cref="P:Nautilus.Handlers.PDAHandler.UnlockBasic"/>.</param>
+            <param name="voiceLog">Audio player that will be displayed inside this PDA entry, typically used for voice logs. Can be null.</param>
+            <remarks>The corresponding language lines for the PDA entry are Ency_{key} and EncyDesc_{key}.</remarks>
+        </member>
+        <member name="M:Nautilus.Handlers.PDAHandler.AddEncyclopediaEntry(System.String,System.String,FMODAsset,FMODAsset)">
+            <summary>
+            Registers a single encyclopedia (databank) entry into the game with a voice log.
+            </summary>
+            <param name="key">The unique internal ID of this PDA entry. Used for the language and story goal systems.</param>
+            <param name="path"><para>Path to this entry in the databank.</para>
+            <para>To find examples of this string, open "Subnautica_Data\StreamingAssets\SNUnmanagedData\LanguageFiles\English.json" and search for "EncyPath".
+            Remember to omit the "EncyPath_" prefix from these language keys. An example of a proper value is: "Lifeforms/Fauna/Leviathans".</para>
+            <para>A list of all Databank paths can also be found in
+            <see href="https://subnauticamodding.github.io/Nautilus/tutorials/databank-entries.html#creating-an-entry-path">this section</see>
+            of Nautilus's documentation.</para>
+            </param>
+            <param name="unlockSound">Sound on unlock. Typical values are <see cref="P:Nautilus.Handlers.PDAHandler.UnlockBasic"/> and <see cref="P:Nautilus.Handlers.PDAHandler.UnlockImportant"/>. If unassigned, will have a default value of <see cref="P:Nautilus.Handlers.PDAHandler.UnlockBasic"/>.</param>
+            <param name="voiceLog">Audio player that will be displayed inside this PDA entry, typically used for voice logs. Can be null.</param>
+            <remarks>The corresponding language lines for the PDA entry are Ency_{key} and EncyDesc_{key}.</remarks>
         </member>
         <member name="T:Nautilus.Handlers.PrefabHandler">
             <summary>
@@ -6556,30 +6708,42 @@
             </summary>
         </member>
         <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.LoadJson``1(``0,System.String,System.Boolean,Newtonsoft.Json.JsonConverter[])">
+            <inheritdoc cref="M:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.LoadJson(System.String,System.Boolean,Newtonsoft.Json.JsonConverter[])"/>
+        </member>
+        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.LoadJsonAsync``1(``0,System.String,System.Boolean,Newtonsoft.Json.JsonConverter[])">
+            <inheritdoc cref="M:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.LoadJsonAsync(System.String,System.Boolean,Newtonsoft.Json.JsonConverter[])"/>
+        </member>
+        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.SaveJson``1(``0,System.String,Newtonsoft.Json.JsonConverter[])">
+            <inheritdoc cref="M:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.SaveJson(System.String,Newtonsoft.Json.JsonConverter[])"/>
+        </member>
+        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.SaveJsonAsync``1(``0,System.String,Newtonsoft.Json.JsonConverter[])">
+            <inheritdoc cref="M:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.SaveJsonAsync(System.String,Newtonsoft.Json.JsonConverter[])"/>
+        </member>
+        <member name="T:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.&lt;M&gt;$299CCA094D25A6532C20451EB9D9C3F3">
+            <param name="jsonObject">The object instance to load the properties into.</param>
+            <typeparam name="T">The type of the <paramref name="jsonObject"/>.</typeparam>
+        </member>
+        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.LoadJson(System.String,System.Boolean,Newtonsoft.Json.JsonConverter[])">
             <summary>
             Loads the JSON properties from a file on disk into the <paramref name="jsonObject"/>.
             </summary>
-            <typeparam name="T">The type of the <paramref name="jsonObject"/>.</typeparam>
-            <param name="jsonObject">The object instance to load the properties into.</param>
             <param name="path">The file path to the JSON file to parse.</param>
             <param name="createIfNotExist">Whether a new JSON file should be created with default values if it does not
             already exist.</param>
             <param name="jsonConverters">The <see cref="T:Newtonsoft.Json.JsonConverter"/>s to be used for deserialization.</param>
             <seealso cref="M:Nautilus.Json.ExtensionMethods.JsonExtensions.SaveJson``1(``0,System.String,Newtonsoft.Json.JsonConverter[])"/>
         </member>
-        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.LoadJsonAsync``1(``0,System.String,System.Boolean,Newtonsoft.Json.JsonConverter[])">
+        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.LoadJsonAsync(System.String,System.Boolean,Newtonsoft.Json.JsonConverter[])">
             <inheritdoc cref="M:Nautilus.Json.ExtensionMethods.JsonExtensions.LoadJson``1(``0,System.String,System.Boolean,Newtonsoft.Json.JsonConverter[])"/>
         </member>
-        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.SaveJson``1(``0,System.String,Newtonsoft.Json.JsonConverter[])">
+        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.SaveJson(System.String,Newtonsoft.Json.JsonConverter[])">
             <summary>
             Saves the fields and properties of the <paramref name="jsonObject"/> as JSON properties to the file on disk.
             </summary>
-            <typeparam name="T">The type of the <paramref name="jsonObject"/>.</typeparam>
-            <param name="jsonObject">The object instance to save the fields and properties from.</param>
             <param name="path">The file path at which to save the JSON file.</param>
             <param name="jsonConverters">The <see cref="T:Newtonsoft.Json.JsonConverter"/>s to be used for serialization.</param>
         </member>
-        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.SaveJsonAsync``1(``0,System.String,Newtonsoft.Json.JsonConverter[])">
+        <member name="M:Nautilus.Json.ExtensionMethods.JsonExtensions.&lt;G&gt;$66F77D1E46F965A5B22D4932892FA78B`1.SaveJsonAsync(System.String,Newtonsoft.Json.JsonConverter[])">
             <inheritdoc cref="M:Nautilus.Json.ExtensionMethods.JsonExtensions.SaveJson``1(``0,System.String,Newtonsoft.Json.JsonConverter[])"/>
         </member>
         <member name="T:Nautilus.Json.Interfaces.IJsonFile">
@@ -6961,7 +7125,9 @@
             <see cref="T:System.Enum"/> choices can also be parsed from their values by merely omitting the <paramref name="options"/>.
             </remarks>
             <param name="label">The label for the choice. If none is set, the name of the member will be used.</param>
-            <param name="options">The list of options for the user to choose from.</param>
+            <param name="options">The list of options for the user to choose from. Values may be either ordinary strings for
+            direct display, or IDs for lookup with <c>Language.Get(string)</c> for translation. Use the
+            <see cref="T:Nautilus.Handlers.LanguageHandler"/> API to register translation strings.</param>
         </member>
         <member name="M:Nautilus.Options.Attributes.ChoiceAttribute.#ctor(System.String[])">
             <summary>
@@ -6972,7 +7138,9 @@
             <remarks>
             <see cref="T:System.Enum"/> choices can also be parsed from their values by merely omitting the <paramref name="options"/>.
             </remarks>
-            <param name="options">The list of options for the user to choose from.</param>
+            <param name="options">The list of options for the user to choose from. Values may be either ordinary strings for
+            direct display, or IDs for lookup with <c>Language.Get(string)</c> for translation. Use the
+            <see cref="T:Nautilus.Handlers.LanguageHandler"/> API to register translation strings.</param>
         </member>
         <member name="M:Nautilus.Options.Attributes.ChoiceAttribute.#ctor">
             <summary>
@@ -9289,6 +9457,89 @@
         <member name="M:Nautilus.Utility.JsonUtils.SaveAsync``1(``0,System.String,Newtonsoft.Json.JsonConverter[])">
             <inheritdoc cref="M:Nautilus.Utility.JsonUtils.Save``1(``0,System.String,Newtonsoft.Json.JsonConverter[])"/>
         </member>
+        <member name="T:Nautilus.Utility.MaterialLibrary">
+            <summary>
+            Allows for quick and simple retrieval of any base-game material throughout both Subnautica and Subnautica:
+            Below Zero. Materials can either be fetched directly using their names by accessing the <see cref="M:Nautilus.Utility.MaterialLibrary.FetchMaterial(System.String,IOut{UnityEngine.Material},System.Boolean)"/>
+            method, or applied generically across the entirety of a custom prefab via the <see cref="!:ReplaceMockMaterials"/> method.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Utility.MaterialLibrary._resourceStream">
+            <summary>
+            Handles loading the appropriate embedded JSON file, used to generate the Filepath map.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Utility.MaterialLibrary._filePathMap">
+            <summary>
+            The parsed JSON data, mapping material names to the best path to load them from.
+            </summary>
+        </member>
+        <member name="F:Nautilus.Utility.MaterialLibrary.MaxSceneLoadTime">
+            <summary>
+            The maximum amount of time, in seconds, that we should wait for materials to finish being retrieved from a scene
+            prefab before we time out the process. Similarly to the <see cref="!:MaxFetchAttempts"/> variable, this property
+            exists exclusively as a failsafe, to prevent neverending wait-times.
+            </summary>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialLibrary.FetchMaterial(System.String,IOut{UnityEngine.Material},System.Boolean)">
+            <summary>
+            Searches the library for the provided <see cref="!:materialName"/>, and loads it from its path, if an entry for
+            it exists.
+            </summary>
+            <param name="materialName">The exact name of the material you wish to retrieve as seen in-game. Case-sensitive!</param>
+            <param name="foundMaterial">The <see cref="T:TaskResult`1"/> to load the vanilla material into, if found. Otherwise, has its value set to null.</param>
+            <param name="warnIfFailed">Whether Nautilus should log a warning if no materials with the provided <see cref="!:materialName"/> are found.</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialLibrary.FetchMaterials(System.String[],IOut{UnityEngine.Material[]},System.Boolean)">
+            <summary>
+            Searches the library for all of the provided <see cref="!:materialNames"/>, and loads those materials from their
+            paths, if entries for them exist. If only some of the given mat names have entries in the library, this method
+            will return all of the vanilla materials it can, and will log warnings for those that it fails to find, by default.
+            </summary>
+            <param name="materialNames">An array of the exact material names that you wish to retrieve, as seen in-game. Case-sensitive!</param>
+            <param name="foundMaterials">The <see cref="T:TaskResult`1"/> to load the vanilla materials into, if found.
+            Will contain as many of the requested vanilla materials as can be found within the library.</param>
+            <param name="warnIfFailed">Whether Nautilus should log a warning if one of the requested
+            <see cref="!:materialNames"/> can not be found in the library.</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialLibrary.GetMaterialFromPath(System.String,IOut{UnityEngine.Material})">
+            <summary>
+            Loads and returns a material using its path relative to the <see cref="T:AddressablesUtility"/>.
+            </summary>
+            <param name="matPath">The path to the .mat file, relative to the <see cref="T:AddressablesUtility"/>.</param>
+            <param name="matResult">The <see cref="T:TaskResult`1"/> to load the found material into. If no material 
+            is found, has its value set to null.</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialLibrary.GetMaterialsFromPrefab(System.String[],System.String,IOut{UnityEngine.Material[]})">
+            <summary>
+            Finds and returns vanilla materials by first loading an associated Prefab, given that prefab's path, and the
+            desired vanilla material names. Iterates over every <see cref="T:UnityEngine.Renderer"/> on the Prefab's parent object, and any of its
+            children objects, in order to find the materials requested.
+            </summary>
+            <param name="materialNames">The names of the materials to search for.</param>
+            <param name="prefabPath">The path to the reference Prefab, for use in the <see cref="T:UWE.PrefabDatabase"/>.</param>
+            <param name="matResult">The <see cref="T:TaskResult`1"/> to load the found materials into. Otherwise, has its value set to null.</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialLibrary.GetMaterialsFromScene(System.String[],System.String,IOut{UnityEngine.Material[]})">
+            <summary>
+            Finds and returns vanilla materials with the specified <see cref="!:materialNames"/>, by searching through a scene prefab,
+            loaded using the given <see cref="!:sceneName"/>. NOTE: This method won't be able to return vanilla materials
+            until the specified Scene is loaded via the <see cref="T:ScenePrefabDatabase"/>.
+            </summary>
+            <param name="materialNames">The names of the materials to search the scene prefab for.</param>
+            <param name="sceneName">The name of the additive scene prefab to load and iterate through for the desired material.</param>
+            <param name="matResults">The <see cref="T:TaskResult`1"/> to load the found material into. Otherwise, has its value set to null.</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialLibrary.GetMaterialPath(System.String)">
+            <summary>
+            Uses the <see cref="F:Nautilus.Utility.MaterialLibrary._filePathMap"/> to retrieve the path associated with a specified material using the
+            <see cref="!:materialName"/>, so that it may be loaded when requested.
+            </summary>
+            <param name="materialName">The name of the material whose path is being requested.</param>
+            <returns>The path to the resource which should be loaded in order to retrieve the specified material.
+            Points to either a mat, prefab, or scene prefab file. Returns an empty string if the provided
+            <see cref="!:materialName"/> does not have an entry within the library.</returns>
+        </member>
         <member name="T:Nautilus.Utility.MaterialModifiers.ColorModifier">
             <summary>
             Basic material modifier that sets the <see cref="P:UnityEngine.Material.color"/> property on all materials.
@@ -9543,6 +9794,23 @@
             <param name="specularIntensity">'_SpecularInt' value of the shader. Values around 1f are recommended.</param>
             <param name="glowStrength">'_GlowStrength' and '_GlowStrengthNight' value of the shader. Should not be absurdly high.</param>
             <param name="materialType">Controls various settings including alpha clipping and transparency.</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialUtils.ReplaceMockMaterials(UnityEngine.GameObject)">
+            <summary>
+            Iterates over every <see cref="T:UnityEngine.Renderer"/> present on the given <see cref="T:UnityEngine.GameObject"/> and any of its
+            children, replacing any material that shares the exact same name (case-sensitive) as a
+            base-game material with its vanilla counterpart.
+            </summary>
+            <param name="prefab">The <see cref="T:UnityEngine.GameObject"/> to apply base-game materials to.
+            Includes all children (recursive).</param>
+        </member>
+        <member name="M:Nautilus.Utility.MaterialUtils.ReplaceMockMaterials(UnityEngine.Renderer[])">
+            <summary>
+            Iterates over every <see cref="T:UnityEngine.Renderer"/> present within the <paramref name="renderers"/> collection, and replaces
+            any material that shares the exact same name (case-sensitive) as a base-game material with its
+            vanilla counterpart.
+            </summary>
+            <param name="renderers">The collection of <see cref="T:UnityEngine.Renderer"/> objects to apply base-game materials to.</param>
         </member>
         <member name="M:Nautilus.Utility.MaterialUtils.SetMaterialTransparent(UnityEngine.Material,System.Boolean)">
             <summary>

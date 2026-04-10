@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comforts.Audio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,9 @@ namespace Comforts.Monobehaviors.Handtargets
     {
         public Animator animator;
         public GameObject light;
+
+        [SerializeField]
+        private FMOD_CustomEmitter soundEmitter;
 
         private bool active = false;
 
@@ -26,11 +30,20 @@ namespace Comforts.Monobehaviors.Handtargets
         {
             active = !active;
 
+            if (soundEmitter != null)
+            {
+                soundEmitter.Play();
+            }
+
             UpdateStuff();
         }
 
         public void Start()
         {
+            if (soundEmitter != null)
+            {
+                soundEmitter.asset = ComfortsFMODAssets.switchSound;
+            }
             UpdateStuff();
         }
 

@@ -9,6 +9,8 @@ namespace Comforts.Monobehaviors.Handtargets
 {
     internal class ParticleSystemHandTarget : HandTarget, IHandTarget
     {
+        [SerializeField] private FMOD_CustomEmitter soundEmitter;
+
         internal virtual ParticleSystem particleSystem
         {
             get
@@ -27,6 +29,11 @@ namespace Comforts.Monobehaviors.Handtargets
         public virtual void OnHandClick(GUIHand hand)
         {
             particleSystem.Play();
+
+            if (soundEmitter != null)
+            {
+                soundEmitter.Play();
+            }
         }
     }
 }

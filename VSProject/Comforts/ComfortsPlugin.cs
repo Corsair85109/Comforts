@@ -25,6 +25,7 @@ using Comforts.Saving;
 namespace Comforts
 {
     [BepInPlugin(MyGUID, PluginName, VersionString)]
+    [BepInDependency("com.snmodding.nautilus")]
     public class ComfortsPlugin : BaseUnityPlugin
     {
         public const string MyGUID = "com.Bobasaur.Comforts";
@@ -99,6 +100,7 @@ namespace Comforts
             MusicChip.Register();
             FloorLocker.Register();
             LightSwitch.Register();
+            AnchoredBeacon.Register();
 
             // Kitchen
             Sink.Register();
@@ -127,6 +129,15 @@ namespace Comforts
         {
             UWE.CoroutineHost.StartCoroutine(BenchReferenceManager.EnsureBenchReferenceExists());
             UWE.CoroutineHost.StartCoroutine(BedReferenceManager.EnsureBedReferencesExist());
+        }
+
+
+
+
+        private void OnDestroy()
+        {
+            save.OnStartedSaving -= SaveHandler.OnSaveStart;
+            save.OnFinishedLoading -= SaveHandler.OnLoadFinish;
         }
     }
 }

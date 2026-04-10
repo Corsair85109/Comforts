@@ -11,5 +11,15 @@ namespace Comforts.Audio
         public static FMODAsset present;
 
         public static FMODAsset cookerLoop;
+
+        public static FMODAsset sink;
+
+        public static FMODAsset shower;
+
+        public static FMODAsset FusionStart;
+        public static FMODAsset FusionLoop;
+        public static FMODAsset FusionEnd;
+
+        public static FMODAsset switchSound;
     }
 }

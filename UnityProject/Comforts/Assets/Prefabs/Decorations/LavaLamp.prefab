@@ -92,6 +92,57 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &744070971935168025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7211737896852814685}
+  - component: {fileID: 6779864693914185509}
+  m_Layer: 0
+  m_Name: SoundEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7211737896852814685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744070971935168025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3607719319501471416}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6779864693914185509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744070971935168025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1699601541, guid: 06dd3d5416bf43ea368cc39ff96e6d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 0}
+  playOnAwake: 0
+  stopImmediatelyOnDisable: 0
+  followParent: 1
+  restartOnPlay: 0
+  debug: 0
+  subtitlesKey: 
+  playSubtitlesWithUnscaledTime: 1
 --- !u!1 &910422175776342268
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +495,7 @@ Transform:
   - {fileID: 2701503267318767657}
   - {fileID: 5703099094511660146}
   - {fileID: 3175766839798027139}
+  - {fileID: 7211737896852814685}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -481,7 +533,7 @@ MonoBehaviour:
   placeMaxDistance: 5
   placeMinDistance: 1.2
   placeDefaultDistance: 2
-  surfaceType: 0
+  surfaceType: 5
   _EmissiveTex: {fileID: 0}
   _NoiseTex: {fileID: 0}
 --- !u!114 &2116382833345184603
@@ -498,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4056041253285499356}
   light: {fileID: 286100097848891595}
+  soundEmitter: {fileID: 6779864693914185509}
 --- !u!1 &4263519403277366656
 GameObject:
   m_ObjectHideFlags: 0
