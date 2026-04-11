@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\handtargets\\jukeboxuihandtargets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\handtargets\\jukeboxuihandtargets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\monobehaviors\\handtargets\\lavalamphandtarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\handtargets\\lavalamphandtarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\audio\\comfortsfmodassets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:audio\\comfortsfmodassets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\audio\\audioregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:audio\\audioregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\monobehaviors\\childinits\\textmeshproadder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\childinits\\textmeshproadder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,74 +46,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JukeboxUIHandtargets.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\JukeboxUIHandtargets.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\Handtargets\\JukeboxUIHandtargets.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\JukeboxUIHandtargets.cs",
-              "RelativeToolTip": "Monobehaviors\\Handtargets\\JukeboxUIHandtargets.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwDMAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T15:37:06.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LavaLampHandTarget.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\LavaLampHandTarget.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\Handtargets\\LavaLampHandTarget.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\LavaLampHandTarget.cs",
-              "RelativeToolTip": "Monobehaviors\\Handtargets\\LavaLampHandTarget.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwCIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T15:35:20.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TextMeshProAdder.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\ChildInits\\TextMeshProAdder.cs",
-              "RelativeDocumentMoniker": "Monobehaviors\\ChildInits\\TextMeshProAdder.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\ChildInits\\TextMeshProAdder.cs",
-              "RelativeToolTip": "Monobehaviors\\ChildInits\\TextMeshProAdder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T15:16:52.934Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ComfortsFMODAssets.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\ComfortsFMODAssets.cs",
-              "RelativeDocumentMoniker": "Audio\\ComfortsFMODAssets.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\ComfortsFMODAssets.cs",
-              "RelativeToolTip": "Audio\\ComfortsFMODAssets.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T12:53:04.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AudioRegistrar.cs",
-              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\AudioRegistrar.cs",
-              "RelativeDocumentMoniker": "Audio\\AudioRegistrar.cs",
-              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Audio\\AudioRegistrar.cs",
-              "RelativeToolTip": "Audio\\AudioRegistrar.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwDAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T12:52:22.258Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ComfortsPlugin.cs",
               "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
               "RelativeDocumentMoniker": "ComfortsPlugin.cs",
               "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
               "RelativeToolTip": "ComfortsPlugin.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T14:27:59.051Z",
               "EditorCaption": ""

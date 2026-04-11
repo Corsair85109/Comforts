@@ -30,7 +30,7 @@ namespace Comforts
     {
         public const string MyGUID = "com.Bobasaur.Comforts";
         public const string PluginName = "Comforts";
-        public const string VersionString = "1.0.0";
+        public const string VersionString = "1.0.1";
 
         private static readonly Harmony Harmony = new Harmony(MyGUID);
 

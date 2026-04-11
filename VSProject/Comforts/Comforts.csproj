@@ -109,7 +109,6 @@
     <Compile Include="Monobehaviors\ChildInits\ConstructableChildInitialiseBed.cs" />
     <Compile Include="Monobehaviors\ChildInits\ConstructableChildInitialiseBench.cs" />
     <Compile Include="Monobehaviors\ChildInits\IonFusionReactorChildInit.cs" />
-    <Compile Include="Monobehaviors\ChildInits\TextMeshProAdder.cs" />
     <Compile Include="Monobehaviors\ClothColourSetter.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortJukeboxController.cs" />
     <Compile Include="Monobehaviors\Controllers\ComfortsClothPhysController.cs" />

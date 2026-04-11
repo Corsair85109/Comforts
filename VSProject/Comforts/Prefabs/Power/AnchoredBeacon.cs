@@ -28,8 +28,8 @@ namespace Comforts.Prefabs.Power
                     new Ingredient(TechType.Copper, 1)
                 }
             };
-            GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(3f);
-            GadgetExtensions.SetUnlock(customPrefab, TechType.SmallLocker, 1);
+            GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(1.5f);
+            GadgetExtensions.SetUnlock(customPrefab, TechType.Beacon, 1);
             GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.InteriorModules, TechCategory.InteriorModule);
             customPrefab.Register();
         }
