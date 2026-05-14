@@ -97,6 +97,7 @@ namespace Comforts
             Speaker.Register();
             WallSpeaker.Register();
             IonFusionReactor.Register();
+            IonFissionReactor.Register();
             MusicChip.Register();
             FloorLocker.Register();
             LightSwitch.Register();

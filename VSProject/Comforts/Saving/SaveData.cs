@@ -17,7 +17,7 @@ namespace Comforts.Saving
     }
 
 
-    public partial class SaveHandler
+    public class SaveHandler
     {
         public static void OnSaveStart(object sender, JsonFileEventArgs args)
         {

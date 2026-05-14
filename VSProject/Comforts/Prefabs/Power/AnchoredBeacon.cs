@@ -30,7 +30,7 @@ namespace Comforts.Prefabs.Power
             };
             GadgetExtensions.SetRecipe(customPrefab, recipeData).WithCraftingTime(1.5f);
             GadgetExtensions.SetUnlock(customPrefab, TechType.Beacon, 1);
-            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.InteriorModules, TechCategory.InteriorModule);
+            GadgetExtensions.SetPdaGroupCategory(customPrefab, TechGroup.ExteriorModules, TechCategory.ExteriorModule);
             customPrefab.Register();
         }
     }

@@ -76,9 +76,9 @@ namespace Comforts.Monobehaviors.Handtargets
         [SerializeField]
         private readonly TechType craftingTechType = TechType.PrecursorIonCrystal;
         [SerializeField]
-        private float timeToCraft = 60f;
+        private float timeToCraft = 90f;
         [SerializeField]
-        private float energyCost = 1000f;
+        private float energyCost = 2000f;
         [SerializeField]
         private float powerEndThreshhold = 100f;
         
@@ -105,7 +105,7 @@ namespace Comforts.Monobehaviors.Handtargets
             progressPercentage = 0f;
             hasCraftedItem = false;
 
-            soundEmitter.Play();
+            SetEnergyBeams(true);
 
             isCrafting = true;
         }
@@ -114,7 +114,7 @@ namespace Comforts.Monobehaviors.Handtargets
         {
             isCrafting = false;
 
-            soundEmitter.Stop();
+            SetEnergyBeams(false);
 
             hasCraftedItem = item;
         }
@@ -157,6 +157,7 @@ namespace Comforts.Monobehaviors.Handtargets
                 if (progress >= timeToCraft)
                 {
                     EndCrafting(true);
+                    SetEnergyBeams(false);
                 }
                 else
                 {
@@ -164,25 +165,23 @@ namespace Comforts.Monobehaviors.Handtargets
                     {
                         powerConsumer.ConsumePower(powerToConsume, out _);
                         progress += Time.deltaTime;
+
+                        SetEnergyBeams(true);
                     }
+                    else
+                    {
+                        SetEnergyBeams(false);
+                    }
+
                     progressPercentage = progress / timeToCraft * 100;
                 }
             }
-
-            // control visuals
-
-            ionCube.SetActive(hasCraftedItem);
-
-            if (isCrafting && !beamsSet)
-            {
-                SetEnergyBeams(true);
-                light.SetActive(true);
-            }
-            if (!isCrafting && beamsSet)
+            else
             {
                 SetEnergyBeams(false);
-                light.SetActive(false);
             }
+
+            ionCube.SetActive(hasCraftedItem);
         }
 
         public void OnHandHover(GUIHand hand)
@@ -199,16 +198,17 @@ namespace Comforts.Monobehaviors.Handtargets
             {
                 if (enoughPower)
                 {
-                    text = Language.main.Get("IonFabricatorProgress");
+                    text2 = Language.main.Get("IonFabricatorProgress");
+                    text = Language.main.Get("IonFabricatorStop");
                     HandReticle.main.SetProgress(progressPercentage / 100);
                     HandReticle.main.SetIcon(HandReticle.IconType.Progress, 1.5f);
-                    button = GameInput.Button.None;
                 }
                 else
                 {
                     text = Language.main.Get("IonFabricatorStop");
                     text2 = Language.main.Get("IonFabricatorNoPower");
-                    HandReticle.main.SetIcon(HandReticle.IconType.Hand, 1f);
+                    HandReticle.main.SetProgress(progressPercentage / 100);
+                    HandReticle.main.SetIcon(HandReticle.IconType.Progress, 1.5f);
                 }
             }
             else if (!enoughPower)
@@ -231,13 +231,13 @@ namespace Comforts.Monobehaviors.Handtargets
             {
                 TryPickup();
             }
-            else if (!isCrafting && enoughPower)
-            {
-                StartCrafting();
-            }
-            else if (isCrafting && !enoughPower)
+            else if (isCrafting)
             {
                 EndCrafting(false);
+            }
+            else if (enoughPower)
+            {
+                StartCrafting();
             }
         }
 
@@ -276,7 +276,20 @@ namespace Comforts.Monobehaviors.Handtargets
 
         private void SetEnergyBeams(bool active)
         {
-            one.SetGravityBeam(active ? beam13.transform : null, beamColour);
+            if (active == beamsSet) return;
+
+            light.SetActive(active);
+
+            if (active)
+            {
+                soundEmitter.Play();
+            }
+            else
+            {
+                soundEmitter.Stop();
+            }
+
+                one.SetGravityBeam(active ? beam13.transform : null, beamColour);
             two.SetGravityBeam(active ? beam14.transform : null, beamColour);
             three.SetGravityBeam(active? beam15.transform: null, beamColour);
             four.SetGravityBeam(active ? beam16.transform : null, beamColour);

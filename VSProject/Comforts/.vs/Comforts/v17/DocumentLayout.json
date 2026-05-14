@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|c:\\github\\comforts\\vsproject\\comforts\\monobehaviors\\handtargets\\ionfabricator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:monobehaviors\\handtargets\\ionfabricator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\prefabs\\power\\ionfissionreactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\power\\ionfissionreactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:comfortsplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\prefabs\\power\\ionfusionreactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:prefabs\\power\\ionfusionreactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|C:\\GitHub\\Comforts\\VSProject\\Comforts\\saving\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C60F7E6-768A-48EC-9A59-A90759E2A1FD}|Comforts.csproj|solutionrelative:saving\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,16 +62,64 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IonFissionReactor.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\IonFissionReactor.cs",
+              "RelativeDocumentMoniker": "Prefabs\\Power\\IonFissionReactor.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\IonFissionReactor.cs",
+              "RelativeToolTip": "Prefabs\\Power\\IonFissionReactor.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T12:03:00.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IonFusionReactor.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\IonFusionReactor.cs",
+              "RelativeDocumentMoniker": "Prefabs\\Power\\IonFusionReactor.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Prefabs\\Power\\IonFusionReactor.cs",
+              "RelativeToolTip": "Prefabs\\Power\\IonFusionReactor.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T11:50:49.831Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IonFabricator.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\IonFabricator.cs",
+              "RelativeDocumentMoniker": "Monobehaviors\\Handtargets\\IonFabricator.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Monobehaviors\\Handtargets\\IonFabricator.cs",
+              "RelativeToolTip": "Monobehaviors\\Handtargets\\IonFabricator.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAGsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T11:51:07.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SaveData.cs",
+              "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Saving\\SaveData.cs",
+              "RelativeDocumentMoniker": "Saving\\SaveData.cs",
+              "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\Saving\\SaveData.cs",
+              "RelativeToolTip": "Saving\\SaveData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T10:40:47.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ComfortsPlugin.cs",
               "DocumentMoniker": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
               "RelativeDocumentMoniker": "ComfortsPlugin.cs",
               "ToolTip": "C:\\GitHub\\Comforts\\VSProject\\Comforts\\ComfortsPlugin.cs",
               "RelativeToolTip": "ComfortsPlugin.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAwwGcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T14:27:59.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T14:27:59.051Z"
             }
           ]
         }
